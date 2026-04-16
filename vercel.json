@@ -1,0 +1,13 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/ortopedista/(.*)",
+      "destination": "/ortopedista/dist/$1"
+    },
+    {
+      "source": "/ortopedista",
+      "destination": "/ortopedista/dist/index.html"
+    }
+  ]
+}

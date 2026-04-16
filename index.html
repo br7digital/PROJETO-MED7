@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <title>Med7 - Seleccione su Especialidad</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* CSS reset and foundations */
+        :root {
+            --bg-color: #fafbfc; /* Off-White */
+            --navy-blue: #0a192f; /* Deep Navy Blue */
+            --slate-gray: #64748b; /* Slate Gray */
+            --white: #ffffff;
+            --shadow-soft: 0 10px 25px -5px rgba(10, 25, 47, 0.08), 0 8px 10px -6px rgba(10, 25, 47, 0.04);
+            --shadow-hover: 0 20px 25px -5px rgba(10, 25, 47, 0.12), 0 10px 10px -5px rgba(10, 25, 47, 0.04);
+            --border-radius: 20px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--navy-blue);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 50% -20%, rgba(100, 116, 139, 0.08) 0%, rgba(250, 251, 252, 0) 70%);
+        }
+
+        /* Header */
+        header {
+            padding: 48px 0;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: -0.05em;
+            color: var(--navy-blue);
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            color: var(--navy-blue);
+            width: 36px;
+            height: 36px;
+        }
+
+        /* Main Content */
+        main {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 24px 24px 80px;
+            max-width: 1000px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .hero-text {
+            text-align: center;
+            margin-bottom: 72px;
+            max-width: 680px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            line-height: 1.3;
+            color: var(--navy-blue);
+            letter-spacing: -0.02em;
+        }
+        
+        h1 strong {
+            font-weight: 500;
+        }
+
+        /* Grid */
+        .specialty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+            width: 100%;
+        }
+
+        /* Cards/Buttons */
+        .card {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            border-radius: var(--border-radius);
+            padding: 40px 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            text-decoration: none;
+            color: var(--navy-blue);
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            overflow: hidden;
+            min-height: 240px;
+        }
+
+        /* Soft gradient overlay for glassmorphism */
+        .card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+            border-radius: var(--border-radius);
+            pointer-events: none;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--navy-blue);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.4s ease;
+            z-index: 10;
+        }
+
+        .card:hover:not(.disabled) {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            background-color: rgb(255, 255, 255);
+            border-color: rgba(10, 25, 47, 0.1);
+        }
+
+        .card:hover:not(.disabled)::before {
+            transform: scaleX(1);
+        }
+
+        .icon-wrapper {
+            width: 72px;
+            height: 72px;
+            border-radius: 50%;
+            background-color: rgba(100, 116, 139, 0.06);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: var(--navy-blue);
+            transition: var(--transition);
+            position: relative;
+            z-index: 10;
+        }
+
+        .card:hover:not(.disabled) .icon-wrapper {
+            background-color: var(--navy-blue);
+            color: var(--white);
+            transform: scale(1.05);
+        }
+
+        .icon-wrapper svg {
+            width: 32px;
+            height: 32px;
+            stroke-width: 1.5px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Disabled State */
+        .card.disabled {
+            cursor: not-allowed;
+            background-color: rgba(255, 255, 255, 0.4);
+            border: 1px dashed rgba(100, 116, 139, 0.3);
+            box-shadow: none;
+            color: var(--slate-gray);
+        }
+
+        .card.disabled .icon-wrapper {
+            color: var(--slate-gray);
+            background-color: transparent;
+            border: 1px solid rgba(100, 116, 139, 0.15);
+        }
+
+        .card.disabled .card-title {
+            color: var(--slate-gray);
+        }
+
+        .badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: rgba(100, 116, 139, 0.1);
+            color: var(--slate-gray);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            .hero-text {
+                margin-bottom: 48px;
+            }
+            header {
+                padding: 40px 0 24px;
+            }
+            .specialty-grid {
+                gap: 20px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+            main {
+                padding: 0 20px 60px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="/" class="logo">
+            <i data-lucide="cross" class="logo-icon"></i>
+            Med7
+        </a>
+    </header>
+
+    <main>
+        <div class="hero-text">
+            <h1>Seleccione su especialidad para acceder a los <strong>Packs de Vídeos</strong></h1>
+        </div>
+
+        <div class="specialty-grid">
+            <!-- Active: Ortopedia -->
+            <a href="/ortopedista" class="card">
+                <div class="icon-wrapper">
+                    <i data-lucide="bone"></i>
+                </div>
+                <h2 class="card-title">Traumatología y Ortopedia</h2>
+            </a>
+
+            <!-- Disabled: Odontologia -->
+            <div class="card disabled">
+                <span class="badge">Próximamente</span>
+                <div class="icon-wrapper">
+                    <i data-lucide="smile"></i>
+                </div>
+                <h2 class="card-title">Odontología</h2>
+            </div>
+
+            <!-- Disabled: Fisioterapia -->
+            <div class="card disabled">
+                <span class="badge">Próximamente</span>
+                <div class="icon-wrapper">
+                    <i data-lucide="accessibility"></i>
+                </div>
+                <h2 class="card-title">Fisioterapia</h2>
+            </div>
+
+            <!-- Disabled: Pediatria -->
+            <div class="card disabled">
+                <span class="badge">Próximamente</span>
+                <div class="icon-wrapper">
+                    <i data-lucide="baby"></i>
+                </div>
+                <h2 class="card-title">Pediatría</h2>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
