@@ -76,6 +76,8 @@ function SpecialtyCard({ specialty, index }) {
     return (
       <a
         href={specialty.href}
+        target="_blank"
+        rel="noopener noreferrer"
         className={`specialty-card-active rounded-2xl p-7 flex flex-col gap-5 relative overflow-hidden cursor-pointer ${delay}`}
         aria-label={`Acessar ${specialty.label}`}
       >
