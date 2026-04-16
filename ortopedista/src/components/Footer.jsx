@@ -1,0 +1,42 @@
+import React from 'react';
+import { Activity } from 'lucide-react';
+import { landingData } from '../data/data-config';
+
+export function Footer() {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="bg-gradient-to-b from-[#010612] to-black py-16 pb-20">
+      <div className="container mx-auto px-6 w-full max-w-[480px] text-center flex flex-col items-center">
+
+        {/* Unified Logo Text + Icon */}
+        <div className="flex items-center justify-center gap-3 mb-10">
+          <div className="p-2 bg-[#00f2ff]/10 rounded-[10px] shadow-[0_0_15px_rgba(0,242,255,0.1)]">
+            <Activity className="w-5 h-5 text-[#00f2ff]" />
+          </div>
+          <span className="font-display font-black text-[22px] text-white tracking-widest uppercase drop-shadow-md">
+            {landingData.global.logoText}
+          </span>
+        </div>
+
+        {/* Links (WCAG Compliant Contrast) */}
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-10 w-full">
+          <a href="#" className="text-zinc-400 text-[10px] uppercase font-black tracking-[0.15em] hover:text-[#00f2ff] transition-colors">Termos de Uso</a>
+          <a href="#" className="text-zinc-400 text-[10px] uppercase font-black tracking-[0.15em] hover:text-[#00f2ff] transition-colors">Políticas de Privacidade</a>
+        </div>
+
+        {/* Disclaimer (WCAG Compliant Contrast: >4.5:1 against black) */}
+        <p className="text-zinc-500 text-[11px] font-body leading-relaxed mb-10 px-2 max-w-[360px]">
+          Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site.
+        </p>
+
+        {/* Copyright */}
+        <div className="w-full pt-8 border-t border-zinc-800">
+          <p className="text-zinc-400 text-[11px] font-medium tracking-wide">
+            © {currentYear} MED7 • Todos os direitos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+}

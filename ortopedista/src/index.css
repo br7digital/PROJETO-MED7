@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #020b18;
+  --color-accent: #00f2ff;
+  --color-accent-dim: rgba(0, 242, 255, 0.1);
+  --color-elite-gold: #c5a15a;
+  
+  --font-display: "Outfit", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --shadow-elite: 0 20px 50px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 30px rgba(0, 242, 255, 0.3);
+}
+
+@layer base {
+  body {
+    @apply bg-[#020b18] text-white/80 font-body antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display text-white tracking-tight;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-[12px] border border-white/10;
+  }
+  
+  .glass-card {
+    @apply bg-gradient-to-br from-white/10 to-white/[0.02] backdrop-blur-md border border-white/10 shadow-elite;
+  }
+
+  .text-glow {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+
+  .accent-glow {
+    @apply shadow-glow;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+
+  .animate-float {
+    animation: float 5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+
+  .shimmer-effect {
+    @apply relative overflow-hidden;
+  }
+
+  @keyframes pulse-attention {
+    0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(0, 242, 255, 0); }
+    10%, 20% { transform: scale(1.03); box-shadow: 0 0 25px rgba(0, 242, 255, 0.5); }
+    15% { transform: scale(1.01); box-shadow: 0 0 10px rgba(0, 242, 255, 0.3); }
+    30% { transform: scale(1); box-shadow: 0 0 0 rgba(0, 242, 255, 0); }
+  }
+
+  .animate-pulse-attention {
+    animation: pulse-attention 5s infinite;
+  }
+
+  .shimmer-effect::after {
+    content: "";
+    @apply absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent;
+    animation: shimmer 2s infinite;
+  }
+
+  .btn-elite {
+    @apply relative overflow-hidden px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-[#00f2ff] to-[#01a8b1] rounded-full text-slate-900 font-display font-bold text-[15px] md:text-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_40px_rgba(0,242,255,0.4)] active:scale-[0.98];
+  }
+}
