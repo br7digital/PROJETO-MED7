@@ -101,7 +101,7 @@ export function Pricing() {
           </ul>
 
           {/* Elite CTA Button */}
-          <button className="relative btn-elite w-full py-7 group overflow-hidden animate-pulse-attention shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:shadow-[0_0_40px_rgba(0,242,255,0.6)]">
+          <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="relative btn-elite w-full py-7 group overflow-hidden animate-pulse-attention shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:shadow-[0_0_40px_rgba(0,242,255,0.6)]">
             <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-[150%] skew-x-[-30deg] animate-[shimmer_2.5s_infinite]" />
             <span className="relative z-10 text-[18px] uppercase tracking-widest font-black drop-shadow-md">QUERO MEU ACESSO AGORA</span>
           </button>

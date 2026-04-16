@@ -18,7 +18,7 @@ export function Navbar() {
         </div>
         
         {/* Elite CTA Pill */}
-        <button className="relative overflow-hidden group bg-[#00f2ff] hover:bg-[#00d1db] px-4 py-2 rounded-full text-slate-900 font-display font-extrabold text-[10px] tracking-widest uppercase transition-all duration-300 shadow-[0_0_20px_rgba(0,242,255,0.3)] hover:shadow-[0_0_30px_rgba(0,242,255,0.5)] cursor-pointer active:scale-95">
+        <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="relative overflow-hidden group bg-[#00f2ff] hover:bg-[#00d1db] px-4 py-2 rounded-full text-slate-900 font-display font-extrabold text-[10px] tracking-widest uppercase transition-all duration-300 shadow-[0_0_20px_rgba(0,242,255,0.3)] hover:shadow-[0_0_30px_rgba(0,242,255,0.5)] cursor-pointer active:scale-95">
           <span className="relative z-10">QUERO AGORA</span>
           <div 
             className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent opacity-80 -skew-x-12"

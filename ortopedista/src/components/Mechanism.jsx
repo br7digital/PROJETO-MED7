@@ -73,7 +73,7 @@ export function Mechanism() {
 
         {/* CTA Button */}
         <div className="mt-16 md:mt-20 flex justify-center w-full">
-           <button className="group relative px-8 py-4 md:px-12 md:py-6 bg-gradient-to-r from-[#2c7a7b] to-[#38b2ac] rounded-full text-white font-display font-bold text-lg md:text-2xl shadow-[0_10px_30px_rgba(56,178,172,0.3)] hover:shadow-[0_15px_40px_rgba(56,178,172,0.5)] transition-all duration-300 hover:scale-105 active:scale-95 uppercase tracking-wider">
+           <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="group relative px-8 py-4 md:px-12 md:py-6 bg-gradient-to-r from-[#2c7a7b] to-[#38b2ac] rounded-full text-white font-display font-bold text-lg md:text-2xl shadow-[0_10px_30px_rgba(56,178,172,0.3)] hover:shadow-[0_15px_40px_rgba(56,178,172,0.5)] transition-all duration-300 hover:scale-105 active:scale-95 uppercase tracking-wider">
               {ctaLabel}
               {/* Shine effect on hover */}
               <div className="absolute inset-0 overflow-hidden rounded-full">

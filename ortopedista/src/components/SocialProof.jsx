@@ -101,7 +101,7 @@ export function SocialProof() {
           </div>
 
           {/* Button */}
-          <button className="btn-elite w-full py-5 group relative z-10">
+          <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-5 group relative z-10">
             <span className="relative z-10 font-display font-black text-[17px] uppercase tracking-wider">
               TAMBÉM QUERO ESSA TRANSFORMAÇÃO
             </span>

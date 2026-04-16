@@ -48,7 +48,7 @@ export function Hero() {
           </p>
 
           <div className="pt-1">
-            <button className="btn-elite shadow-2xl flex items-center justify-center gap-3 w-fit group animate-pulse-attention">
+            <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite shadow-2xl flex items-center justify-center gap-3 w-fit group animate-pulse-attention">
               {ctaPrimary}
               <div className="w-1 h-1 rounded-full bg-slate-900 group-hover:scale-150 transition-transform duration-300" />
             </button>
