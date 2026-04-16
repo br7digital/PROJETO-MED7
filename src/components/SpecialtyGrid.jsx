@@ -16,7 +16,7 @@ const specialties = [
     id: 'ortopedista',
     label: 'Traumatologia e Ortopedia',
     icon: Bone,
-    href: '/ortopedista',
+    href: '/ortopedista/',
     active: true,
     badge: null,
     description: 'Conteúdo clínico institucional para ortopedistas e traumatologistas.',
