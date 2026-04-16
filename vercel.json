@@ -1,15 +1,7 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "cleanUrls": true,
   "rewrites": [
-    {
-      "source": "/ortopedista/assets/(.*)",
-      "destination": "/ortopedista/dist/assets/$1"
-    },
-    {
-      "source": "/ortopedista/:path*",
-      "destination": "/ortopedista/dist/index.html"
-    }
+    { "source": "/ortopedista/(.*)", "destination": "/ortopedista/dist/$1" },
+    { "source": "/ortopedista", "destination": "/ortopedista/dist/index.html" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
