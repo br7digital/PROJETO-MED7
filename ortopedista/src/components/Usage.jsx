@@ -75,10 +75,17 @@ export function Usage() {
           <span className="text-[#00f2ff] text-[10px] font-bold tracking-[0.2em] uppercase mb-4 block animate-pulse">
             {overline}
           </span>
-          <h2 className="text-[clamp(26px,8vw,32px)] font-display font-bold text-white leading-[1.1] mb-6 whitespace-pre-line">
-            {title}
+          <h2 className="text-[clamp(26px,8vw,32px)] font-display font-bold text-white leading-[1.1] mb-6">
+            {title.split('\n').map((part, i, arr) => (
+              <React.Fragment key={i}>
+                <span className={i === arr.length - 1 ? "text-[#00f2ff]" : ""}>
+                  {part}
+                </span>
+                {i < arr.length - 1 && <br />}
+              </React.Fragment>
+            ))}
           </h2>
-          <p className="text-zinc-400 text-sm font-body leading-relaxed max-w-[280px] mx-auto">
+          <p className="text-zinc-200 text-sm font-body leading-relaxed max-w-[280px] mx-auto">
             {subheadline}
           </p>
         </div>
@@ -178,7 +185,7 @@ export function Usage() {
 
           {/* Footer Support Text */}
           <div className="text-center">
-            <p className="text-white/60 text-[11px] font-medium tracking-wide uppercase">
+            <p className="text-white/80 text-[11px] font-medium tracking-wide uppercase">
               {supportText}
             </p>
           </div>

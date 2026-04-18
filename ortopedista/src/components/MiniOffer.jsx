@@ -20,7 +20,7 @@ export function MiniOffer() {
 
         {/* Pricing Area */}
         <div className="text-center mb-6 relative z-10">
-          <p className="text-white/40 line-through text-xs font-display font-medium tracking-wider mb-1">De R$ 2.500,00</p>
+          <p className="text-white/70 line-through text-xs font-display font-medium tracking-wider mb-1">De R$ 2.500,00</p>
           <div className="flex items-center justify-center gap-1 drop-shadow-xl">
             <span className="text-white/80 text-xl font-display font-bold">R$</span>
             <span className="text-white text-[56px] leading-none font-display font-black tracking-tighter text-glow">97</span>
@@ -31,12 +31,17 @@ export function MiniOffer() {
               💰 Economize R$ 2.403,00
             </span>
           </div>
+          <div className="mt-3 text-center">
+            <span className="inline-block bg-white/5 px-4 py-1.5 rounded-full text-[#00f2ff] font-display font-medium text-[11px] border border-[#00f2ff]/20">
+              Ou 12x de R$ 9,68
+            </span>
+          </div>
         </div>
 
         {/* Button */}
         <div className="relative z-10">
           <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-4 !text-sm group shadow-[0_0_20px_rgba(0,242,255,0.2)] animate-pulse-attention">
-            <span className="relative z-10 uppercase tracking-widest font-black">QUERO GARANTIR AGORA</span>
+            <span className="relative z-10 uppercase tracking-[0.05em] md:tracking-widest font-black text-[clamp(12px,3.5vw,14px)] whitespace-nowrap">QUERO GARANTIR COM DESCONTO</span>
           </button>
         </div>
 

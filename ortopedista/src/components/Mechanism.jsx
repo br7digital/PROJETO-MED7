@@ -13,8 +13,13 @@ export function Mechanism() {
       <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-[#010816] to-transparent z-0" />
       <div className="container mx-auto px-6 relative z-10 flex flex-col items-center">
         <div className="text-center mb-8">
-          <h2 className="text-[clamp(24px,7vw,30px)] font-display font-bold text-white tracking-tight mb-4 drop-shadow-lg">
-            {title}
+          <h2 className="text-[clamp(24px,7vw,30px)] font-display font-bold text-white tracking-tight mb-4 drop-shadow-lg leading-[1.2]">
+            {title.split('\n').map((part, i) => (
+              <React.Fragment key={i}>
+                {i === 1 ? <span className="text-[#00f2ff]">{part}</span> : part}
+                {i === 0 && <br />}
+              </React.Fragment>
+            ))}
           </h2>
           <p className="text-white/80 text-[clamp(16px,4vw,18px)] font-body font-light">
             {subtitle}
@@ -73,10 +78,10 @@ export function Mechanism() {
 
         {/* CTA Button */}
         <div className="mt-16 md:mt-20 flex justify-center w-full">
-           <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="group relative px-8 py-4 md:px-12 md:py-6 bg-gradient-to-r from-[#2c7a7b] to-[#38b2ac] rounded-full text-white font-display font-bold text-lg md:text-2xl shadow-[0_10px_30px_rgba(56,178,172,0.3)] hover:shadow-[0_15px_40px_rgba(56,178,172,0.5)] transition-all duration-300 hover:scale-105 active:scale-95 uppercase tracking-wider">
+           <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="group relative w-[90%] sm:w-auto whitespace-nowrap px-4 py-4 md:px-12 md:py-6 bg-gradient-to-r from-[#2c7a7b] to-[#38b2ac] rounded-full text-white font-display font-bold text-[clamp(16px,5vw,24px)] md:text-2xl shadow-[0_10px_30px_rgba(56,178,172,0.3)] hover:shadow-[0_15px_40px_rgba(56,178,172,0.5)] transition-all duration-300 hover:scale-105 active:scale-95 uppercase tracking-wider overflow-hidden">
               {ctaLabel}
               {/* Shine effect on hover */}
-              <div className="absolute inset-0 overflow-hidden rounded-full">
+              <div className="absolute inset-0 rounded-full">
                 <div className="w-1/2 h-full bg-white/20 -skew-x-12 translate-x-[-150%] group-hover:translate-x-[250%] transition-transform duration-1000" />
               </div>
            </button>

@@ -36,7 +36,7 @@ export function Faq() {
                 <span className="text-zinc-200 font-medium text-sm pr-4">
                   {item.question}
                 </span>
-                <span className={`flex-shrink-0 w-6 h-6 rounded-full border border-white/10 flex items-center justify-center text-zinc-400 transition-transform duration-300 ${
+                <span className={`flex-shrink-0 w-6 h-6 rounded-full border border-white/10 flex items-center justify-center text-zinc-200 transition-transform duration-300 ${
                   openIndex === idx ? 'rotate-180 bg-white/10 text-white' : ''
                 }`}>
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -50,7 +50,7 @@ export function Faq() {
                   openIndex === idx ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="px-6 pb-6 pt-2 text-zinc-400 text-sm leading-relaxed border-t border-white/5">
+                <div className="px-6 pb-6 pt-2 text-zinc-200 text-sm leading-relaxed border-t border-white/5">
                   {item.answer}
                 </div>
               </div>
@@ -67,7 +67,7 @@ export function Faq() {
             <h3 className="text-white font-display font-bold text-xl mb-2">
               Ainda tem dúvidas?
             </h3>
-            <p className="text-zinc-400 text-sm font-body mb-8 max-w-[280px] mx-auto">
+            <p className="text-zinc-200 text-sm font-body mb-8 max-w-[280px] mx-auto">
               Nossa equipe está pronta para te atender e tirar qualquer tipo de dúvida.
             </p>
             
@@ -90,7 +90,7 @@ export function Faq() {
               {/* Close Button */}
               <button 
                 onClick={() => setIsModalOpen(false)}
-                className="absolute top-4 right-4 text-white/40 hover:text-white"
+                className="absolute top-4 right-4 text-white/70 hover:text-white"
               >
                 ✕
               </button>
@@ -102,7 +102,7 @@ export function Faq() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-display font-bold text-white mb-2 leading-tight">Suporte Protegido</h3>
-                <p className="text-zinc-400 text-[13px] leading-relaxed mb-4">
+                <p className="text-zinc-200 text-[13px] leading-relaxed mb-4">
                   Por se tratar de um produto de <strong>baixo valor</strong> (Low Ticket), nosso suporte via WhatsApp fica disponível <strong>imediatamente após a confirmação do pagamento</strong>, para dar atenção exclusiva aos alunos.
                 </p>
                 <div className="bg-[#00f2ff]/10 border border-[#00f2ff]/20 p-3 rounded-xl mb-2">

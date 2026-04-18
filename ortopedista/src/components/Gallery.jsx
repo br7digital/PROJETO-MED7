@@ -16,9 +16,14 @@ export function Gallery() {
         {/* Header */}
         <div className="text-center mb-10">
           <h2 className="text-[clamp(22px,6vw,26px)] font-display font-bold text-white mb-3">
-            {title}
+            {title.split('\n').map((part, i) => (
+              <React.Fragment key={i}>
+                {i === 1 ? <span className="text-[#00f2ff]">{part}</span> : part}
+                {i === 0 && <br />}
+              </React.Fragment>
+            ))}
           </h2>
-          <p className="text-zinc-400 text-sm max-w-xs mx-auto">
+          <p className="text-zinc-200 text-sm max-w-xs mx-auto">
             {description}
           </p>
         </div>
@@ -66,7 +71,7 @@ export function Gallery() {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00f2ff]"></span>
             </span>
             <span className="text-white/80 text-sm font-medium tracking-wide">
-              Novos posts adicionados semanalmente
+              Diversos formatos estruturados para dominar o algoritmo.
             </span>
           </div>
         </div>

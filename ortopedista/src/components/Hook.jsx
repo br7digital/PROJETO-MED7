@@ -34,7 +34,7 @@ export function Hook() {
                     <h3 className="text-xl font-display font-bold text-white leading-tight">
                       {pillar.title}
                     </h3>
-                    <p className="text-gray-400 text-xs font-body leading-tight mt-1">
+                    <p className="text-gray-200 text-xs font-body leading-tight mt-1">
                       {pillar.description}
                     </p>
                   </div>

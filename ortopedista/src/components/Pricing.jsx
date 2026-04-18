@@ -18,9 +18,13 @@ export function Pricing() {
         {/* Header */}
         <div className="text-center mb-12">
           <h2 className="text-[clamp(30px,8vw,36px)] font-display font-black text-white mb-4 leading-none tracking-tighter text-glow">
-            {title}
+            {title.split('\n').map((part, i) => (
+              <React.Fragment key={i}>
+                {i === 1 ? <span className="text-[#00f2ff] block">{part}</span> : part}
+              </React.Fragment>
+            ))}
           </h2>
-          <p className="text-white/40 font-body font-light text-sm tracking-wide">
+          <p className="text-white/70 font-body font-light text-sm tracking-wide">
             {subtitle}
           </p>
         </div>
@@ -66,7 +70,7 @@ export function Pricing() {
 
             {/* Pricing Area */}
             <div className="text-center">
-              <p className="text-white/40 line-through text-xs font-display font-medium tracking-wider mb-2">De R$ 2.500,00</p>
+              <p className="text-white/70 line-through text-xs font-display font-medium tracking-wider mb-2">De R$ 2.500,00</p>
               <div className="flex items-center justify-center gap-1 drop-shadow-xl mb-4">
                 <span className="text-white/80 text-3xl font-display font-bold">R$</span>
                 <span className="text-white text-[90px] leading-none font-display font-black tracking-tighter text-glow">97</span>
@@ -103,7 +107,7 @@ export function Pricing() {
           {/* Elite CTA Button */}
           <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="relative btn-elite w-full py-7 group overflow-hidden animate-pulse-attention shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:shadow-[0_0_40px_rgba(0,242,255,0.6)]">
             <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-[150%] skew-x-[-30deg] animate-[shimmer_2.5s_infinite]" />
-            <span className="relative z-10 text-[18px] uppercase tracking-widest font-black drop-shadow-md">QUERO MEU ACESSO AGORA</span>
+            <span className="relative z-10 text-[clamp(13.5px,4vw,18px)] uppercase tracking-[0.1em] md:tracking-widest font-black drop-shadow-md px-2 whitespace-nowrap">QUERO GARANTIR COM DESCONTO</span>
           </button>
 
           {/* Bottom Trust Indicators - Imported from MiniOffer */}
@@ -144,11 +148,7 @@ export function Pricing() {
               Acesse sua área de membros agora e teste a praticidade de ter todo seu conteúdo pronto.
             </p>
             <p>
-              Se por qualquer motivo você não sentir um aumento na sua autoridade, basta enviar um único e-mail em até 7 dias.
-            </p>
-            <p>
-              <strong className="text-[#00f2ff] block">Devolveremos cada centavo do seu investimento!</strong> 
-              <span className="block mt-1 text-[13px] text-white/40">Sem letras miúdas e sem ressentimentos.</span>
+              Se em até 7 dias você não sentir um aumento na sua autoridade, devolvemos cada centavo.
             </p>
           </div>
         </div>

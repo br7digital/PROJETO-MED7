@@ -29,13 +29,13 @@ export function Hero() {
         <div className="space-y-6 max-w-[360px]">
 
           {/* Elite Tag */}
-          <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-white/10 bg-black/20 backdrop-blur-xl">
+          <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#10B981]/30 bg-[#011a14]/60 backdrop-blur-xl shadow-[0_0_20px_rgba(16,185,129,0.25)]">
             <span className="relative flex h-2 w-2 mr-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00f2ff] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#00f2ff]"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10B981] opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#10B981]"></span>
             </span>
-            <span className="text-[#00f2ff] text-[10px] font-bold tracking-[0.2em] uppercase">
-              Elite Orthopedic Content
+            <span className="text-[#10B981] text-[10px] font-bold tracking-[0.2em] uppercase flex items-center">
+              CONFORMIDADE CFM <span className="text-white/20 mx-2 text-[12px] font-light">|</span> <span className="text-[#00f2ff]">ESTRATÉGIA DE ELITE</span>
             </span>
           </div>
 
@@ -78,17 +78,17 @@ export function Hero() {
         <div className="absolute bottom-10 left-0 w-full flex justify-around px-4 z-20 pointer-events-none">
           <div className="glass-panel px-3 py-2.5 rounded-xl shadow-elite animate-float flex flex-col items-center gap-1 border-white/20 bg-black/20">
             <span className="text-[#00f2ff] font-display font-black text-xs md:text-sm tracking-tighter">1.2K+</span>
-            <span className="text-white/40 text-[7px] md:text-[8px] font-bold uppercase tracking-widest">Envolvimento</span>
+            <span className="text-white/70 text-[7px] md:text-[8px] font-bold uppercase tracking-widest">Envolvimento</span>
           </div>
 
           <div className="glass-panel px-3 py-2.5 rounded-xl shadow-elite animate-float flex flex-col items-center gap-1 border-white/20 bg-black/20" style={{ animationDelay: '1s' }}>
             <span className="text-[#00f2ff] font-display font-black text-xs md:text-sm tracking-tighter">PREMIUM</span>
-            <span className="text-white/40 text-[7px] md:text-[8px] font-bold uppercase tracking-widest">Qualidade CGI</span>
+            <span className="text-white/70 text-[7px] md:text-[8px] font-bold uppercase tracking-widest">Qualidade CGI</span>
           </div>
 
           <div className="glass-panel px-3 py-2.5 rounded-xl shadow-elite animate-float flex flex-col items-center gap-1 border-white/20 bg-black/20" style={{ animationDelay: '2s' }}>
-            <span className="text-[#00f2ff] font-display font-black text-xs md:text-sm tracking-tighter">VITÁLICIO</span>
-            <span className="text-white/40 text-[7px] md:text-[8px] font-bold uppercase tracking-widest">Acesso Imediato</span>
+            <span className="text-[#00f2ff] font-display font-black text-xs md:text-sm tracking-tighter">VITALÍCIO</span>
+            <span className="text-white/70 text-[7px] md:text-[8px] font-bold uppercase tracking-widest">Acesso Imediato</span>
           </div>
         </div>
       </div>

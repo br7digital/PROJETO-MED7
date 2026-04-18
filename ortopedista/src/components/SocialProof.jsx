@@ -28,7 +28,7 @@ export function SocialProof() {
               <div className="text-[36px] font-display font-black text-white leading-none mb-1">
                 4.9/5
               </div>
-              <div className="text-[10px] text-white/50 uppercase tracking-widest font-bold">
+              <div className="text-[10px] text-white/80 uppercase tracking-widest font-bold">
                 847 Avaliações
               </div>
             </div>
@@ -102,7 +102,7 @@ export function SocialProof() {
 
           {/* Button */}
           <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-5 group relative z-10">
-            <span className="relative z-10 font-display font-black text-[17px] uppercase tracking-wider">
+            <span className="relative z-10 font-display font-black text-[clamp(14px,4vw,17px)] uppercase tracking-[0.05em] md:tracking-wider whitespace-nowrap">
               TAMBÉM QUERO ESSA TRANSFORMAÇÃO
             </span>
           </button>

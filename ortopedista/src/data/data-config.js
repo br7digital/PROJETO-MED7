@@ -3,9 +3,9 @@ export const landingData = {
     logoText: "MED7"
   },
   hero: {
-    headline: "Seu perfil não pode parecer comum.\nTenha vídeos que chamam atenção e posicionam você como referência.",
-    subheadline: "Visual animado, profissional e didático, pronto para postar no Instagram, TikTok e Reels — para gerar autoridade sem perder tempo criando tudo do zero.",
-    ctaPrimary: "QUERO AGORA",
+    headline: "Como os grandes nomes da Ortopedia e Traumatologia\nganham autoridade sem parecerem \"blogueiros\"?",
+    subheadline: "Substitua agências, ferramentas pagas e horas de gravação. Abandone os posts genéricos e use vídeos de alta fidelidade, prontos para postar, que transmitem sofisticação e autoridade técnica imediata.",
+    ctaPrimary: "QUERO MEU ACERVO DE ELITE",
     imageAlt: "Médico ortopedista usando celular para gravar conteúdo"
   },
   
@@ -54,9 +54,9 @@ export const landingData = {
   },
   
   mechanism: {
-    title: "Por que esse formato domina o feed",
+    title: "Por que esse formato\ndomina o feed",
     subtitle: "A combinação que faz o ortopedista ser visto, entendido e lembrado.",
-    ctaLabel: "QUERO NO MEU PERFIL",
+    ctaLabel: "DOMINAR MEU FEED",
     items: [
       { 
         label: "Personagem animado", 
@@ -80,14 +80,14 @@ export const landingData = {
   },
   
   usage: {
-    overline: "COMO O ORTOPEDISTA USA ISSO?",
-    title: "Recebe pronto.\nPosta rápido.\nSeu perfil parece maior.",
+    overline: "COMO O ORTOPEDISTA E TRAUMATOLOGISTA USA ISSO?",
+    title: "Seleciona o vídeo.\nPublica em segundos.\nTorna-se a referência.",
     subheadline: "Sem travar na criação, sem depender de improviso e sem perder tempo fazendo conteúdo do zero.",
     supportText: "Para Reels, Stories e posts de autoridade",
     chips: [
-      "Recebe pronto",
-      "Publica em minutos",
-      "Ganha autoridade"
+      "RECEBE PRONTO",
+      "PUBLICA EM MINUTOS",
+      "GANHA AUTORIDADE"
     ],
     carousel: [
       { id: 1, image: "/Post01.webp", label: "Para Feed" },
@@ -98,7 +98,7 @@ export const landingData = {
   },
   
   gallery: {
-    title: "Biblioteca de Alta Conversão",
+    title: "Biblioteca de\nAlta Conversão",
     description: "Posts validados que educam e vendem por você 24h por dia.",
     images: [
       { 
@@ -155,7 +155,7 @@ export const landingData = {
   },
   
   transformation: {
-    title: "A Revolução do seu Posicionamento",
+    title: "A Revolução do\nseu Posicionamento",
     subtitle: "Saia do amadorismo e assuma o controle da sua autoridade digital.",
     beforeText: "Posts genéricos, amadores e sem estratégia que afastam pacientes qualificados.",
     afterText: "Visual cinematográfico, autoridade instantânea e agenda lotada com o público certo.",
@@ -167,16 +167,16 @@ export const landingData = {
   },
   
   pricing: {
-    title: "O Seu Arsenal de Autoridade",
+    title: "O Seu Arsenal\nde Autoridade",
     subtitle: "Acesso vitalício ao pack de vídeos CGI que dominam o feed.",
     price: "97",
     installments: "12x de R$ 9,68",
     benefits: [
-      "Acesso Vitalício aos Vídeos CGI",
-      "Formatos Reels, Stories e Feed",
-      "Legendas Estratégicas Inclusas",
+      "Acesso Vitalício aos 50 Vídeos CGI",
+      "Diversos formatos estruturados",
+      "Bônus: 50 Legendas Estratégicas",
       "Guia de Postagem de Alta Conversão",
-      "Atualizações Gratuitas"
+      "Suporte Exclusivo para Alunos"
     ],
     guarantee: "Garantia incondicional de 7 dias."
   },
@@ -186,19 +186,19 @@ export const landingData = {
     questions: [
       {
         question: "Isso está de acordo com o CRM?",
-        answer: "Sim! Os conteúdos são puramente informativos e educativos, respeitando todas as normas de publicidade médica."
+        answer: "Sim. Os vídeos são anatômicos, educativos e não prometem resultados ou substituem consultas, respeitando as diretrizes de publicidade médica."
       },
       {
         question: "Preciso saber editar vídeos?",
-        answer: "Não. Os vídeos já estão prontos. Você só precisa postar ou adicionar o seu @ se desejar."
+        answer: "Não. Os vídeos já vêm prontos, renderizados e narrados. Basta baixar e postar no seu Instagram."
       },
       {
         question: "Serve para outras especialidades?",
-        answer: "Este pack é exclusivo e focado em Ortopedia e Traumatologia para garantir a máxima autoridade técnica."
+        answer: "Este pack foi desenhado com foco nas patologias e na rotina da Ortopedia e Traumatologia, garantindo máxima precisão anatômica para a área."
       },
       {
         question: "Como recebo o acesso?",
-        answer: "Imediatamente após o pagamento, você recebe os links de download e o guia no seu e-mail."
+        answer: "Imediatamente após a aprovação da compra, você receberá um e-mail com seus dados de login para acessar a área de membros e baixar todo o material."
       }
     ]
   }

@@ -21,8 +21,8 @@ export function Footer() {
 
         {/* Links (WCAG Compliant Contrast) */}
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-10 w-full">
-          <a href="#" className="text-zinc-400 text-[10px] uppercase font-black tracking-[0.15em] hover:text-[#00f2ff] transition-colors">Termos de Uso</a>
-          <a href="#" className="text-zinc-400 text-[10px] uppercase font-black tracking-[0.15em] hover:text-[#00f2ff] transition-colors">Políticas de Privacidade</a>
+          <a href="#" className="text-zinc-200 text-[10px] uppercase font-black tracking-[0.15em] hover:text-[#00f2ff] transition-colors">Termos de Uso</a>
+          <a href="#" className="text-zinc-200 text-[10px] uppercase font-black tracking-[0.15em] hover:text-[#00f2ff] transition-colors">Políticas de Privacidade</a>
         </div>
 
         {/* Disclaimer (WCAG Compliant Contrast: >4.5:1 against black) */}
@@ -32,7 +32,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="w-full pt-8 border-t border-zinc-800">
-          <p className="text-zinc-400 text-[11px] font-medium tracking-wide">
+          <p className="text-zinc-200 text-[11px] font-medium tracking-wide">
             © {currentYear} MED7 • Todos os direitos reservados.
           </p>
         </div>
