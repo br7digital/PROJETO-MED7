@@ -26,11 +26,15 @@ export function Mechanism() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-10 w-full max-w-2xl mt-12">
+        <div className="flex flex-col gap-10 w-full max-w-2xl mt-12 relative">
+          {/* Vertical Connecting Glow Line */}
+          <div className="absolute left-[35px] top-12 bottom-12 w-[2px] bg-gradient-to-b from-transparent via-[#00f2ff]/40 to-transparent z-0 shadow-[0_0_15px_rgba(0,242,255,0.5)] hidden md:block" />
+          <div className="absolute left-[35px] top-12 bottom-12 w-[2px] bg-gradient-to-b from-transparent via-[#00f2ff]/20 to-transparent z-0 md:hidden" />
+
           {items.map((item, idx) => (
             <div 
               key={idx}
-              className="group relative flex items-center bg-[#0d2a33]/60 backdrop-blur-xl border-2 border-[#22575e]/80 rounded-[1.5rem] p-4 transition-all duration-500 hover:border-[#38b2ac]/80 hover:bg-[#0d2a33]/80 shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:-translate-y-1 min-h-[100px]"
+              className="group relative flex items-center bg-[#0d2a33]/60 backdrop-blur-xl border-2 border-[#22575e]/80 rounded-[1.5rem] p-4 transition-all duration-500 hover:border-[#38b2ac]/80 hover:bg-[#0d2a33]/80 shadow-[0_20px_50px_rgba(0,0,0,0.3)] hover:-translate-y-1 min-h-[100px] z-10"
             >
               {/* 3D Icon Container - Overlapping left edge style */}
               <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-24 h-24 bg-[#133d45] border-2 border-[#2c6e76] rounded-[1.2rem] flex items-center justify-center p-4 shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-transform duration-500 group-hover:scale-105 group-hover:rotate-2 z-10 overflow-visible">
@@ -77,7 +81,7 @@ export function Mechanism() {
         </div>
 
         {/* CTA Button */}
-        <div className="mt-16 md:mt-20 flex justify-center w-full">
+        <div className="mt-20 md:mt-28 flex justify-center w-full relative z-20">
            <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="group relative w-[90%] sm:w-auto whitespace-nowrap px-4 py-4 md:px-12 md:py-6 bg-gradient-to-r from-[#2c7a7b] to-[#38b2ac] rounded-full text-white font-display font-bold text-[clamp(16px,5vw,24px)] md:text-2xl shadow-[0_10px_30px_rgba(56,178,172,0.3)] hover:shadow-[0_15px_40px_rgba(56,178,172,0.5)] transition-all duration-300 hover:scale-105 active:scale-95 uppercase tracking-wider overflow-hidden">
               {ctaLabel}
               {/* Shine effect on hover */}

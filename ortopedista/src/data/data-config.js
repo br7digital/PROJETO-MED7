@@ -60,7 +60,7 @@ export const landingData = {
     items: [
       { 
         label: "Personagem animado", 
-        sublabel: "Prende o olhar imediatamente e faz o conteúdo parar de parecer comum.", 
+        sublabel: "Prende o olhar imediatamente e rompe o padrão do scroll genérico.", 
         description: "",
         assetType: "attention" 
       },
