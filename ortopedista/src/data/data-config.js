@@ -72,9 +72,9 @@ export const landingData = {
         assetType: "understanding" 
       },
       { 
-        label: "Médico real", 
-        sublabel: "Transforma atenção em confiança e deixa o perfil mais convincente.", 
-        description: "",
+        label: "Precisão Cirúrgica", 
+        sublabel: "Demonstre seu domínio técnico com ativos validados.", 
+        description: "Substitua o amadorismo por modelos 3D de alta precisão que reforçam seu conhecimento profundo.",
         assetType: "conversion" 
       }
     ]

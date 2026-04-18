@@ -52,38 +52,36 @@ export function Mechanism() {
                        className="w-full h-full object-contain scale-[1.8] drop-shadow-[0_20px_30px_rgba(0,0,0,0.6)] relative z-20"
                      />
                    )}
-                   {item.assetType === 'conversion' && (
-                     <img 
-                       src="/doctor.webp" 
-                       alt="Conversão"
-                       className="w-full h-full object-contain scale-[1.8] drop-shadow-[0_20px_30px_rgba(0,0,0,0.6)] relative z-20"
-                     />
-                   )}
-              </div>
+                    {item.assetType === 'conversion' && (
+                      <img 
+                        src="/heartbeat.webp" 
+                        alt="Precisão"
+                        className="w-full h-full object-contain scale-[1.6] drop-shadow-[0_20px_30px_rgba(0,0,0,0.6)] relative z-20"
+                      />
+                    )}
+               </div>
 
-              {/* Text Content - Optimized for Mobile-Contained width */}
-              <div className="flex flex-col pl-[86px] pr-1 py-1">
-                <h3 className="text-lg font-display font-bold text-white mb-1 leading-tight">
-                  {item.label}: <span className="font-light text-white/90">{item.sublabel}</span>
-                </h3>
-                {item.description && (
-                  <p className="text-white/70 text-xs font-body font-light leading-snug">
-                    {item.description}
-                  </p>
-                )}
-              </div>
+               {/* Text Content - Optimized for Mobile-Contained width */}
+               <div className="flex flex-col pl-[86px] pr-1 py-1">
+                 <h3 className="text-lg font-display font-bold text-white mb-1 leading-tight">
+                   {item.label}: <span className="font-light text-white/90">{item.sublabel}</span>
+                 </h3>
+                 {item.description && (
+                   <p className="text-white/70 text-[11px] font-body font-light leading-snug">
+                     {item.description}
+                   </p>
+                 )}
+               </div>
             </div>
           ))}
         </div>
 
         {/* CTA Button */}
         <div className="mt-20 md:mt-28 flex justify-center w-full relative z-20">
-           <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="group relative w-[90%] sm:w-auto whitespace-nowrap px-4 py-4 md:px-12 md:py-6 bg-gradient-to-r from-[#2c7a7b] to-[#38b2ac] rounded-full text-white font-display font-bold text-[clamp(16px,5vw,24px)] md:text-2xl shadow-[0_10px_30px_rgba(56,178,172,0.3)] hover:shadow-[0_15px_40px_rgba(56,178,172,0.5)] transition-all duration-300 hover:scale-105 active:scale-95 uppercase tracking-wider overflow-hidden">
-              {ctaLabel}
-              {/* Shine effect on hover */}
-              <div className="absolute inset-0 rounded-full">
-                <div className="w-1/2 h-full bg-white/20 -skew-x-12 translate-x-[-150%] group-hover:translate-x-[250%] transition-transform duration-1000" />
-              </div>
+           <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-[90%] sm:w-auto px-10 py-6 shadow-[0_0_40px_rgba(0,242,255,0.3)] animate-pulse-attention">
+              <span className="relative z-10 uppercase tracking-widest font-black text-[clamp(14px,4vw,20px)] whitespace-nowrap">
+                {ctaLabel}
+              </span>
            </button>
         </div>
       </div>
