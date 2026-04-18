@@ -41,7 +41,7 @@ export function Hook() {
                   </div>
                   
                   <div className="flex-1 -ml-2 relative z-10 pr-1">
-                    <h3 className="text-[17px] md:text-xl font-display font-black text-white leading-[1.2] tracking-tighter">
+                    <h3 className="text-[19px] md:text-[22px] font-display font-black text-white leading-[1.3] tracking-tight">
                       {index === 0 && <>Acervo <span className="text-[#00f2ff]">Pronto para Postar</span></>}
                       {index === 1 && <>Estética de <span className="text-[#00f2ff]">Alta Fidelidade</span></>}
                       {index === 2 && <><span className="text-[#00f2ff]">Autoridade Instantânea</span></>}

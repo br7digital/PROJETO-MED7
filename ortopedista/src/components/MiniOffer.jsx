@@ -52,7 +52,7 @@ export function MiniOffer() {
 
           <div className="mt-7 mb-4">
             <p className="text-white/90 font-body text-[14px] md:text-[15px] font-medium leading-[1.6] w-full mx-auto drop-shadow-md px-1">
-              Economize mais de R$ 2.300 em custos de agência. Tenha o arsenal completo de um estúdio por uma fração do preço.
+              <span className="text-white font-bold">Economize mais de R$ 2.300</span> em custos de agência. Tenha o <span className="text-white font-bold">arsenal completo</span> de um estúdio por uma <span className="text-white font-bold">fração do preço</span>.
             </p>
           </div>
         </div>
