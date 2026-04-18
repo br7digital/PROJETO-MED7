@@ -162,12 +162,12 @@ export function Faq() {
 
         {/* Support Modal Overlay */}
         {isModalOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-md animate-fade-in">
-            <div className="bg-[#0b1627] border border-[#00f2ff]/30 rounded-3xl p-6 md:p-8 max-w-[340px] w-full shadow-[0_0_60px_rgba(0,0,0,1)] relative transform transition-all border-b-4 border-b-[#00f2ff]">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-md animate-fade-in" onClick={() => setIsModalOpen(false)}>
+            <div className="bg-[#0b1627] border border-[#00f2ff]/30 rounded-3xl p-6 md:p-8 max-w-[340px] w-full shadow-[0_0_60px_rgba(0,0,0,1)] relative transform transition-all border-b-4 border-b-[#00f2ff]" onClick={(e) => e.stopPropagation()}>
               {/* Close Button */}
-              <button
+              <button 
                 onClick={() => setIsModalOpen(false)}
-                className="absolute top-4 right-4 text-white/40 hover:text-white transition-colors"
+                className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white/60 hover:bg-white/20 hover:text-white transition-all text-lg font-bold z-30"
               >
                 ✕
               </button>
