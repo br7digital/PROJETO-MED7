@@ -12,7 +12,7 @@ export function Gallery() {
       <div className="absolute top-1/4 -right-24 w-64 h-64 bg-cyan-500/10 rounded-full blur-[80px] pointer-events-none" />
       <div className="absolute bottom-1/4 -left-24 w-64 h-64 bg-blue-500/10 rounded-full blur-[80px] pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10 w-full max-w-[480px]">
+      <div className="container mx-auto px-4 md:px-6 relative z-10 w-full max-w-[480px]">
         {/* Header */}
         <div className="text-center mb-10">
           <h2 className="text-[clamp(30px,8vw,36px)] font-display font-black text-white tracking-tighter mb-4 text-glow leading-[1.2]">

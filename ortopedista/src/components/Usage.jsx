@@ -194,7 +194,7 @@ export function Usage() {
           </div>
 
           {/* Matemática da Autoridade & CTA (Google AI Conversion Tactic) */}
-          <div className="relative w-full max-w-[420px] mx-auto p-7 md:p-10 rounded-[32px] bg-[#020a18]/90 backdrop-blur-3xl border border-emerald-500/30 shadow-[0_20px_40px_rgba(0,0,0,0.6)] flex flex-col items-center">
+          <div className="relative w-full max-w-[420px] mx-auto p-5 md:p-10 rounded-[32px] bg-[#020a18]/90 backdrop-blur-3xl border border-emerald-500/30 shadow-[0_20px_40px_rgba(0,0,0,0.6)] flex flex-col items-center">
             
             <div className="flex justify-center mb-6 w-full px-2">
                <span className="text-emerald-400 font-bold text-[10px] md:text-[11px] uppercase tracking-[0.15em] bg-emerald-500/10 px-4 py-2 rounded-full border border-emerald-500/20 shadow-inner text-center block w-fit whitespace-nowrap">

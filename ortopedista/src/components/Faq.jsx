@@ -12,7 +12,7 @@ export function Faq() {
 
   return (
     <section className="relative pt-4 pb-16 bg-gradient-to-b from-[#020c1a] to-[#01050d] overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10 w-full max-w-[480px]">
+      <div className="container mx-auto px-4 md:px-6 relative z-10 w-full max-w-[480px]">
         {/* Header */}
         <div className="text-center mb-10">
           <h2 className="text-[clamp(30px,8vw,36px)] font-display font-black text-white leading-none tracking-tighter text-glow">
@@ -59,7 +59,7 @@ export function Faq() {
 
         {/* Highlighted Support CTA */}
         <div className="mt-16">
-          <div className="bg-gradient-to-b from-[#0b1627] to-[#010612] border border-[#00f2ff]/20 rounded-3xl p-8 relative overflow-hidden text-center shadow-[0_0_30px_rgba(0,242,255,0.05)]">
+          <div className="bg-gradient-to-b from-[#0b1627] to-[#010612] border border-[#00f2ff]/20 rounded-3xl p-5 md:p-8 relative overflow-hidden text-center shadow-[0_0_30px_rgba(0,242,255,0.05)]">
             {/* Glow effect */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-[#00f2ff] shadow-[0_0_20px_rgba(0,242,255,1)]" />
             
@@ -87,7 +87,7 @@ export function Faq() {
         {/* Background Glow Overlay */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[110%] bg-[#00f2ff]/5 blur-[100px] rounded-full pointer-events-none" />
         
-        <div className="bg-gradient-to-b from-[#0f1a2a] to-[#010612] rounded-[48px] p-8 md:p-12 pt-16 md:pt-24 border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.8)] backdrop-blur-2xl flex flex-col items-center relative overflow-visible group">
+        <div className="bg-gradient-to-b from-[#0f1a2a] to-[#010612] rounded-[48px] p-5 md:p-12 pt-16 md:pt-24 border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.8)] backdrop-blur-2xl flex flex-col items-center relative overflow-visible group">
           {/* Internal Accent Border */}
           <div className="absolute inset-0 border border-white/5 rounded-[48px] m-1.5 pointer-events-none" />
           

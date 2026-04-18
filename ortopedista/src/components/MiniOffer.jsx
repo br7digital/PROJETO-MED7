@@ -15,7 +15,7 @@ export function MiniOffer() {
         </span>
       </div>
 
-      <div className="relative w-full max-w-sm mx-auto glass-card px-5 py-7 sm:p-6 rounded-[32px] overflow-hidden group bg-[#081221]/95 backdrop-blur-3xl shadow-[0_15px_30px_rgba(0,0,0,0.5)] border-white/10">
+      <div className="relative w-full max-w-sm mx-auto glass-card px-4 py-6 sm:p-6 rounded-[32px] overflow-hidden group bg-[#081221]/95 backdrop-blur-3xl shadow-[0_15px_30px_rgba(0,0,0,0.5)] border-white/10">
         
         {/* Glow effect */}
         <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#00f2ff]/10 blur-[40px] group-hover:bg-[#00f2ff]/20 transition-colors duration-700 pointer-events-none" />

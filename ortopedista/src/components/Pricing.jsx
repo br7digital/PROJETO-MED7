@@ -14,7 +14,7 @@ export function Pricing() {
       {/* Intense glow at bottom for CTA focus */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-[#00f2ff]/5 blur-[120px] pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10 w-full max-w-[480px] flex flex-col items-center">
+      <div className="container mx-auto px-4 md:px-6 relative z-10 w-full max-w-[480px] flex flex-col items-center">
         {/* Header */}
         <div className="text-center mb-8">
           <h2 className="text-[clamp(30px,8vw,36px)] font-display font-black text-white mb-4 leading-none tracking-tighter text-glow">
@@ -77,7 +77,7 @@ export function Pricing() {
         </div>
 
         {/* Elite Pricing Card */}
-        <div className="relative w-full px-8 py-10 pt-14 glass-card rounded-[40px] overflow-hidden group z-30 bg-[#0b1627]/95 backdrop-blur-3xl shadow-[0_-20px_40px_rgba(0,0,0,0.6)]">
+        <div className="relative w-full px-5 md:px-8 py-10 pt-14 glass-card rounded-[40px] overflow-hidden group z-30 bg-[#0b1627]/95 backdrop-blur-3xl shadow-[0_-20px_40px_rgba(0,0,0,0.6)]">
 
           {/* Decorative Corner Glow */}
           <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#00f2ff]/20 blur-[40px] group-hover:bg-[#00f2ff]/30 transition-colors duration-700 pointer-events-none" />
@@ -158,7 +158,7 @@ export function Pricing() {
         </div>
 
         {/* Elite Guarantee Block - CERTIFICATE STYLE */}
-        <div className="mt-32 md:mt-40 relative px-6 md:px-10 py-16 md:py-24 bg-[#010815]/95 rounded-[32px] text-center flex flex-col items-center border border-white/10 shadow-[0_30px_70px_rgba(0,0,0,0.7)] backdrop-blur-3xl overflow-visible">
+        <div className="mt-32 md:mt-40 relative px-4 md:px-10 py-16 md:py-24 bg-[#010815]/95 rounded-[32px] text-center flex flex-col items-center border border-white/10 shadow-[0_30px_70px_rgba(0,0,0,0.7)] backdrop-blur-3xl overflow-visible">
           {/* Background Layers Container (Handles pattern clipping while allowing seal to overflow) */}
           <div className="absolute inset-0 rounded-[32px] overflow-hidden pointer-events-none">
             {/* Security Grid Background Pattern */}

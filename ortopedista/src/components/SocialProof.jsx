@@ -9,7 +9,7 @@ export function SocialProof() {
       {/* Background Ambient Glows */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle,rgba(0,242,255,0.03)_0%,transparent_70%)] pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10 w-full max-w-[480px]">
+      <div className="container mx-auto px-4 md:px-6 relative z-10 w-full max-w-[480px]">
 
         {/* Header Section */}
         <div className="mb-14">
