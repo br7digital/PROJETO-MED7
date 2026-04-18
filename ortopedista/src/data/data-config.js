@@ -185,20 +185,36 @@ export const landingData = {
     title: "Dúvidas Frequentes",
     questions: [
       {
-        question: "Isso está de acordo com o CRM?",
-        answer: "Sim. Os vídeos são anatômicos, educativos e não prometem resultados ou substituem consultas, respeitando as diretrizes de publicidade médica."
+        question: "Isso está de acordo com as normas médicas do CFM?",
+        answer: "Sim. Totalmente adequado à <strong class=\"text-white font-bold\">Resolução CFM 2.336/23</strong>. Os vídeos possuem caráter estritamente anatômico e educativo, sem promessas de resultados ou exposição de pacientes, garantindo sua <strong class=\"text-white\">segurança jurídica</strong>."
+      },
+      {
+        question: "Preciso de softwares pagos ou do Canva Pro?",
+        answer: "Não. Todos os ativos foram projetados para serem <strong class=\"text-[#00f2ff] font-bold\">100% compatíveis com as versões gratuitas</strong> do Canva e das principais ferramentas do mercado. Você não terá nenhum custo extra com softwares."
       },
       {
         question: "Preciso saber editar vídeos?",
-        answer: "Não. Os vídeos já vêm prontos, renderizados e narrados. Basta baixar e postar no seu Instagram."
+        answer: "De forma alguma. Os vídeos já vêm prontos, renderizados e narrados. <strong class=\"text-white\">Basta baixar o arquivo e publicar</strong> diretamente no seu Instagram, TikTok ou Reels. O processo foi feito para quem não tem tempo a perder."
       },
       {
-        question: "Serve para outras especialidades?",
-        answer: "Este pack foi desenhado com foco nas patologias e na rotina da Ortopedia e Traumatologia, garantindo máxima precisão anatômica para a área."
+        question: "O acesso é imediato?",
+        answer: "Exatamente. O protocolo de acesso é enviado automaticamente para seu e-mail no ato da confirmação do pagamento. <strong class=\"text-white\">Para PIX e Cartão, a liberação ocorre em tempo real</strong>."
       },
       {
-        question: "Como recebo o acesso?",
-        answer: "Imediatamente após a aprovação da compra, você receberá um e-mail com seus dados de login para acessar a área de membros e baixar todo o material."
+        question: "Terei custos contínuos ou mensalidades?",
+        answer: "Este investimento garante o acesso permanente ao <strong class=\"text-[#00f2ff] font-bold\">Pack Atual de Lançamento</strong>. Você não terá cobranças automáticas para manter este material. Futuramente, ofereceremos planos de assinatura opcionais para quem desejar receber novos vídeos exclusivos todos os meses."
+      },
+      {
+        question: "O conteúdo deste pack é atualizado?",
+        answer: "O acervo que você adquire hoje é completo e pronto para uso imediato. Como cliente deste primeiro lote, você terá <strong class=\"text-white font-bold\">condições especiais</strong> caso decida migrar para nosso futuro <strong class=\"text-white\">Plano de Assinatura</strong>, garantindo novos conteúdos de elite mensalmente."
+      },
+      {
+        question: "Serve para outras especialidades além de Ortopedia?",
+        answer: "Não. Este pack é <strong class=\"text-[#00f2ff]\">ultra-específico</strong> para a rotina e patologias da Ortopedia e Traumatologia, garantindo a máxima precisão anatômica necessária para a sua área de atuação."
+      },
+      {
+        question: "Como funciona a garantia de reembolso?",
+        answer: "Oferecemos <strong class=\"text-emerald-400 font-bold drop-shadow-[0_0_5px_rgba(52,211,153,0.3)]\">7 dias de garantia incondicional</strong>. Se o material não atender ao seu padrão de exigência técnica ou estética, basta um e-mail para o suporte e devolvemos 100% do seu investimento. Sem perguntas."
       }
     ]
   }

@@ -157,8 +157,25 @@ export function Pricing() {
           </div>
         </div>
 
+
+        {/* Compliance Block (Jurídico e CFM) */}
+        <div className="mt-16 relative w-full flex flex-col items-center text-center px-4 py-8 bg-[#010815]/80 rounded-[24px] border border-[#00f2ff]/10 shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
+          <div className="flex items-center gap-3 mb-3 relative z-10">
+            <span className="text-lg drop-shadow-[0_0_8px_rgba(0,242,255,0.6)]">⚖️</span>
+            <h4 className="text-[#00f2ff] font-display font-bold text-[11px] md:text-sm tracking-widest uppercase drop-shadow-md">
+              Segurança Jurídica e Ética Médica
+            </h4>
+          </div>
+          <p className="text-white font-black font-display text-[15px] md:text-lg mb-4 tracking-wide relative z-10">
+            Conformidade com a Resolução CFM nº 2.336/23
+          </p>
+          <p className="text-white/75 font-body text-[12px] md:text-sm leading-relaxed max-w-[420px] relative z-10">
+            Protocolize sua comunicação digital com total segurança. Nossos ativos visuais foram desenvolvidos para estar <strong className="text-white">100% alinhados às novas diretrizes do CFM</strong>, permitindo que você ganhe autoridade sem riscos éticos.
+          </p>
+        </div>
+
         {/* Elite Guarantee Block */}
-        <div className="mt-16 relative p-8 md:p-10 glass-panel rounded-[32px] text-center flex flex-col items-center overflow-hidden border border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
+        <div className="mt-12 relative p-8 md:p-10 glass-panel rounded-[32px] text-center flex flex-col items-center overflow-hidden border border-white/5 shadow-[0_20px_50px_rgba(0,0,0,0.5)]">
           <div className="absolute inset-0 bg-gradient-to-b from-[#00f2ff]/5 to-transparent pointer-events-none" />
           
           <div className="w-36 h-36 flex items-center justify-center relative z-10 mb-4">
@@ -169,16 +186,16 @@ export function Pricing() {
             />
           </div>
           
-          <h3 className="text-white font-display font-black text-2xl tracking-tighter z-10 mb-3 text-glow">
-            Garantia Blindada Incondicional
+          <h3 className="text-white font-display font-black text-lg md:text-xl tracking-tighter z-10 mb-1 drop-shadow-md text-center max-w-[90%]">
+            GARANTIA DE EXCELÊNCIA OU REEMBOLSO INTEGRAL
           </h3>
-          <div className="flex flex-col gap-4 text-white/70 text-[14px] font-body px-2 leading-relaxed max-w-[380px] relative z-10">
+          <p className="text-[#00f2ff] font-display font-bold text-[11px] uppercase tracking-widest mb-5 z-10 drop-shadow-[0_0_8px_rgba(0,242,255,0.4)]">
+            7 Dias de Proteção Total
+          </p>
+          <div className="flex flex-col text-white/70 text-[13px] md:text-[14px] font-body px-4 leading-relaxed max-w-[420px] relative z-10">
             <p>
-              <strong className="text-white block text-[16px] mb-1">Nós assumimos 100% do risco.</strong> 
-              Acesse sua área de membros agora e teste a praticidade de ter todo seu conteúdo pronto.
-            </p>
-            <p>
-              Se em até 7 dias você não sentir um aumento na sua autoridade, devolvemos cada centavo.
+              <strong className="text-white font-medium block mb-2 opacity-90">Comprometidos com o mais alto padrão de entrega.</strong>
+              Caso nosso arsenal visual não atenda à sua exigência de qualidade técnica ou estética, devolvemos 100% do seu investimento em até <strong className="text-white font-bold drop-shadow-[0_0_5px_rgba(255,255,255,0.4)]">7 dias</strong>. Sem burocracia e sem perguntas.
             </p>
           </div>
         </div>
