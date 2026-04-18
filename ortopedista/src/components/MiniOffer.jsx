@@ -50,8 +50,8 @@ export function MiniOffer() {
             </span>
           </div>
 
-          <div className="mt-7 mb-4 px-2">
-            <p className="text-white/90 font-body text-[14px] md:text-[15px] font-medium leading-[1.6] max-w-[300px] mx-auto drop-shadow-md">
+          <div className="mt-7 mb-4 px-0">
+            <p className="text-white/90 font-body text-[15px] md:text-[16px] font-medium leading-[1.6] w-full mx-auto drop-shadow-md px-1">
               Economize mais de R$ 2.300 em custos de agência. Tenha o arsenal completo de um estúdio por uma fração do preço.
             </p>
           </div>
