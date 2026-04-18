@@ -205,7 +205,7 @@ export function Faq() {
                     CONCORDAR E ACESSAR
                   </button>
                   {/* Dr. Osso peeking */}
-                  <div className="absolute -bottom-5 -right-3 w-14 h-auto pointer-events-none z-20">
+                  <div className="absolute -bottom-10 -right-4 w-20 h-auto pointer-events-none z-20">
                     <img
                       src="/dr osso avaliar.webp"
                       alt="Dr. Osso"
