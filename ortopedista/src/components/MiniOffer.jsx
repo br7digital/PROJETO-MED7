@@ -64,10 +64,12 @@ export function MiniOffer() {
               QUERO GARANTIR COM DESCONTO
             </span>
           </button>
-          <p className="text-center text-[#00f2ff]/90 font-medium text-[12px] md:text-[14px] font-display tracking-tight mt-1.5 max-w-[280px]">
-            <span className="inline-block w-2 h-2 rounded-full bg-[#10B981] animate-pulse mr-2 relative -top-[0.5px]"></span>
-            Condição especial para os primeiros acessos.
-          </p>
+          <div className="w-full flex justify-center mt-2 px-1">
+            <div className="flex items-center gap-1.5 text-[#00f2ff]/90 font-medium text-[12px] md:text-[14px] font-display tracking-tighter sm:tracking-tight">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse flex-shrink-0"></span>
+              <span>Condição especial para os primeiros acessos.</span>
+            </div>
+          </div>
         </div>
 
         {/* Bottom Trust Indicators matched from Pricing */}
