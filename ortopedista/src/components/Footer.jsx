@@ -10,10 +10,14 @@ export function Footer() {
       <div className="container mx-auto px-6 w-full max-w-[480px] text-center flex flex-col items-center">
 
         {/* Brand Identity */}
-        <div className="flex flex-col items-center gap-3 mb-10">
+        <a 
+          href="#" 
+          onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+          className="flex flex-col items-center gap-3 mb-10 group cursor-pointer hover:opacity-80 transition-opacity"
+        >
           {/* Main Logo */}
           <div className="flex items-center justify-center gap-3">
-            <div className="p-2 bg-[#00f2ff]/10 rounded-[10px] shadow-[0_0_15px_rgba(0,242,255,0.1)]">
+            <div className="p-2 bg-[#00f2ff]/10 rounded-[10px] shadow-[0_0_15px_rgba(0,242,255,0.1)] group-hover:bg-[#00f2ff]/20 transition-colors">
               <Activity className="w-5 h-5 text-[#00f2ff]" />
             </div>
             <span className="font-display font-black text-[22px] text-white tracking-widest uppercase drop-shadow-md">
@@ -21,14 +25,14 @@ export function Footer() {
             </span>
           </div>
           {/* Sub-logo: Acervo Visual */}
-          <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5">
+          <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 group-hover:border-[#00f2ff]/30 transition-colors">
             <svg className="w-3.5 h-3.5 text-[#00f2ff]/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polygon points="23 7 16 12 23 17 23 7" />
               <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
             </svg>
             <span className="text-white/50 text-[10px] font-display font-semibold tracking-[0.2em] uppercase">Acervo Visual</span>
           </div>
-        </div>
+        </a>
 
         {/* Links (WCAG Compliant Contrast) */}
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-10 w-full">
