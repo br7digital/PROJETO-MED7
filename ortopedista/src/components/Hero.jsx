@@ -19,15 +19,28 @@ export function Hero() {
     };
 
     return (
-      <div className="flex flex-col gap-0.5">
-        <span className="text-white drop-shadow-lg leading-[1.15]">{parts[0]}</span>
+      <div className="flex flex-col gap-1.5">
+        <span className="text-white drop-shadow-lg leading-[1.2]">{parts[0]}</span>
         {parts[1] && (
-          <span className="text-white drop-shadow-md font-extrabold tracking-tight leading-[1.15]">
+          <span className="text-white drop-shadow-md font-extrabold tracking-tight leading-[1.25]">
             {highlightWords(parts[1])}
           </span>
         )}
       </div>
     );
+  };
+
+  const renderSubheadline = () => {
+    const splitIndex = subheadline.indexOf('.') + 1;
+    if (splitIndex > 0) {
+      return (
+        <>
+          <span className="font-semibold text-white/95">{subheadline.substring(0, splitIndex)}</span>
+          {subheadline.substring(splitIndex)}
+        </>
+      );
+    }
+    return subheadline;
   };
 
   return (
@@ -40,26 +53,17 @@ export function Hero() {
       <div className="relative z-30 w-full px-5 pt-[85px] sm:pt-[100px] pb-0">
         <div className="space-y-5 max-w-md md:max-w-[520px]">
 
-          {/* Elite Tag */}
-          <div className="inline-flex items-center px-4 py-2 rounded-full border border-[#10B981]/50 bg-[#011a14]/80 backdrop-blur-xl shadow-[0_0_25px_rgba(16,185,129,0.35)]">
-            <span className="relative flex h-2.5 w-2.5 mr-3">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10B981] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#10B981]"></span>
-            </span>
-            <span className="text-[#10B981] text-[11px] md:text-xs font-bold tracking-[0.2em] uppercase flex items-center drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]">
-              CONFORMIDADE CFM <span className="text-white/20 mx-2 text-[12px] font-light">|</span> <span className="text-[#00f2ff] drop-shadow-[0_0_5px_rgba(0,242,255,0.6)]">ESTRATÉGIA DE ELITE</span>
-            </span>
-          </div>
+          {/* Title now opens the page */}
 
-          <h1 className="text-[clamp(24px,7vw,40px)] font-display text-white tracking-tight font-extrabold !leading-[1.15] drop-shadow-md">
+          <h1 className="text-[clamp(24px,7vw,40px)] font-display text-white tracking-tight font-extrabold !leading-[1.25] drop-shadow-md">
             {renderHeadline()}
           </h1>
 
           <p className="text-[clamp(15px,4vw,17px)] text-white/80 font-body font-light leading-relaxed max-w-[350] drop-shadow-md">
-            {subheadline}
+            {renderSubheadline()}
           </p>
 
-          <div className="pt-1 flex flex-col gap-3">
+          <div className="pt-2 pb-8 sm:pb-12 flex flex-col gap-3 relative z-20">
             <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite shadow-2xl flex items-center justify-center gap-3 w-fit group animate-pulse-attention">
               {ctaPrimary}
               <div className="w-1 h-1 rounded-full bg-slate-900 group-hover:scale-150 transition-transform duration-300" />
