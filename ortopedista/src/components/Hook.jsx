@@ -40,11 +40,13 @@ export function Hook() {
                      <img src={icons[index]} className="w-full h-full object-contain drop-shadow-[5px_15px_25px_rgba(0,0,0,0.6)] scale-125 transition-transform duration-700 group-hover:scale-[1.35]" alt="" />
                   </div>
                   
-                  <div className="flex-1 -ml-2 relative z-10">
-                    <h3 className="text-[17px] md:text-xl font-display font-black text-white leading-[1.1] tracking-tighter">
-                      {pillar.title}
+                  <div className="flex-1 -ml-2 relative z-10 pr-1">
+                    <h3 className="text-[17px] md:text-xl font-display font-black text-white leading-[1.2] tracking-tighter">
+                      {index === 0 && <>Acervo <span className="text-[#00f2ff]">Pronto para Postar</span></>}
+                      {index === 1 && <>Estética de <span className="text-[#00f2ff]">Alta Fidelidade</span></>}
+                      {index === 2 && <><span className="text-[#00f2ff]">Autoridade Instantânea</span></>}
                     </h3>
-                    <p className="text-gray-200 text-[11px] md:text-xs font-body leading-relaxed mt-2 opacity-90 max-w-[180px]">
+                    <p className="text-gray-200 text-[13px] md:text-sm font-body leading-relaxed mt-2 opacity-95 max-w-[195px]">
                       {pillar.description}
                     </p>
                   </div>
