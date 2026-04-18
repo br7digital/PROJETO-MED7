@@ -30,19 +30,22 @@ export function Pricing() {
         </div>
 
         {/* Analytical Value Stack (Google AI Skeptical Conversion) */}
-        <div className="w-full bg-[#11151c]/90 rounded-3xl p-6 mb-10 border border-[#00f2ff]/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)] relative z-20 backdrop-blur-md">
-          <h3 className="text-white font-display font-bold text-center mb-5 text-[10px] uppercase tracking-[0.15em] text-emerald-400">O Custo Oculto da Produção Tradicional</h3>
+        <div className="w-full bg-[#11151c]/90 rounded-3xl p-6 mb-16 md:mb-20 border border-[#00f2ff]/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)] relative z-20 backdrop-blur-md">
+          <h3 className="text-white font-display font-bold text-center mb-2 text-[10px] uppercase tracking-[0.15em] text-emerald-400">O Custo Oculto da Produção Tradicional</h3>
+          <p className="text-white/60 text-center font-body text-[11px] leading-snug mb-5 max-w-[90%] mx-auto block">
+            Se você fosse assinar as ferramentas de IA, contratar editores e gastar horas criando roteiros técnicos do zero, seu investimento seria este:
+          </p>
           <ul className="space-y-3 font-body text-xs text-white/70">
             <li className="flex justify-between items-center border-b border-white/5 pb-2">
-              <span>Produção de 100 Vídeos (Agência)</span>
+              <span>Produção CGI e Renderização IA</span>
               <span className="font-semibold text-white/90">R$ 1.500,00</span>
             </li>
             <li className="flex justify-between items-center border-b border-white/5 pb-2">
-              <span>Roteirização Técnica Especializada</span>
+              <span>Roteirização Técnica e Estratégica</span>
               <span className="font-semibold text-white/90">R$ 600,00</span>
             </li>
             <li className="flex justify-between items-center border-b border-white/5 pb-2">
-              <span>Licenciamento de Banco 3D Médico</span>
+              <span>Edição e Pós-Produção Digital</span>
               <span className="font-semibold text-white/90">R$ 400,00</span>
             </li>
             <li className="flex justify-between items-center pt-2">

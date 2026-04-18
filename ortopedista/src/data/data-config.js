@@ -175,7 +175,7 @@ export const landingData = {
       "Acesso Vitalício aos 50 Vídeos CGI",
       "Diversos formatos estruturados",
       "Bônus: 50 Legendas Estratégicas",
-      "Guia de Postagem de Alta Conversão",
+      "Protocolo de Postagem e Posicionamento",
       "Suporte Exclusivo para Alunos"
     ],
     guarantee: "Garantia incondicional de 7 dias."
