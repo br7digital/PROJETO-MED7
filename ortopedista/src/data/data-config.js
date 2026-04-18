@@ -98,8 +98,8 @@ export const landingData = {
   },
   
   gallery: {
-    title: "Biblioteca de\nAlta Conversão",
-    description: "Posts validados que educam e vendem por você 24h por dia.",
+    title: "Inventário Visual\nEstratégico",
+    description: "Conteúdo tecnicamente preciso e adaptado para todos os formatos das redes sociais.",
     images: [
       { 
         title: "Destaque: Anatomia 3D", 
@@ -107,22 +107,22 @@ export const landingData = {
         type: "feature" 
       },
       { 
-        title: "Post Educativo", 
+        title: "Educação de Pacientes", 
         imageUrl: "/OSSO.webp", 
         type: "standard" 
       },
       { 
-        title: "Dica de Saúde", 
+        title: "Orientações Clínicas", 
         imageUrl: "/heartbeat.webp", 
         type: "standard" 
       },
       { 
-        title: "Vídeo de Autoridade", 
+        title: "Posicionamento Técnico", 
         imageUrl: "/doctor.webp", 
         type: "standard" 
       },
       { 
-        title: "Reels Viral", 
+        title: "Alcance Qualificado", 
         imageUrl: "/reels.webp", 
         type: "standard" 
       }

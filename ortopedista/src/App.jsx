@@ -20,9 +20,9 @@ function App() {
         <MiniOffer />
         <Hook />
         <Usage />
+        <Gallery />
         <Mechanism />
         <SocialProof />
-        <Gallery />
         <Pricing />
         <Faq />
         <Footer />
