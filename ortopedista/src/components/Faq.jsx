@@ -83,41 +83,73 @@ export function Faq() {
       </div>
 
       {/* Final CTA Mini-Card (Skeptical Final Hook) */}
-      <div className="mt-16 text-center border-t border-white/5 pt-12 relative z-10 w-full max-w-[420px] mx-auto pb-4">
-        <div className="bg-[#11151c]/95 rounded-[32px] p-8 md:p-10 border border-[#00f2ff]/20 shadow-[0_15px_40px_rgba(0,0,0,0.6)] backdrop-blur-xl flex flex-col items-center text-center">
+      <div className="mt-20 text-center relative z-10 w-full max-w-[450px] mx-auto pb-12">
+        {/* Background Glow Overlay */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[110%] bg-[#00f2ff]/5 blur-[100px] rounded-full pointer-events-none" />
+        
+        <div className="bg-gradient-to-b from-[#0f1a2a] to-[#010612] rounded-[48px] p-8 md:p-12 pt-16 md:pt-24 border border-white/10 shadow-[0_25px_60px_rgba(0,0,0,0.8)] backdrop-blur-2xl flex flex-col items-center relative overflow-visible group">
+          {/* Internal Accent Border */}
+          <div className="absolute inset-0 border border-white/5 rounded-[48px] m-1.5 pointer-events-none" />
           
-          {/* Tech SVG Hexagon Seal */}
-          <div className="w-20 h-20 mb-6 drop-shadow-[0_0_15px_rgba(0,242,255,0.4)] text-[#00f2ff] relative">
-            <svg viewBox="0 0 100 100" fill="none" className="w-full h-full animate-[spin_15s_linear_infinite] opacity-50 absolute inset-0">
-              <polygon points="50 3 93 25 93 75 50 97 7 75 7 25" stroke="currentColor" strokeWidth="1" strokeDasharray="4 4" />
+          {/* Cyber-Vault Security Seal - OVERLAPPING POSITION */}
+          <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-24 h-24 flex items-center justify-center">
+            {/* Rotate Right Layer */}
+            <svg className="absolute inset-0 w-full h-full animate-[spin_12s_linear_infinite] opacity-25" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="48" stroke="#00f2ff" strokeWidth="0.5" strokeDasharray="3 6" fill="none" />
             </svg>
-            <svg viewBox="0 0 100 100" fill="none" className="w-full h-full relative z-10">
-              <polygon points="50 5 90 27 90 73 50 95 10 73 10 27" stroke="currentColor" strokeWidth="2" />
-              <circle cx="50" cy="50" r="18" fill="currentColor" fillOpacity="0.1" stroke="currentColor" strokeWidth="1" />
-              <text x="50" y="56" textAnchor="middle" fill="currentColor" fontSize="22" fontWeight="900" fontFamily="sans-serif">7D</text>
+            {/* Rotate Left Layer */}
+            <svg className="absolute inset-0 w-full h-full animate-[spin_18s_linear_infinite_reverse] opacity-40" viewBox="0 0 100 100" style={{ transform: 'scale(0.82)' }}>
+              <circle cx="50" cy="50" r="48" stroke="#00f2ff" strokeWidth="1" strokeDasharray="12 18" fill="none" />
             </svg>
-          </div>
-
-          <h3 className="text-white font-display font-bold text-[20px] md:text-[22px] mb-3 leading-snug tracking-tight drop-shadow-md px-2">
-            Pronto para elevar o nível do seu <span className="text-[#00f2ff]">posicionamento?</span>
-          </h3>
-          <p className="text-white/80 font-body text-[14px] md:text-[15px] mb-8 leading-relaxed max-w-[320px]">
-            Junte-se aos ortopedistas que já dominam o digital com sofisticação técnica e liberdade de tempo.
-          </p>
-
-          <div className="flex flex-col items-center justify-center gap-1 drop-shadow-xl mb-6 w-full px-4 pt-4 border-t border-white/10">
-            <p className="text-rose-500/50 line-through text-[13px] font-display font-medium tracking-widest uppercase mb-1">De R$ 2.500,00</p>
-            <div className="flex items-center">
-              <span className="text-emerald-400 text-lg font-display font-black mr-1 mt-1">R$</span>
-              <span className="text-emerald-400 text-5xl leading-none font-display font-black tracking-tighter drop-shadow-[0_0_12px_rgba(52,211,153,0.3)]">197</span>
-              <span className="text-emerald-400 text-xl font-display font-bold">,90</span>
+            {/* Shield Core */}
+            <div className="relative z-10 w-24 h-24 bg-gradient-to-b from-[#00f2ff]/20 to-transparent rounded-3xl border border-[#00f2ff]/30 flex flex-col items-center justify-center shadow-[0_0_35px_rgba(0,242,255,0.4)] backdrop-blur-xl">
+              <span className="text-[13px] font-display font-black text-[#00f2ff] tracking-[0.05em] mb-1.5 uppercase drop-shadow-[0_0_8px_rgba(0,242,255,0.5)]">7 Dias</span>
+              <div className="h-[1px] w-8 bg-[#00f2ff]/20 mb-1.5" />
+              <span className="text-[10px] font-display font-black text-white/90 leading-none tracking-[0.2em] relative z-10 uppercase">Protegido</span>
             </div>
           </div>
 
-          <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="relative btn-elite w-full py-6 group overflow-hidden shadow-[0_0_30px_rgba(0,242,255,0.3)] hover:shadow-[0_0_50px_rgba(0,242,255,0.6)] rounded-2xl animate-pulse-attention">
+          {/* Elite Pattern Header */}
+          <div className="mb-10 px-2 text-center">
+            <span className="inline-block text-[#00f2ff] font-display font-bold text-[11px] tracking-[0.35em] uppercase mb-4 drop-shadow-[0_0_10px_rgba(0,242,255,0.4)]">
+              O INVESTIMENTO SEGURO
+            </span>
+            <h3 className="text-white font-display font-black text-[26px] md:text-[30px] leading-tight tracking-tighter uppercase">
+              REVOLUCIONE SEU <br />
+              <span className="text-[#00f2ff] text-glow">ALCANCE MÉDICO</span>
+            </h3>
+          </div>
+
+          <p className="text-white/60 font-body text-[14px] md:text-[15px] mb-10 leading-relaxed max-w-[340px]">
+            Junte-se à elite que domina o digital com <span className="text-white font-medium">sofisticação técnica</span> e liberdade de tempo imediata.
+          </p>
+
+          <div className="flex flex-col items-center gap-1 mb-8 w-full group/price">
+            <p className="text-rose-500/50 line-through text-[12px] font-display font-medium tracking-[0.2em] uppercase transition-colors group-hover/price:text-rose-500/70">De R$ 2.500,00</p>
+            <div className="flex items-baseline gap-1">
+              <span className="text-emerald-400 text-lg font-display font-black">R$</span>
+              <span className="text-emerald-400 text-6xl leading-none font-display font-black tracking-tighter drop-shadow-[0_0_20px_rgba(52,211,153,0.3)]">197</span>
+              <span className="text-emerald-400 text-2xl font-display font-bold">,90</span>
+            </div>
+          </div>
+
+          <button 
+            onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} 
+            className="relative btn-elite w-full py-6 group/btn overflow-hidden shadow-[0_15px_40px_rgba(0,242,255,0.2)] hover:shadow-[0_20px_60px_rgba(0,242,255,0.4)] rounded-2xl"
+          >
             <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-[150%] skew-x-[-30deg] animate-[shimmer_3s_infinite]" />
-            <span className="relative z-10 text-[13px] md:text-[15px] uppercase tracking-wider md:tracking-[0.15em] font-black drop-shadow-md">QUERO MEU ACESSO IMEDIATO</span>
+            <span className="relative z-10 text-[14px] uppercase tracking-[0.1em] font-black drop-shadow-md">QUERO MEU ACESSO IMEDIATO</span>
           </button>
+          
+          <div className="mt-8 flex items-center justify-center gap-2 px-3 py-2 bg-white/5 rounded-full border border-white/5 shadow-inner min-w-[280px]">
+            <span className="relative flex h-2 w-2 flex-shrink-0">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            <p className="text-[9px] md:text-[10px] text-white/40 font-display uppercase tracking-[0.15em] font-bold whitespace-nowrap">
+              Inscrição Segura <span className="text-white/20 px-1">|</span> Checkout Hotmart
+            </p>
+          </div>
         </div>
       </div>
 
