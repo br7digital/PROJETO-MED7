@@ -15,7 +15,7 @@ export function MiniOffer() {
         </span>
       </div>
 
-      <div className="relative w-full max-w-sm mx-auto glass-card p-6 rounded-[32px] overflow-hidden group bg-[#081221]/95 backdrop-blur-3xl shadow-[0_15px_30px_rgba(0,0,0,0.5)] border-white/10">
+      <div className="relative w-full max-w-sm mx-auto glass-card px-5 py-7 sm:p-6 rounded-[32px] overflow-hidden group bg-[#081221]/95 backdrop-blur-3xl shadow-[0_15px_30px_rgba(0,0,0,0.5)] border-white/10">
         
         {/* Glow effect */}
         <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#00f2ff]/10 blur-[40px] group-hover:bg-[#00f2ff]/20 transition-colors duration-700 pointer-events-none" />
@@ -50,22 +50,22 @@ export function MiniOffer() {
             </span>
           </div>
 
-          <div className="mt-7 mb-4 px-0">
-            <p className="text-white/90 font-body text-[15px] md:text-[16px] font-medium leading-[1.6] w-full mx-auto drop-shadow-md px-1">
+          <div className="mt-7 mb-4">
+            <p className="text-white/90 font-body text-[14px] md:text-[15px] font-medium leading-[1.6] w-full mx-auto drop-shadow-md px-1">
               Economize mais de R$ 2.300 em custos de agência. Tenha o arsenal completo de um estúdio por uma fração do preço.
             </p>
           </div>
         </div>
 
         {/* Button */}
-        <div className="relative z-10 flex flex-col gap-3.5">
+        <div className="relative z-10 flex flex-col gap-3.5 items-center">
           <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-6 group shadow-[0_0_25px_rgba(0,242,255,0.3)] animate-pulse-attention">
-            <span className="relative z-10 uppercase tracking-wider font-black text-[clamp(13px,4vw,15px)] leading-tight px-2 block">
+            <span className="relative z-10 uppercase tracking-wider font-black text-[clamp(12px,3.8vw,15px)] leading-tight px-1 block">
               QUERO GARANTIR COM DESCONTO
             </span>
           </button>
-          <p className="text-center text-[#00f2ff]/90 font-medium text-[11px] md:text-[12px] font-display tracking-wide flex items-center justify-center gap-2 mt-1">
-            <span className="w-2 h-2 flex-shrink-0 rounded-full bg-[#10B981] animate-pulse"></span>
+          <p className="text-center text-[#00f2ff]/90 font-medium text-[10px] xs:text-[11px] md:text-[12px] font-display tracking-tight mt-1 max-w-[260px]">
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse mr-2 relative -top-[1px]"></span>
             Condição especial para os primeiros acessos.
           </p>
         </div>
