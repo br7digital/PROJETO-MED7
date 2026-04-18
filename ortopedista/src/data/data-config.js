@@ -177,9 +177,9 @@ export const landingData = {
     price: "97",
     installments: "12x de R$ 9,68",
     benefits: [
-      "Acesso Vitalício aos 50 Vídeos CGI",
+      "Acesso Vitalício aos 30 Vídeos CGI",
       "Diversos formatos estruturados",
-      "Bônus: 50 Legendas Estratégicas",
+      "Bônus: 30 Legendas Estratégicas",
       "Protocolo de Postagem e Posicionamento",
       "Suporte Exclusivo para Alunos"
     ],
