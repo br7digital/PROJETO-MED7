@@ -194,22 +194,29 @@ export function Usage() {
           </div>
 
           {/* Matemática da Autoridade & CTA (Google AI Conversion Tactic) */}
-          <div className="relative w-full max-w-[420px] mx-auto p-8 md:p-10 rounded-[32px] bg-[#020a18]/90 backdrop-blur-3xl border border-emerald-500/30 shadow-[0_20px_40px_rgba(0,0,0,0.6)] flex flex-col items-center">
+          <div className="relative w-full max-w-[420px] mx-auto p-7 md:p-10 rounded-[32px] bg-[#020a18]/90 backdrop-blur-3xl border border-emerald-500/30 shadow-[0_20px_40px_rgba(0,0,0,0.6)] flex flex-col items-center">
             
-            <div className="flex justify-center mb-6">
-               <span className="text-emerald-400 font-bold text-[11px] uppercase tracking-widest bg-emerald-500/10 px-4 py-2 rounded-full border border-emerald-500/20 shadow-inner">
-                 ⚖️ A Matemática da Autoridade
+            <div className="flex justify-center mb-6 w-full px-2">
+               <span className="text-emerald-400 font-bold text-[10px] md:text-[11px] uppercase tracking-[0.15em] bg-emerald-500/10 px-4 py-2 rounded-full border border-emerald-500/20 shadow-inner text-center block w-fit whitespace-nowrap">
+                 🩺 A MATEMÁTICA DA AUTORIDADE
                </span>
             </div>
 
-            <p className="text-white/90 font-body text-[14px] md:text-[15px] leading-relaxed text-center mb-8 px-2">
-              Por que estamos entregando este arsenal de elite por apenas <strong className="text-white font-black text-[17px] drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] bg-white/10 px-3 py-1 rounded-lg mx-1 tracking-wide">R$ 197,90</strong>? Porque decidimos <strong className="text-[#00f2ff]">diluir o custo</strong> de uma produção de R$ 2.500,00 para viabilizar e escalar o seu posicionamento.
-            </p>
+            <div className="space-y-4 mb-8">
+              <p className="text-white/90 font-body text-[14px] md:text-[15px] leading-relaxed text-center px-2">
+                Por que estamos entregando este arsenal de elite por apenas <span className="inline-block"><strong className="text-white font-black text-[17px] drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] bg-white/10 px-3 py-1 rounded-lg mx-1 tracking-wide">R$ 197,90</strong>?</span>
+              </p>
+              <p className="text-white/80 font-body text-[13px] md:text-[14px] leading-relaxed text-center px-2 italic">
+                Porque decidimos <strong className="text-[#00f2ff]">diluir o custo</strong> de uma produção de R$ 2.500,00 para viabilizar e escalar o seu posicionamento.
+              </p>
+            </div>
 
-            <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-6 !text-base group shadow-[0_0_30px_rgba(0,242,255,0.25)] animate-pulse-attention">
-              <span className="relative z-10 uppercase tracking-widest font-black text-[clamp(13px,4vw,16px)]">QUERO MEU ACESSO AGORA</span>
+            <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-6 group shadow-[0_0_30px_rgba(0,242,255,0.25)] animate-pulse-attention">
+              <span className="relative z-10 uppercase tracking-wider font-black text-[clamp(11px,3.8vw,14px)] whitespace-nowrap">
+                QUERO MEU ACESSO AGORA
+              </span>
             </button>
-            <p className="text-center text-[#00f2ff]/90 font-medium text-[11px] md:text-[12px] font-display tracking-widest mt-4 flex items-center justify-center gap-3">
+            <p className="text-center text-[#00f2ff]/90 font-medium text-[11px] md:text-[12px] font-display tracking-widest mt-5 flex items-center justify-center gap-3 text-glow uppercase">
               <span className="w-2 h-2 flex-shrink-0 rounded-full bg-[#10B981] animate-pulse"></span>
               LOTE PROMOCIONAL EXCLUSIVO
             </p>
