@@ -81,9 +81,9 @@ export const landingData = {
   
   usage: {
     overline: "COMO O ORTOPEDISTA E TRAUMATOLOGISTA USA ISSO?",
-    title: "Seleciona o vídeo.\nPublica em segundos.\nTorna-se a referência.",
+    title: "Selecione o vídeo.\nPublique em segundos.\nVire a referência.",
     subheadline: "Sem travar na criação, sem depender de improviso e sem perder tempo fazendo conteúdo do zero.",
-    supportText: "Para Reels, Stories e posts de autoridade",
+    supportText: "Formatos otimizados para Reels, Stories e Feed",
     chips: [
       "RECEBE PRONTO",
       "PUBLICA EM MINUTOS",

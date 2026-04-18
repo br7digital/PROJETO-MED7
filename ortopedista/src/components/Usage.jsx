@@ -184,9 +184,31 @@ export function Usage() {
           </div>
 
           {/* Footer Support Text */}
-          <div className="text-center">
-            <p className="text-white/80 text-[11px] font-medium tracking-wide uppercase">
+          <div className="text-center mb-8">
+            <p className="text-[#00f2ff] text-[11px] font-bold tracking-widest uppercase bg-[#00f2ff]/10 inline-block px-4 py-1.5 rounded-full border border-[#00f2ff]/20 shadow-[0_0_15px_rgba(0,242,255,0.15)]">
               {supportText}
+            </p>
+          </div>
+
+          {/* Matemática da Autoridade & CTA (Google AI Conversion Tactic) */}
+          <div className="relative w-full max-w-sm mx-auto p-6 md:p-8 rounded-[24px] bg-[#020a18]/80 backdrop-blur-xl border border-emerald-500/20 shadow-[0_15px_30px_rgba(0,0,0,0.5)] flex flex-col items-center">
+            
+            <div className="flex justify-center mb-4">
+               <span className="text-emerald-400 font-bold text-[10px] uppercase tracking-wide bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/20 shadow-inner">
+                 ⚖️ A Matemática da Autoridade
+               </span>
+            </div>
+
+            <p className="text-white/80 font-body text-[13px] leading-relaxed text-center mb-6">
+              Por que estamos entregando este arsenal de elite por apenas <strong className="text-white">R$ 197,90</strong>? Porque decidimos <strong className="text-[#00f2ff]">diluir o custo</strong> de uma produção de R$ 2.500,00 para democratizar o seu acesso.
+            </p>
+
+            <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-4 !text-sm group shadow-[0_0_20px_rgba(0,242,255,0.2)] animate-pulse-attention">
+              <span className="relative z-10 uppercase tracking-[0.05em] md:tracking-widest font-black text-[clamp(12px,3.5vw,14px)] whitespace-nowrap">QUERO MEU ACESSO AGORA</span>
+            </button>
+            <p className="text-center text-[#00f2ff]/90 font-medium text-[10px] md:text-[11px] font-display tracking-wide mt-3 flex items-center justify-center gap-2">
+              <span className="w-1.5 h-1.5 flex-shrink-0 rounded-full bg-[#10B981] animate-pulse"></span>
+              Lote promocional exclusivo
             </p>
           </div>
 
