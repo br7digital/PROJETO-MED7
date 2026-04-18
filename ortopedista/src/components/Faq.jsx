@@ -162,8 +162,8 @@ export function Faq() {
 
         {/* Support Modal Overlay */}
         {isModalOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/95 backdrop-blur-md animate-fade-in" onClick={() => setIsModalOpen(false)}>
-            <div className="bg-[#0b1627] border border-[#00f2ff]/30 rounded-3xl p-6 md:p-8 max-w-[340px] w-full shadow-[0_0_60px_rgba(0,0,0,1)] relative transform transition-all border-b-4 border-b-[#00f2ff]" onClick={(e) => e.stopPropagation()}>
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/95 backdrop-blur-md animate-fade-in" onClick={() => setIsModalOpen(false)}>
+            <div className="bg-[#0b1627] border border-[#00f2ff]/30 rounded-3xl p-6 md:p-8 max-w-[300px] w-full shadow-[0_0_60px_rgba(0,0,0,1)] relative transform transition-all border-b-4 border-b-[#00f2ff]" onClick={(e) => e.stopPropagation()}>
               {/* Close Button */}
               <button 
                 onClick={() => setIsModalOpen(false)}
