@@ -31,36 +31,41 @@ export function MiniOffer() {
 
         {/* Pricing Area */}
         <div className="text-center mb-6 relative z-10">
-          <p className="text-white/70 line-through text-xs font-display font-medium tracking-wider mb-1">De R$ 2.500,00</p>
+          <p className="text-rose-500/50 line-through text-sm font-display font-medium tracking-wider mb-2">De R$ 2.500,00</p>
           <div className="flex items-center justify-center gap-1 drop-shadow-xl mt-1">
             <span className="text-white/80 text-xl font-display font-bold">R$</span>
-            <span className="text-white text-[56px] leading-none font-display font-black tracking-tighter drop-shadow-2xl scale-110 mx-1">197</span>
+            <span className="text-white text-[64px] leading-none font-display font-black tracking-tighter drop-shadow-2xl scale-110 mx-1">197</span>
             <span className="text-white/80 text-xl font-display font-bold">,90</span>
           </div>
-          <div className="mt-3">
-            <span className="text-emerald-400 font-bold text-[10px] uppercase tracking-wide bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/20 shadow-inner">
+          
+          <div className="mt-4 mb-5">
+            <span className="inline-block bg-[#00f2ff]/10 px-6 py-2 rounded-full text-white font-display font-bold text-[15px] border border-[#00f2ff]/30 shadow-[0_0_15px_rgba(0,242,255,0.1)]">
+              Ou 12x de R$ 19,75
+            </span>
+          </div>
+
+          <div className="mt-4">
+            <span className="text-emerald-400 font-bold text-[12px] uppercase tracking-wide bg-emerald-500/10 px-4 py-2 rounded-full border border-emerald-500/20 shadow-inner">
               💰 Economize R$ 2.302,10
             </span>
           </div>
-          <div className="mt-4 mb-3 px-2">
-            <p className="text-white/80 font-body text-[12px] md:text-[13px] font-medium leading-relaxed max-w-[280px] mx-auto drop-shadow-md">
+
+          <div className="mt-7 mb-4 px-2">
+            <p className="text-white/90 font-body text-[14px] md:text-[15px] font-medium leading-[1.6] max-w-[300px] mx-auto drop-shadow-md">
               Economize mais de R$ 2.300 em custos de agência. Tenha o arsenal completo de um estúdio por uma fração do preço.
             </p>
-          </div>
-          <div className="mt-3 text-center">
-            <span className="inline-block bg-[#00f2ff]/5 px-4 py-1.5 rounded-full text-white/80 font-display font-medium text-[12px] border border-[#00f2ff]/20">
-              Ou 12x de R$ 19,75
-            </span>
           </div>
         </div>
 
         {/* Button */}
-        <div className="relative z-10 flex flex-col gap-3">
-          <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-4 !text-sm group shadow-[0_0_20px_rgba(0,242,255,0.2)] animate-pulse-attention">
-            <span className="relative z-10 uppercase tracking-[0.05em] md:tracking-widest font-black text-[clamp(12px,3.5vw,14px)] whitespace-nowrap">QUERO GARANTIR COM DESCONTO</span>
+        <div className="relative z-10 flex flex-col gap-3.5">
+          <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-6 group shadow-[0_0_25px_rgba(0,242,255,0.3)] animate-pulse-attention">
+            <span className="relative z-10 uppercase tracking-wider font-black text-[clamp(13px,4vw,15px)] leading-tight px-2 block">
+              QUERO GARANTIR COM DESCONTO
+            </span>
           </button>
-          <p className="text-center text-[#00f2ff]/90 font-medium text-[10px] md:text-[11px] font-display tracking-wide flex items-center justify-center gap-2 mt-1">
-            <span className="w-1.5 h-1.5 flex-shrink-0 rounded-full bg-[#10B981] animate-pulse"></span>
+          <p className="text-center text-[#00f2ff]/90 font-medium text-[11px] md:text-[12px] font-display tracking-wide flex items-center justify-center gap-2 mt-1">
+            <span className="w-2 h-2 flex-shrink-0 rounded-full bg-[#10B981] animate-pulse"></span>
             Condição especial para os primeiros acessos.
           </p>
         </div>

@@ -94,7 +94,7 @@ export function Pricing() {
                   LOTE DE LANÇAMENTO
                 </span>
               </div>
-              <p className="text-white/70 line-through text-[14px] font-display font-medium tracking-wider mb-2">De R$ 2.500,00</p>
+              <p className="text-rose-500/50 line-through text-[14px] font-display font-medium tracking-wider mb-2">De R$ 2.500,00</p>
               <div className="flex items-center justify-center gap-1 drop-shadow-xl mb-4 mt-2">
                 <span className="text-white/80 text-3xl font-display font-bold">R$</span>
                 <span className="text-white text-[90px] leading-none font-display font-black tracking-tighter drop-shadow-2xl scale-110 mx-2">197</span>

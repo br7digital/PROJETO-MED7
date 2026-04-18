@@ -106,7 +106,7 @@ export function Faq() {
             </p>
 
             <div className="flex flex-col items-center justify-center gap-1 drop-shadow-xl mb-6 w-full px-4 pt-4 border-t border-white/10">
-              <p className="text-white/50 line-through text-[13px] font-display font-medium tracking-widest uppercase mb-1">De R$ 2.500,00</p>
+              <p className="text-rose-500/50 line-through text-[13px] font-display font-medium tracking-widest uppercase mb-1">De R$ 2.500,00</p>
               <div className="flex items-center">
                 <span className="text-emerald-400 text-lg font-display font-black mr-1 mt-1">R$</span>
                 <span className="text-emerald-400 text-5xl leading-none font-display font-black tracking-tighter drop-shadow-[0_0_12px_rgba(52,211,153,0.3)]">197</span>
