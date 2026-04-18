@@ -62,7 +62,7 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="text-[clamp(28px,8vw,44px)] font-display text-white tracking-tighter font-black !leading-[1.12] drop-shadow-md">
+          <h1 className="text-[clamp(32px,9vw,46px)] font-display text-white tracking-tighter font-black !leading-[1.12] drop-shadow-md">
             {renderHeadline()}
           </h1>
 
