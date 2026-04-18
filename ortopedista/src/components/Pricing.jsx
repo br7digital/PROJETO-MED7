@@ -157,30 +157,51 @@ export function Pricing() {
           </div>
         </div>
 
-        {/* Elite Guarantee Block */}
-        <div className="mt-32 md:mt-40 relative px-8 py-16 md:py-20 bg-[#010815]/90 rounded-[32px] text-center flex flex-col items-center border border-white/5 shadow-[0_30px_60px_rgba(0,0,0,0.6)] backdrop-blur-3xl">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#00f2ff]/5 to-transparent rounded-[32px] pointer-events-none" />
+        {/* Elite Guarantee Block - CERTIFICATE STYLE */}
+        <div className="mt-32 md:mt-40 relative px-6 md:px-10 py-16 md:py-24 bg-[#010815]/95 rounded-[32px] text-center flex flex-col items-center border border-white/10 shadow-[0_30px_70px_rgba(0,0,0,0.7)] backdrop-blur-3xl overflow-visible">
+          {/* Background Layers Container (Handles pattern clipping while allowing seal to overflow) */}
+          <div className="absolute inset-0 rounded-[32px] overflow-hidden pointer-events-none">
+            {/* Security Grid Background Pattern */}
+            <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: `radial-gradient(#00f2ff 0.5px, transparent 0.5px)`, backgroundSize: '24px 24px' }} />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#00f2ff]/5 to-transparent shadow-inner" />
+          </div>
           
+          {/* Pulsing Protection Aura behind Seal */}
+          <div className="absolute -top-14 md:-top-20 left-1/2 -translate-x-1/2 w-40 h-40 bg-[#00f2ff]/20 blur-[50px] rounded-full animate-pulse z-0" />
+
           {/* Overlapping Satisfaction Seal - Slightly smaller visual weight than CFM */}
           <div className="absolute -top-14 md:-top-20 w-28 h-28 md:w-40 md:h-40 z-20 animate-float-slow">
             <img 
               src="/LOGO SATISFAÇÃO.webp" 
               alt="Selo de Satisfação" 
-              className="w-full h-full object-contain drop-shadow-[0_0_20px_rgba(255,215,0,0.2)] opacity-95 brightness-105 contrast-105"
+              className="w-full h-full object-contain drop-shadow-[0_0_25px_rgba(255,215,0,0.3)] opacity-95 brightness-110 contrast-105"
             />
           </div>
           
           <h3 className="text-white font-display font-black text-xl md:text-2xl tracking-tighter z-10 mb-2 drop-shadow-md text-center max-w-[95%]">
             GARANTIA DE EXCELÊNCIA OU REEMBOLSO INTEGRAL
           </h3>
-          <p className="text-[#00f2ff] font-display font-bold text-[13px] md:text-[14px] uppercase tracking-widest mb-6 z-10 drop-shadow-[0_0_8px_rgba(0,242,255,0.4)]">
+          <p className="text-[#00f2ff] font-display font-bold text-[13px] md:text-[14px] uppercase tracking-widest mb-8 z-10 drop-shadow-[0_0_8px_rgba(0,242,255,0.4)]">
             7 Dias de Proteção Total
           </p>
-          <div className="flex flex-col text-white/80 text-[14px] md:text-[16px] font-body px-4 leading-[1.6] max-w-[460px] relative z-10">
+          
+          <div className="flex flex-col text-white/80 text-[14px] md:text-[16px] font-body px-2 sm:px-6 leading-relaxed max-w-[460px] relative z-10 mb-10">
             <p>
-              <strong className="text-white font-medium block mb-3 opacity-90">Comprometidos com o mais alto padrão de entrega.</strong>
-              Caso nosso arsenal visual não atenda à sua exigência de qualidade técnica ou estética, devolvemos 100% do seu investimento em até <strong className="text-white font-bold drop-shadow-[0_0_5px_rgba(255,255,255,0.4)]">7 dias</strong>. Sem burocracia e sem perguntas.
+              <strong className="text-white font-medium block mb-3 opacity-90 italic">Comprometidos com o mais alto padrão de entrega.</strong>
+              Caso nosso arsenal visual não atenda à sua exigência de qualidade técnica ou estética, <span className="text-white font-bold text-glow underline decoration-[#00f2ff]/30 underline-offset-4">devolvemos 100% do seu investimento</span> em até <strong className="text-white font-bold">7 dias</strong>. Sem burocracia e sem perguntas.
             </p>
+          </div>
+
+          {/* Safe Transaction Footer */}
+          <div className="pt-6 border-t border-white/5 w-full max-w-[280px] flex items-center justify-center gap-6 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+            <div className="flex items-center gap-1.5 cursor-default">
+              <span className="text-[14px]">🔒</span>
+              <span className="text-[9px] font-display font-bold uppercase tracking-widest text-white">Checkout Seguro</span>
+            </div>
+            <div className="flex items-center gap-1.5 cursor-default">
+              <span className="text-[13px]">🛡️</span>
+              <span className="text-[9px] font-display font-bold uppercase tracking-widest text-white">Dados Protegidos</span>
+            </div>
           </div>
         </div>
       </div>
