@@ -16,7 +16,7 @@ export function Faq() {
         {/* Header */}
         <div className="text-center mb-10">
           <h2 className="text-[clamp(30px,8vw,36px)] font-display font-black text-white leading-none tracking-tighter text-glow">
-            {title}
+            Dúvidas <span className="text-[#00f2ff] drop-shadow-[0_0_10px_rgba(0,242,255,0.3)]">Frequentes</span>
           </h2>
         </div>
 
@@ -64,7 +64,7 @@ export function Faq() {
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-[#00f2ff] shadow-[0_0_20px_rgba(0,242,255,1)]" />
             
             <h3 className="text-white font-display font-bold text-2xl md:text-3xl mb-3">
-              Suporte Exclusivo via WhatsApp
+              Suporte Exclusivo via <span className="text-[#00f2ff]">WhatsApp</span>
             </h3>
             <p className="text-zinc-200 text-[15px] md:text-base font-body mb-8 max-w-[360px] mx-auto leading-relaxed">
               Ao garantir seu acervo, você ganha acesso direto ao nosso time técnico para auxiliar em toda a sua implementação.
@@ -99,7 +99,7 @@ export function Faq() {
             </div>
 
             <h3 className="text-white font-display font-bold text-[20px] md:text-[22px] mb-3 leading-snug tracking-tight drop-shadow-md px-2">
-              Pronto para elevar o nível do seu posicionamento?
+              Pronto para elevar o nível do seu <span className="text-[#00f2ff]">posicionamento?</span>
             </h3>
             <p className="text-white/80 font-body text-[14px] md:text-[15px] mb-8 leading-relaxed max-w-[320px]">
               Junte-se aos ortopedistas que já dominam o digital com sofisticação técnica e liberdade de tempo.
