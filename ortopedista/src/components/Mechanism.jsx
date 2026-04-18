@@ -13,13 +13,9 @@ export function Mechanism() {
       <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-[#010816] to-transparent z-0" />
       <div className="container mx-auto px-6 relative z-10 flex flex-col items-center">
         <div className="text-center mb-8">
-          <h2 className="text-[clamp(30px,8vw,36px)] font-display font-black text-white tracking-tighter mb-4 text-glow leading-none">
-            {title.split('\n').map((part, i) => (
-              <React.Fragment key={i}>
-                {i === 1 ? <span className="text-[#00f2ff]">{part}</span> : part}
-                {i === 0 && <br />}
-              </React.Fragment>
-            ))}
+          <h2 className="text-[clamp(30px,8vw,36px)] font-display font-black text-white tracking-tighter mb-4 text-glow leading-[1.1]">
+            Por que esse <span className="text-[#00f2ff]">formato</span><br />
+            <span className="text-[#00f2ff]">domina o feed</span>
           </h2>
           <p className="text-white/80 text-[clamp(16px,4vw,18px)] font-body font-light">
             {subtitle}

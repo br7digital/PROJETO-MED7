@@ -56,8 +56,10 @@ export function Hero() {
           {/* Title now opens the page */}
 
           <div className="flex items-start sm:items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-2.5 rounded-[16px] sm:rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-3 shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
-            <div className="mt-1 sm:mt-0 w-2 h-2 flex-shrink-0 rounded-full bg-[#00f2ff] animate-pulse"></div>
-            <span className="text-white/90 text-[11px] md:text-[12px] font-bold tracking-[0.1em] sm:tracking-wider uppercase font-display leading-[1.4] sm:leading-none">{landingData.hero.badge}</span>
+            <div className="mt-1.5 sm:mt-0 w-2 h-2 flex-shrink-0 rounded-full bg-[#00f2ff] animate-pulse"></div>
+            <span className="text-white/90 text-[11px] md:text-[12px] font-bold tracking-[0.1em] sm:tracking-wider uppercase font-display leading-[1.6] sm:leading-none">
+              SUA <span className="text-[#00f2ff]">EXCELÊNCIA CLÍNICA</span> É DE ELITE. SEU <span className="text-[#00f2ff]">POSICIONAMENTO DIGITAL</span> TAMBÉM PRECISA SER.
+            </span>
           </div>
 
           <h1 className="text-[clamp(28px,8vw,44px)] font-display text-white tracking-tighter font-black !leading-[1.12] drop-shadow-md">

@@ -75,15 +75,10 @@ export function Usage() {
           <span className="text-[#00f2ff] text-[10px] font-bold tracking-[0.2em] uppercase mb-4 block animate-pulse">
             {overline}
           </span>
-          <h2 className="text-[clamp(30px,8vw,36px)] font-display font-black text-white tracking-tighter mb-4 text-glow leading-none">
-            {title.split('\n').map((part, i, arr) => (
-              <React.Fragment key={i}>
-                <span className={i === arr.length - 1 ? "text-[#00f2ff]" : ""}>
-                  {part}
-                </span>
-                {i < arr.length - 1 && <br />}
-              </React.Fragment>
-            ))}
+          <h2 className="text-[clamp(30px,8vw,36px)] font-display font-black text-white tracking-tighter mb-4 text-glow leading-[1.1]">
+            Selecione o vídeo.<br />
+            Publique em segundos.<br />
+            <span className="text-[#00f2ff]">Vire a referência.</span>
           </h2>
           <p className="text-zinc-200 text-sm font-body leading-relaxed max-w-[280px] mx-auto">
             {subheadline}

@@ -15,13 +15,9 @@ export function Gallery() {
       <div className="container mx-auto px-6 relative z-10 w-full max-w-[480px]">
         {/* Header */}
         <div className="text-center mb-10">
-          <h2 className="text-[clamp(30px,8vw,36px)] font-display font-black text-white tracking-tighter mb-4 text-glow leading-none">
-            {title.split('\n').map((part, i) => (
-              <React.Fragment key={i}>
-                {i === 1 ? <span className="text-[#00f2ff]">{part}</span> : part}
-                {i === 0 && <br />}
-              </React.Fragment>
-            ))}
+          <h2 className="text-[clamp(30px,8vw,36px)] font-display font-black text-white tracking-tighter mb-4 text-glow leading-[1.1]">
+            Explore a <span className="text-[#00f2ff]">Qualidade Técnica</span><br />
+            do Acervo
           </h2>
           <p className="text-zinc-200 text-sm max-w-xs mx-auto">
             {description}
