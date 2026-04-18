@@ -83,14 +83,14 @@ export function SocialProof() {
         </div>
 
         {/* CTA Area with Character */}
-        <div className="relative mt-20 flex flex-col items-center">
+        <div className="relative mt-28 md:mt-32 flex flex-col items-center w-full max-w-[400px]">
 
           {/* Bonequinho character popping out */}
-          <div className="absolute -top-33 right-1 w-28 h-40 pointer-events-none z-20">
+          <div className="absolute -top-24 md:-top-28 -right-4 md:-right-10 w-24 md:w-32 h-auto pointer-events-none z-20">
             <img
               src="/dr osso avaliar.webp"
               alt="Character"
-              className="w-full h-full object-contain animate-float drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]"
+              className="w-full h-auto object-contain animate-float drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]"
             />
             {/* Heart Popup */}
             <div className="absolute -top-2 -left-2 bg-pink-500 rounded-full p-2 shadow-[0_0_20px_rgba(236,72,153,0.6)] animate-bounce duration-1000">
@@ -101,8 +101,8 @@ export function SocialProof() {
           </div>
 
           {/* Button */}
-          <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-5 group relative z-10">
-            <span className="relative z-10 font-display font-black text-[clamp(14px,4vw,17px)] uppercase tracking-[0.05em] md:tracking-wider whitespace-nowrap">
+          <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-5 group relative z-10 flex items-center justify-center">
+            <span className="relative z-10 font-display font-black text-[clamp(12px,4vw,15px)] uppercase tracking-[0.05em] md:tracking-wider pr-16 pl-2 text-center leading-snug">
               TAMBÉM QUERO ESSA TRANSFORMAÇÃO
             </span>
           </button>
