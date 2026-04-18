@@ -33,24 +33,24 @@ export function Pricing() {
         <div className="w-full bg-[#11151c]/95 rounded-3xl p-6 md:p-8 mb-16 md:mb-20 border border-[#00f2ff]/20 shadow-[0_15px_40px_rgba(0,0,0,0.6)] relative z-20 backdrop-blur-xl">
           <h3 className="text-[#00f2ff] font-display font-bold text-center mb-3 text-[11px] md:text-xs uppercase tracking-widest drop-shadow-md">O Custo Oculto da Produção Tradicional</h3>
           <p className="text-white/85 text-center font-body text-[11px] sm:text-xs md:text-[13px] leading-[1.4] mb-6 w-full mx-auto block drop-shadow-sm">
-            Se você fosse assinar as ferramentas de IA, contratar editores e gastar horas criando roteiros técnicos do zero, seu investimento seria este:
+            Se você fosse assinar as <strong className="text-white">ferramentas de IA</strong>, contratar <strong className="text-white">editores</strong> e gastar <strong className="text-white">horas criando roteiros técnicos</strong> do zero, seu investimento seria este:
           </p>
           <ul className="space-y-4 font-body text-[13px] md:text-sm text-white/90">
             <li className="flex justify-between items-center border-b border-white/10 pb-3">
-              <span className="font-medium text-white/80">Produção CGI e Renderização IA</span>
+              <span className="font-medium text-white/80"><strong className="text-white">Produção CGI</strong> e Renderização IA</span>
               <span className="font-bold text-white tracking-wide">R$ 1.500,00</span>
             </li>
             <li className="flex justify-between items-center border-b border-white/10 pb-3">
-              <span className="font-medium text-white/80">Roteirização Técnica e Estratégica</span>
+              <span className="font-medium text-white/80"><strong className="text-white">Roteirização Técnica</strong> e Estratégica</span>
               <span className="font-bold text-white tracking-wide">R$ 600,00</span>
             </li>
             <li className="flex justify-between items-center border-b border-white/10 pb-3">
-              <span className="font-medium text-white/80">Edição e Pós-Produção Digital</span>
+              <span className="font-medium text-white/80"><strong className="text-white">Pós-Produção</strong> Digital Especializada</span>
               <span className="font-bold text-white tracking-wide">R$ 400,00</span>
             </li>
             <li className="flex justify-between items-center pt-2">
-              <span className="text-white font-black uppercase text-[11px] md:text-xs tracking-widest bg-emerald-500/10 px-3 py-1.5 rounded-lg border border-emerald-500/20 shadow-inner">CUSTO REAL</span>
-              <span className="text-emerald-400 font-black text-xl md:text-2xl drop-shadow-[0_0_12px_rgba(52,211,153,0.5)]">R$ 2.500,00</span>
+              <span className="text-white/60 font-black uppercase text-[10px] md:text-[11px] tracking-widest bg-white/5 px-3 py-1.5 rounded-lg border border-white/10 shadow-inner">VALOR DE MERCADO</span>
+              <span className="text-rose-500/60 font-black text-xl md:text-2xl line-through decoration-rose-500/50 decoration-2 drop-shadow-sm">R$ 2.500,00</span>
             </li>
           </ul>
         </div>
@@ -154,41 +154,6 @@ export function Pricing() {
               <span className="text-2xl drop-shadow-[0_0_10px_rgba(255,215,0,0.5)]">🏆</span>
               <span className="text-[10px] font-bold tracking-[0.2em] text-[#fbbf24] uppercase">Garantia</span>
             </div>
-          </div>
-        </div>
-
-
-        {/* Compliance Block (Jurídico e CFM) */}
-        <div className="mt-28 md:mt-32 relative w-full flex flex-col items-center text-center px-6 py-12 bg-[#010815]/90 rounded-[32px] border border-[#00f2ff]/20 shadow-[0_20px_50px_rgba(0,0,0,0.4)] backdrop-blur-3xl">
-          
-          {/* Overlapping CFM Seal - Elite Break-the-Border Style */}
-          <div className="absolute -top-16 md:-top-24 w-32 h-32 md:w-48 md:h-48 z-20 animate-float">
-            <img 
-              src="/LOGO CFM.webp" 
-              alt="Selo de Conformidade CFM" 
-              className="w-full h-full object-contain filter drop-shadow-[0_0_30px_rgba(255,255,255,0.3)] brightness-110 contrast-110"
-            />
-          </div>
-
-          <div className="mt-12 md:mt-20 flex flex-col items-center gap-3 mb-6 relative z-10">
-            <h4 className="text-[#00f2ff] font-display font-bold text-[12px] md:text-[14px] tracking-[0.2em] uppercase drop-shadow-md">
-              Segurança Jurídica e Ética Médica
-            </h4>
-            <div className="h-[2px] w-12 bg-gradient-to-r from-transparent via-[#00f2ff]/50 to-transparent"></div>
-          </div>
-
-          <h3 className="text-white font-black font-display text-[18px] md:text-[22px] mb-6 tracking-tight relative z-10 leading-tight px-4 shadow-sm">
-            Conformidade Total com a <br className="hidden sm:block" />
-            <span className="text-[#00f2ff]">Resolução CFM nº 2.336/23</span>
-          </h3>
-
-          <div className="space-y-4 max-w-[440px] relative z-10">
-            <p className="text-white/90 font-body text-[15px] md:text-[17px] leading-relaxed px-2 font-medium">
-              Protocolize sua comunicação digital com total segurança jurídica.
-            </p>
-            <p className="text-white/70 font-body text-[13px] md:text-[14px] leading-relaxed px-4">
-              Este acervo foi <strong className="text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.3)]">desenvolvido rigorosamente sob as novas diretrizes do CFM</strong>, garantindo o fortalecimento da sua autoridade sem colocar seu registro profissional em risco.
-            </p>
           </div>
         </div>
 

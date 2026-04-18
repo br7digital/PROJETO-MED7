@@ -10,6 +10,7 @@ import { Faq } from './components/Faq';
 import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
 import { MiniOffer } from './components/MiniOffer';
+import { CFMCompliance } from './components/CFMCompliance';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Usage />
         <Gallery />
         <Mechanism />
+        <CFMCompliance />
         <SocialProof />
         <Pricing />
         <Faq />
