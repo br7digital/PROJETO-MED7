@@ -25,8 +25,8 @@ export function Footer() {
           <a href="#" className="text-zinc-200 text-[10px] uppercase font-black tracking-[0.15em] hover:text-[#00f2ff] transition-colors">Políticas de Privacidade</a>
         </div>
 
-        {/* Disclaimer (WCAG Compliant Contrast: >4.5:1 against black) */}
-        <p className="text-zinc-500 text-[11px] font-body leading-relaxed mb-10 px-2 max-w-[360px]">
+        {/* Disclaimer (Technical Legal Requirement) */}
+        <p className="text-zinc-700 text-[9px] font-body leading-relaxed mb-10 px-2 max-w-[400px]">
           Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site.
         </p>
 

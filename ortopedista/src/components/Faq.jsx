@@ -82,19 +82,43 @@ export function Faq() {
           </div>
         </div>
 
-        {/* Final CTA & AI Guarantee Seal */}
-        <div className="mt-16 text-center border-t border-white/5 pt-12 relative z-10 flex flex-col items-center">
-          <div className="w-32 h-32 flex items-center justify-center relative mb-8">
-            <img 
-              src="/LOGO SATISFAÇÃO.webp" 
-              alt="Garantia de Excelência" 
-              className="w-full h-full object-contain filter drop-shadow-[0_0_15px_rgba(0,242,255,0.4)]"
-            />
+        {/* Final CTA Mini-Card (Skeptical Final Hook) */}
+        <div className="mt-16 text-center border-t border-white/5 pt-12 relative z-10 w-full max-w-[420px] mx-auto pb-4">
+          <div className="bg-[#11151c]/95 rounded-[32px] p-8 md:p-10 border border-[#00f2ff]/20 shadow-[0_15px_40px_rgba(0,0,0,0.6)] backdrop-blur-xl flex flex-col items-center text-center">
+            
+            {/* Tech SVG Hexagon Seal */}
+            <div className="w-20 h-20 mb-6 drop-shadow-[0_0_15px_rgba(0,242,255,0.4)] text-[#00f2ff] relative">
+              <svg viewBox="0 0 100 100" fill="none" className="w-full h-full animate-[spin_15s_linear_infinite] opacity-50 absolute inset-0">
+                <polygon points="50 3 93 25 93 75 50 97 7 75 7 25" stroke="currentColor" strokeWidth="1" strokeDasharray="4 4" />
+              </svg>
+              <svg viewBox="0 0 100 100" fill="none" className="w-full h-full relative z-10">
+                <polygon points="50 5 90 27 90 73 50 95 10 73 10 27" stroke="currentColor" strokeWidth="2" />
+                <circle cx="50" cy="50" r="18" fill="currentColor" fillOpacity="0.1" stroke="currentColor" strokeWidth="1" />
+                <text x="50" y="56" textAnchor="middle" fill="currentColor" fontSize="22" fontWeight="900" fontFamily="sans-serif">7D</text>
+              </svg>
+            </div>
+
+            <h3 className="text-white font-display font-bold text-[18px] md:text-[20px] mb-3 leading-snug tracking-tight drop-shadow-md px-2">
+              Pronto para elevar o nível do seu posicionamento?
+            </h3>
+            <p className="text-white/70 font-body text-[12.5px] md:text-[13.5px] mb-8 leading-relaxed max-w-[300px]">
+              Junte-se aos ortopedistas que já dominam o digital com sofisticação técnica e liberdade de tempo.
+            </p>
+
+            <div className="flex flex-col items-center justify-center gap-1 drop-shadow-xl mb-6 w-full px-4 pt-4 border-t border-white/10">
+              <p className="text-white/40 line-through text-[11px] font-display font-medium tracking-[0.2em] uppercase mb-1">De R$ 2.500,00</p>
+              <div className="flex items-center">
+                <span className="text-emerald-400 text-lg font-display font-black mr-1 mt-1">R$</span>
+                <span className="text-emerald-400 text-5xl leading-none font-display font-black tracking-tighter drop-shadow-[0_0_12px_rgba(52,211,153,0.3)]">197</span>
+                <span className="text-emerald-400 text-xl font-display font-bold">,90</span>
+              </div>
+            </div>
+
+            <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="relative btn-elite w-full py-5 group overflow-hidden shadow-[0_0_30px_rgba(0,242,255,0.3)] hover:shadow-[0_0_50px_rgba(0,242,255,0.6)] rounded-2xl animate-pulse-attention">
+              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-[150%] skew-x-[-30deg] animate-[shimmer_3s_infinite]" />
+              <span className="relative z-10 text-[11px] md:text-[13px] uppercase tracking-[0.15em] font-black drop-shadow-md">QUERO MEU ACESSO IMEDIATO</span>
+            </button>
           </div>
-          <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="relative btn-elite w-full py-6 group overflow-hidden shadow-[0_0_30px_rgba(0,242,255,0.3)] hover:shadow-[0_0_50px_rgba(0,242,255,0.6)] rounded-full animate-pulse-attention">
-            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-[150%] skew-x-[-30deg] animate-[shimmer_3s_infinite]" />
-            <span className="relative z-10 text-[13px] md:text-[15px] uppercase tracking-widest font-black drop-shadow-md px-4">QUERO GARANTIR MEU ACERVO DE ELITE</span>
-          </button>
         </div>
 
         {/* Support Modal Overlay */}
