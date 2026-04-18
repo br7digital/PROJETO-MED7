@@ -13,18 +13,18 @@ export const landingData = {
     badge: "PRONTO PARA POSTAR",
     pillars: [
       { 
-        title: "Posts Prontos", 
-        description: "Conteúdos prontos para publicar e manter seu perfil ativo com aparência profissional.",
+        title: "Acervo Pronto para Postar", 
+        description: "Vídeos estruturados para manter seu perfil ativo e relevante, eliminando o custo e o tempo de gravação manual.",
         iconType: "smartphone" 
       },
       { 
-        title: "Visual Premium", 
-        description: "Avatar Pixar, anatomia 3D e acabamento visual de alto nível para destacar seu perfil no feed.",
+        title: "Estética de Alta Fidelidade", 
+        description: "Animações 3D com precisão anatômica e acabamento nível Pixar, que transmitem a sofisticação técnica da sua prática médica.",
         iconType: "star" 
       },
       { 
-        title: "Mais Autoridade", 
-        description: "Conteúdo com estética de referência para fazer seu perfil parecer mais forte, moderno e confiável.",
+        title: "Autoridade Instantânea", 
+        description: "Conteúdo com estética de referência mundial para posicionar seu perfil acima da média e gerar confiança imediata em pacientes particulares.",
         iconType: "authority" 
       }
     ],
