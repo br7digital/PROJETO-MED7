@@ -55,27 +55,27 @@ export function Hero() {
 
           {/* Title now opens the page */}
 
-          <div className="flex items-start sm:items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 rounded-[14px] sm:rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-2 shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
-            <div className="mt-1 sm:mt-0 w-1.5 h-1.5 flex-shrink-0 rounded-full bg-[#00f2ff] animate-pulse"></div>
-            <span className="text-white/90 text-[8.5px] sm:text-[10px] md:text-[11px] font-bold tracking-[0.15em] sm:tracking-widest uppercase font-display leading-[1.4] sm:leading-none">{landingData.hero.badge}</span>
+          <div className="flex items-start sm:items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-2.5 rounded-[16px] sm:rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-3 shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
+            <div className="mt-1 sm:mt-0 w-2 h-2 flex-shrink-0 rounded-full bg-[#00f2ff] animate-pulse"></div>
+            <span className="text-white/90 text-[11px] md:text-[12px] font-bold tracking-[0.1em] sm:tracking-wider uppercase font-display leading-[1.4] sm:leading-none">{landingData.hero.badge}</span>
           </div>
 
-          <h1 className="text-[clamp(24px,7vw,40px)] font-display text-white tracking-tight font-extrabold !leading-[1.15] drop-shadow-md">
+          <h1 className="text-[clamp(28px,8vw,44px)] font-display text-white tracking-tight font-extrabold !leading-[1.12] drop-shadow-md">
             {renderHeadline()}
           </h1>
 
-          <p className="text-[clamp(15px,4vw,17px)] text-white/90 font-body font-medium leading-relaxed max-w-[350] drop-shadow-sm">
+          <p className="text-[clamp(16.5px,5vw,19px)] text-white/90 font-body font-medium leading-[1.6] max-w-[380px] drop-shadow-sm pt-1">
             {renderSubheadline()}
           </p>
 
-          <div className="pt-2 pb-8 sm:pb-12 flex flex-col gap-3 relative z-20">
-            <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite shadow-2xl flex items-center justify-center gap-3 w-fit group animate-pulse-attention">
+          <div className="pt-4 pb-8 sm:pb-12 flex flex-col gap-3.5 relative z-20">
+            <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite shadow-2xl flex items-center justify-center gap-3 w-fit group animate-pulse-attention py-4 px-8 text-[14px] md:text-[16px]">
               {ctaPrimary}
-              <div className="w-1 h-1 rounded-full bg-slate-900 group-hover:scale-150 transition-transform duration-300" />
+              <div className="w-1.5 h-1.5 rounded-full bg-slate-900 group-hover:scale-150 transition-transform duration-300" />
             </button>
-            <p className="text-[#00f2ff]/80 font-light text-[9px] sm:text-[11px] font-display tracking-wide ml-2 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 flex-shrink-0 rounded-full bg-[#10B981] animate-pulse"></span>
-              Condição especial exclusiva para os primeiros acessos.
+            <p className="text-[#00f2ff]/90 font-medium text-[11px] sm:text-[13px] font-display tracking-wide ml-2 flex items-center gap-2">
+              <span className="w-2 h-2 flex-shrink-0 rounded-full bg-[#10B981] animate-pulse"></span>
+              Condição especial para os primeiros acessos.
             </p>
           </div>
         </div>

@@ -21,18 +21,18 @@ export function Footer() {
 
         {/* Links (WCAG Compliant Contrast) */}
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 mb-10 w-full">
-          <a href="#" className="text-zinc-200 text-[10px] uppercase font-black tracking-[0.15em] hover:text-[#00f2ff] transition-colors">Termos de Uso</a>
-          <a href="#" className="text-zinc-200 text-[10px] uppercase font-black tracking-[0.15em] hover:text-[#00f2ff] transition-colors">Políticas de Privacidade</a>
+          <a href="#" className="text-zinc-200 text-[12px] uppercase font-black tracking-[0.1em] hover:text-[#00f2ff] transition-colors">Termos de Uso</a>
+          <a href="#" className="text-zinc-200 text-[12px] uppercase font-black tracking-[0.1em] hover:text-[#00f2ff] transition-colors">Políticas de Privacidade</a>
         </div>
 
         {/* Disclaimer (Technical Legal Requirement) */}
-        <p className="text-zinc-700 text-[9px] font-body leading-relaxed mb-10 px-2 max-w-[400px]">
+        <p className="text-zinc-500 text-[11px] font-body leading-relaxed mb-10 px-2 max-w-[420px]">
           Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site.
         </p>
 
         {/* Copyright */}
-        <div className="w-full pt-8 border-t border-zinc-800">
-          <p className="text-zinc-200 text-[11px] font-medium tracking-wide">
+        <div className="w-full pt-8 border-t border-zinc-700/50">
+          <p className="text-zinc-200 text-[13px] md:text-[14px] font-medium tracking-wide">
             © {currentYear} MED7 • Todos os direitos reservados.
           </p>
         </div>

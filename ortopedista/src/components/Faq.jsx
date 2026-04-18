@@ -33,7 +33,7 @@ export function Faq() {
                 onClick={() => toggleAccordion(idx)}
                 className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
               >
-                <span className="text-zinc-200 font-medium text-sm pr-4">
+                <span className="text-zinc-200 font-medium text-[15px] md:text-base pr-4">
                   {item.question}
                 </span>
                 <span className={`flex-shrink-0 w-6 h-6 rounded-full border border-white/10 flex items-center justify-center text-zinc-200 transition-transform duration-300 ${
@@ -50,7 +50,7 @@ export function Faq() {
                   openIndex === idx ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
                 }`}
               >
-                <div className="px-6 pb-6 pt-2 text-zinc-200 text-[13px] md:text-sm leading-relaxed border-t border-white/5" dangerouslySetInnerHTML={{ __html: item.answer }}>
+                <div className="px-6 pb-6 pt-2 text-zinc-200 text-[14px] md:text-[15px] leading-relaxed border-t border-white/5" dangerouslySetInnerHTML={{ __html: item.answer }}>
                 </div>
               </div>
             </div>
@@ -63,16 +63,16 @@ export function Faq() {
             {/* Glow effect */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-1 bg-[#00f2ff] shadow-[0_0_20px_rgba(0,242,255,1)]" />
             
-            <h3 className="text-white font-display font-bold text-xl md:text-2xl mb-2">
+            <h3 className="text-white font-display font-bold text-2xl md:text-3xl mb-3">
               Suporte Exclusivo via WhatsApp
             </h3>
-            <p className="text-zinc-200 text-sm font-body mb-8 max-w-[340px] mx-auto">
+            <p className="text-zinc-200 text-[15px] md:text-base font-body mb-8 max-w-[360px] mx-auto leading-relaxed">
               Ao garantir seu acervo, você ganha acesso direto ao nosso time técnico para auxiliar em toda a sua implementação.
             </p>
             
             <button 
               onClick={() => setIsModalOpen(true)}
-              className="group relative inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#111b29] hover:bg-[#1a293f] text-white rounded-full text-xs font-black border border-white/10 hover:border-[#00f2ff]/50 tracking-widest transition-all duration-300 shadow-xl"
+              className="group relative inline-flex items-center justify-center gap-2 px-8 py-5 bg-[#111b29] hover:bg-[#1a293f] text-white rounded-full text-[13px] md:text-[14px] font-black border border-white/10 hover:border-[#00f2ff]/50 tracking-widest transition-all duration-300 shadow-xl"
             >
               <svg className="w-4 h-4 text-emerald-500 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.347-.272.297-1.04 1.016-1.04 2.479 0 1.463 1.065 2.876 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
@@ -98,15 +98,15 @@ export function Faq() {
               </svg>
             </div>
 
-            <h3 className="text-white font-display font-bold text-[18px] md:text-[20px] mb-3 leading-snug tracking-tight drop-shadow-md px-2">
+            <h3 className="text-white font-display font-bold text-[20px] md:text-[22px] mb-3 leading-snug tracking-tight drop-shadow-md px-2">
               Pronto para elevar o nível do seu posicionamento?
             </h3>
-            <p className="text-white/70 font-body text-[12.5px] md:text-[13.5px] mb-8 leading-relaxed max-w-[300px]">
+            <p className="text-white/80 font-body text-[14px] md:text-[15px] mb-8 leading-relaxed max-w-[320px]">
               Junte-se aos ortopedistas que já dominam o digital com sofisticação técnica e liberdade de tempo.
             </p>
 
             <div className="flex flex-col items-center justify-center gap-1 drop-shadow-xl mb-6 w-full px-4 pt-4 border-t border-white/10">
-              <p className="text-white/40 line-through text-[11px] font-display font-medium tracking-[0.2em] uppercase mb-1">De R$ 2.500,00</p>
+              <p className="text-white/50 line-through text-[13px] font-display font-medium tracking-widest uppercase mb-1">De R$ 2.500,00</p>
               <div className="flex items-center">
                 <span className="text-emerald-400 text-lg font-display font-black mr-1 mt-1">R$</span>
                 <span className="text-emerald-400 text-5xl leading-none font-display font-black tracking-tighter drop-shadow-[0_0_12px_rgba(52,211,153,0.3)]">197</span>
@@ -114,9 +114,9 @@ export function Faq() {
               </div>
             </div>
 
-            <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="relative btn-elite w-full py-5 group overflow-hidden shadow-[0_0_30px_rgba(0,242,255,0.3)] hover:shadow-[0_0_50px_rgba(0,242,255,0.6)] rounded-2xl animate-pulse-attention">
+            <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="relative btn-elite w-full py-6 group overflow-hidden shadow-[0_0_30px_rgba(0,242,255,0.3)] hover:shadow-[0_0_50px_rgba(0,242,255,0.6)] rounded-2xl animate-pulse-attention">
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-[150%] skew-x-[-30deg] animate-[shimmer_3s_infinite]" />
-              <span className="relative z-10 text-[11px] md:text-[13px] uppercase tracking-[0.15em] font-black drop-shadow-md">QUERO MEU ACESSO IMEDIATO</span>
+              <span className="relative z-10 text-[13px] md:text-[15px] uppercase tracking-wider md:tracking-[0.15em] font-black drop-shadow-md">QUERO MEU ACESSO IMEDIATO</span>
             </button>
           </div>
         </div>

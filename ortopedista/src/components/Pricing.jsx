@@ -90,24 +90,24 @@ export function Pricing() {
             {/* Pricing Area */}
             <div className="text-center">
               <div className="mb-3">
-                <span className="inline-block bg-[#00f2ff]/10 border border-[#00f2ff]/30 text-[#00f2ff] text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full shadow-[0_0_15px_rgba(0,242,255,0.2)] animate-pulse">
+                <span className="inline-block bg-[#00f2ff]/10 border border-[#00f2ff]/30 text-[#00f2ff] text-[12px] md:text-[13px] uppercase font-bold tracking-widest px-3 py-1 rounded-full shadow-[0_0_15px_rgba(0,242,255,0.2)] animate-pulse">
                   LOTE DE LANÇAMENTO
                 </span>
               </div>
-              <p className="text-white/70 line-through text-xs font-display font-medium tracking-wider mb-2">De R$ 2.500,00</p>
+              <p className="text-white/70 line-through text-[14px] font-display font-medium tracking-wider mb-2">De R$ 2.500,00</p>
               <div className="flex items-center justify-center gap-1 drop-shadow-xl mb-4 mt-2">
                 <span className="text-white/80 text-3xl font-display font-bold">R$</span>
                 <span className="text-white text-[90px] leading-none font-display font-black tracking-tighter drop-shadow-2xl scale-110 mx-2">197</span>
                 <span className="text-white/80 text-3xl font-display font-bold">,90</span>
               </div>
               <div className="mb-4">
-                <span className="text-emerald-400 font-bold text-[11px] uppercase tracking-wide bg-emerald-500/10 px-4 py-2 rounded-full border border-emerald-500/20 shadow-inner drop-shadow-md">
+                <span className="text-emerald-400 font-bold text-[13px] md:text-[14px] uppercase tracking-wide bg-emerald-500/10 px-4 py-2 rounded-full border border-emerald-500/20 shadow-inner drop-shadow-md">
                   💰 Economize R$ 2.302,10
                 </span>
               </div>
 
-              <div className="mt-2">
-                <span className="inline-block bg-[#00f2ff]/5 px-6 py-1.5 rounded-full text-white/80 font-display font-medium text-[12px] md:text-sm border border-[#00f2ff]/20 shadow-[0_5px_15px_rgba(0,242,255,0.05)]">
+              <div className="mt-3">
+                <span className="inline-block bg-[#00f2ff]/5 px-6 py-2 rounded-full text-white/80 font-display font-medium text-[14px] md:text-[16px] border border-[#00f2ff]/20 shadow-[0_5px_15px_rgba(0,242,255,0.05)]">
                   Ou 12x de R$ 19,75
                 </span>
               </div>
@@ -118,25 +118,25 @@ export function Pricing() {
           <ul className="space-y-5 mb-12">
             {benefits.map((benefit, idx) => (
               <li key={idx} className="flex items-center gap-4 group/item">
-                <div className="w-6 h-6 rounded-full bg-[#00f2ff]/10 border border-[#00f2ff]/20 flex items-center justify-center flex-shrink-0 group-hover/item:border-[#00f2ff]/50 transition-colors">
-                  <svg className="w-3 h-3 text-[#00f2ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#00f2ff]/10 border border-[#00f2ff]/20 flex items-center justify-center flex-shrink-0 group-hover/item:border-[#00f2ff]/50 transition-colors">
+                  <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#00f2ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" d="M5 13l4 4L19 7" />
                   </svg>
                 </div>
-                <span className="text-white/70 text-[13px] font-medium leading-tight group-hover/item:text-white transition-colors">{benefit}</span>
+                <span className="text-white/70 text-[14px] md:text-[15px] font-medium leading-tight group-hover/item:text-white transition-colors">{benefit}</span>
               </li>
             ))}
           </ul>
 
           {/* Elite CTA Button with Scarcity */}
-          <div className="flex flex-col gap-3">
-            <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="relative btn-elite w-full py-7 group overflow-hidden animate-pulse-attention shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:shadow-[0_0_40px_rgba(0,242,255,0.6)]">
+          <div className="flex flex-col gap-3.5">
+            <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="relative btn-elite w-full py-8 group overflow-hidden animate-pulse-attention shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:shadow-[0_0_40px_rgba(0,242,255,0.6)]">
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-[150%] skew-x-[-30deg] animate-[shimmer_2.5s_infinite]" />
-              <span className="relative z-10 text-[11.5px] xs:text-[12.5px] sm:text-[14px] md:text-[16px] uppercase tracking-wider md:tracking-widest font-black drop-shadow-md px-2 w-full text-center leading-snug">QUERO GARANTIR COM DESCONTO</span>
+              <span className="relative z-10 text-[13px] xs:text-[14px] sm:text-[15px] md:text-[17px] uppercase tracking-wider md:tracking-widest font-black drop-shadow-md px-2 w-full text-center leading-snug">QUERO GARANTIR COM DESCONTO</span>
             </button>
-            <p className="text-center text-[#00f2ff]/90 font-medium text-[10px] sm:text-[11px] font-display tracking-wide flex items-center justify-center gap-2 mt-1">
-              <span className="w-1.5 h-1.5 flex-shrink-0 rounded-full bg-[#10B981] animate-pulse"></span>
-              Condição especial exclusiva para os primeiros acessos da atualização.
+            <p className="text-center text-[#00f2ff]/90 font-medium text-[11px] sm:text-[13px] font-display tracking-wide flex items-center justify-center gap-2 mt-1">
+              <span className="w-2 h-2 flex-shrink-0 rounded-full bg-[#10B981] animate-pulse"></span>
+              Condição especial exclusiva para os primeiros acessos.
             </p>
           </div>
 
@@ -159,17 +159,17 @@ export function Pricing() {
 
 
         {/* Compliance Block (Jurídico e CFM) */}
-        <div className="mt-16 relative w-full flex flex-col items-center text-center px-4 py-8 bg-[#010815]/80 rounded-[24px] border border-[#00f2ff]/10 shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
-          <div className="flex items-center gap-3 mb-3 relative z-10">
-            <span className="text-lg drop-shadow-[0_0_8px_rgba(0,242,255,0.6)]">⚖️</span>
-            <h4 className="text-[#00f2ff] font-display font-bold text-[11px] md:text-sm tracking-widest uppercase drop-shadow-md">
+        <div className="mt-16 relative w-full flex flex-col items-center text-center px-5 py-10 bg-[#010815]/80 rounded-[24px] border border-[#00f2ff]/10 shadow-[0_10px_30px_rgba(0,0,0,0.3)]">
+          <div className="flex items-center gap-3 mb-4 relative z-10">
+            <span className="text-xl drop-shadow-[0_0_8px_rgba(0,242,255,0.6)]">⚖️</span>
+            <h4 className="text-[#00f2ff] font-display font-bold text-[13px] md:text-[15px] tracking-widest uppercase drop-shadow-md">
               Segurança Jurídica e Ética Médica
             </h4>
           </div>
-          <p className="text-white font-black font-display text-[15px] md:text-lg mb-4 tracking-wide relative z-10">
+          <p className="text-white font-black font-display text-[16px] md:text-[20px] mb-5 tracking-wide relative z-10">
             Conformidade com a Resolução CFM nº 2.336/23
           </p>
-          <p className="text-white/75 font-body text-[12px] md:text-sm leading-relaxed max-w-[420px] relative z-10">
+          <p className="text-white/80 font-body text-[14px] md:text-[16px] leading-[1.6] max-w-[440px] relative z-10">
             Protocolize sua comunicação digital com total segurança. Este acervo foi <strong className="text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.4)]">desenvolvido sob as diretrizes da Resolução CFM 2.336/23</strong>, garantindo sua máxima autoridade preservando o seu registro.
           </p>
         </div>
@@ -186,15 +186,15 @@ export function Pricing() {
             />
           </div>
           
-          <h3 className="text-white font-display font-black text-lg md:text-xl tracking-tighter z-10 mb-1 drop-shadow-md text-center max-w-[90%]">
+          <h3 className="text-white font-display font-black text-xl md:text-2xl tracking-tighter z-10 mb-2 drop-shadow-md text-center max-w-[95%]">
             GARANTIA DE EXCELÊNCIA OU REEMBOLSO INTEGRAL
           </h3>
-          <p className="text-[#00f2ff] font-display font-bold text-[11px] uppercase tracking-widest mb-5 z-10 drop-shadow-[0_0_8px_rgba(0,242,255,0.4)]">
+          <p className="text-[#00f2ff] font-display font-bold text-[13px] md:text-[14px] uppercase tracking-widest mb-6 z-10 drop-shadow-[0_0_8px_rgba(0,242,255,0.4)]">
             7 Dias de Proteção Total
           </p>
-          <div className="flex flex-col text-white/70 text-[13px] md:text-[14px] font-body px-4 leading-relaxed max-w-[420px] relative z-10">
+          <div className="flex flex-col text-white/80 text-[14px] md:text-[16px] font-body px-4 leading-[1.6] max-w-[460px] relative z-10">
             <p>
-              <strong className="text-white font-medium block mb-2 opacity-90">Comprometidos com o mais alto padrão de entrega.</strong>
+              <strong className="text-white font-medium block mb-3 opacity-90">Comprometidos com o mais alto padrão de entrega.</strong>
               Caso nosso arsenal visual não atenda à sua exigência de qualidade técnica ou estética, devolvemos 100% do seu investimento em até <strong className="text-white font-bold drop-shadow-[0_0_5px_rgba(255,255,255,0.4)]">7 dias</strong>. Sem burocracia e sem perguntas.
             </p>
           </div>
