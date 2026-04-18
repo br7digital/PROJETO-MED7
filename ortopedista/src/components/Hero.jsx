@@ -12,7 +12,7 @@ export function Hero() {
       // Splits retaining the target words to style them correctly
       return text.split(/(autoridade|"blogueiros"\?)/g).map((chunk, i) => {
         if (chunk === 'autoridade' || chunk === '"blogueiros"?') {
-          return <span key={i} className="text-[#00f2ff] [text-shadow:-1px_-1px_0_rgba(0,0,0,0.8),1px_-1px_0_rgba(0,0,0,0.8),-1px_1px_0_rgba(0,0,0,0.8),1px_1px_0_rgba(0,0,0,0.8)] drop-shadow-[0_0_6px_rgba(0,242,255,0.5)] brightness-110">{chunk}</span>;
+          return <span key={i} className="text-[#00f2ff] drop-shadow-[0_1px_4px_rgba(0,242,255,0.4)] brightness-110">{chunk}</span>;
         }
         return <span key={i}>{chunk}</span>;
       });
@@ -20,9 +20,9 @@ export function Hero() {
 
     return (
       <div className="flex flex-col gap-1.5">
-        <span className="text-white drop-shadow-lg leading-[1.2]">{parts[0]}</span>
+        <span className="text-white drop-shadow-md leading-[1.15]">{parts[0]}</span>
         {parts[1] && (
-          <span className="text-white drop-shadow-md font-extrabold tracking-tight leading-[1.25]">
+          <span className="text-white drop-shadow-md font-extrabold tracking-tight leading-[1.15]">
             {highlightWords(parts[1])}
           </span>
         )}
@@ -35,7 +35,7 @@ export function Hero() {
     if (splitIndex > 0) {
       return (
         <>
-          <span className="font-semibold text-white/95">{subheadline.substring(0, splitIndex)}</span>
+          <span className="font-bold text-white/95">{subheadline.substring(0, splitIndex)}</span>
           {subheadline.substring(splitIndex)}
         </>
       );
@@ -55,11 +55,16 @@ export function Hero() {
 
           {/* Title now opens the page */}
 
-          <h1 className="text-[clamp(24px,7vw,40px)] font-display text-white tracking-tight font-extrabold !leading-[1.25] drop-shadow-md">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-2 shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#00f2ff] animate-pulse"></span>
+            <span className="text-white/90 text-[10px] sm:text-[11px] font-bold tracking-widest uppercase font-display">{landingData.hero.badge}</span>
+          </div>
+
+          <h1 className="text-[clamp(24px,7vw,40px)] font-display text-white tracking-tight font-extrabold !leading-[1.15] drop-shadow-md">
             {renderHeadline()}
           </h1>
 
-          <p className="text-[clamp(15px,4vw,17px)] text-white/80 font-body font-light leading-relaxed max-w-[350] drop-shadow-md">
+          <p className="text-[clamp(15px,4vw,17px)] text-white/90 font-body font-medium leading-relaxed max-w-[350] drop-shadow-sm">
             {renderSubheadline()}
           </p>
 

@@ -1,8 +1,9 @@
 export const landingData = {
   global: {
-    logoText: "MED7"
+    logoText: "MED7 | Acervo Visual"
   },
   hero: {
+    badge: "Sua excelência clínica é de elite. Seu posicionamento digital também precisa ser.",
     headline: "Como os grandes nomes da Ortopedia e Traumatologia\nganham autoridade sem parecerem \"blogueiros\"?",
     subheadline: "Substitua agências, ferramentas pagas e horas de gravação. Abandone os posts genéricos e use vídeos de alta fidelidade, prontos para postar, que transmitem sofisticação e autoridade técnica imediata.",
     ctaPrimary: "QUERO MEU ACERVO DE ELITE",
@@ -135,19 +136,19 @@ export const landingData = {
     testimonials: [
       {
         name: "Dra Ana Paula",
-        text: "Meu joelho agradece. Explicou melhor do que muito post comum e ficou muito fácil de entender.",
+        text: "\"Parei de perder horas gravando e foquei no centro cirúrgico. A qualidade falou por si só.\"",
         imageUrl: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=100&h=100",
         color: "bg-emerald-500/20 text-emerald-400"
       },
       {
         name: "Dr João Paulo",
-        text: "O perfil ficou mais profissional e o conteúdo ajudou até na forma como explico durante a consulta.",
+        text: "\"Meus pacientes comentaram sobre a qualidade dos vídeos em 3D. Passa muita confiança na consulta.\"",
         imageUrl: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=100&h=100",
         color: "bg-blue-500/20 text-blue-400"
       },
       {
         name: "Dra Mariana Costa",
-        text: "Excelente para reabilitação. Material bonito, didático e com aparência realmente premium.",
+        text: "\"Não preciso mais improvisar ou fazer papel de blogueira. O material é institucional e de extremo bom gosto.\"",
         imageUrl: "https://randomuser.me/api/portraits/women/68.jpg",
         color: "bg-[#00f2ff]/20 text-[#00f2ff]"
       }

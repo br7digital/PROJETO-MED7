@@ -132,7 +132,7 @@ export function Pricing() {
           <div className="flex flex-col gap-3">
             <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="relative btn-elite w-full py-7 group overflow-hidden animate-pulse-attention shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:shadow-[0_0_40px_rgba(0,242,255,0.6)]">
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-[150%] skew-x-[-30deg] animate-[shimmer_2.5s_infinite]" />
-              <span className="relative z-10 text-[clamp(13.5px,4vw,18px)] uppercase tracking-[0.1em] md:tracking-widest font-black drop-shadow-md px-2 whitespace-nowrap">QUERO GARANTIR COM DESCONTO</span>
+              <span className="relative z-10 text-[11.5px] xs:text-[12.5px] sm:text-[14px] md:text-[16px] uppercase tracking-wider md:tracking-widest font-black drop-shadow-md px-2 w-full text-center leading-snug">QUERO GARANTIR COM DESCONTO</span>
             </button>
             <p className="text-center text-[#00f2ff]/90 font-medium text-[10px] sm:text-[11px] font-display tracking-wide flex items-center justify-center gap-2 mt-1">
               <span className="w-1.5 h-1.5 flex-shrink-0 rounded-full bg-[#10B981] animate-pulse"></span>
@@ -170,7 +170,7 @@ export function Pricing() {
             Conformidade com a Resolução CFM nº 2.336/23
           </p>
           <p className="text-white/75 font-body text-[12px] md:text-sm leading-relaxed max-w-[420px] relative z-10">
-            Protocolize sua comunicação digital com total segurança. Nossos ativos visuais foram desenvolvidos para estar <strong className="text-white">100% alinhados às novas diretrizes do CFM</strong>, permitindo que você ganhe autoridade sem riscos éticos.
+            Protocolize sua comunicação digital com total segurança. Este acervo foi <strong className="text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.4)]">desenvolvido sob as diretrizes da Resolução CFM 2.336/23</strong>, garantindo sua máxima autoridade preservando o seu registro.
           </p>
         </div>
 
