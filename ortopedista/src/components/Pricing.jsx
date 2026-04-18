@@ -30,27 +30,27 @@ export function Pricing() {
         </div>
 
         {/* Analytical Value Stack (Google AI Skeptical Conversion) */}
-        <div className="w-full bg-[#11151c]/90 rounded-3xl p-6 mb-16 md:mb-20 border border-[#00f2ff]/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)] relative z-20 backdrop-blur-md">
-          <h3 className="text-white font-display font-bold text-center mb-2 text-[10px] uppercase tracking-[0.15em] text-emerald-400">O Custo Oculto da Produção Tradicional</h3>
-          <p className="text-white/60 text-center font-body text-[11px] leading-snug mb-5 max-w-[90%] mx-auto block">
+        <div className="w-full bg-[#11151c]/95 rounded-3xl p-6 md:p-8 mb-16 md:mb-20 border border-[#00f2ff]/20 shadow-[0_15px_40px_rgba(0,0,0,0.6)] relative z-20 backdrop-blur-xl">
+          <h3 className="text-[#00f2ff] font-display font-bold text-center mb-3 text-[11px] md:text-xs uppercase tracking-widest drop-shadow-md">O Custo Oculto da Produção Tradicional</h3>
+          <p className="text-white/85 text-center font-body text-[11px] sm:text-xs md:text-[13px] leading-[1.4] mb-6 w-full mx-auto block drop-shadow-sm">
             Se você fosse assinar as ferramentas de IA, contratar editores e gastar horas criando roteiros técnicos do zero, seu investimento seria este:
           </p>
-          <ul className="space-y-3 font-body text-xs text-white/70">
-            <li className="flex justify-between items-center border-b border-white/5 pb-2">
-              <span>Produção CGI e Renderização IA</span>
-              <span className="font-semibold text-white/90">R$ 1.500,00</span>
+          <ul className="space-y-4 font-body text-[13px] md:text-sm text-white/90">
+            <li className="flex justify-between items-center border-b border-white/10 pb-3">
+              <span className="font-medium text-white/80">Produção CGI e Renderização IA</span>
+              <span className="font-bold text-white tracking-wide">R$ 1.500,00</span>
             </li>
-            <li className="flex justify-between items-center border-b border-white/5 pb-2">
-              <span>Roteirização Técnica e Estratégica</span>
-              <span className="font-semibold text-white/90">R$ 600,00</span>
+            <li className="flex justify-between items-center border-b border-white/10 pb-3">
+              <span className="font-medium text-white/80">Roteirização Técnica e Estratégica</span>
+              <span className="font-bold text-white tracking-wide">R$ 600,00</span>
             </li>
-            <li className="flex justify-between items-center border-b border-white/5 pb-2">
-              <span>Edição e Pós-Produção Digital</span>
-              <span className="font-semibold text-white/90">R$ 400,00</span>
+            <li className="flex justify-between items-center border-b border-white/10 pb-3">
+              <span className="font-medium text-white/80">Edição e Pós-Produção Digital</span>
+              <span className="font-bold text-white tracking-wide">R$ 400,00</span>
             </li>
             <li className="flex justify-between items-center pt-2">
-              <span className="text-white font-bold uppercase text-[10px] tracking-widest">Custo Real Estimado</span>
-              <span className="text-emerald-400 font-black text-sm">R$ 2.500,00</span>
+              <span className="text-white font-black uppercase text-[11px] md:text-xs tracking-widest bg-emerald-500/10 px-3 py-1.5 rounded-lg border border-emerald-500/20 shadow-inner">CUSTO REAL</span>
+              <span className="text-emerald-400 font-black text-xl md:text-2xl drop-shadow-[0_0_12px_rgba(52,211,153,0.5)]">R$ 2.500,00</span>
             </li>
           </ul>
         </div>
