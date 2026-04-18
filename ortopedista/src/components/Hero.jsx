@@ -55,9 +55,9 @@ export function Hero() {
 
           {/* Title now opens the page */}
 
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-2 shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#00f2ff] animate-pulse"></span>
-            <span className="text-white/90 text-[10px] sm:text-[11px] font-bold tracking-widest uppercase font-display">{landingData.hero.badge}</span>
+          <div className="flex items-start sm:items-center gap-2 px-3 py-2 sm:px-4 sm:py-2 rounded-[14px] sm:rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-2 shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
+            <div className="mt-1 sm:mt-0 w-1.5 h-1.5 flex-shrink-0 rounded-full bg-[#00f2ff] animate-pulse"></div>
+            <span className="text-white/90 text-[8.5px] sm:text-[10px] md:text-[11px] font-bold tracking-[0.15em] sm:tracking-widest uppercase font-display leading-[1.4] sm:leading-none">{landingData.hero.badge}</span>
           </div>
 
           <h1 className="text-[clamp(24px,7vw,40px)] font-display text-white tracking-tight font-extrabold !leading-[1.15] drop-shadow-md">

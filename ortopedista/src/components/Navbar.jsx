@@ -8,12 +8,12 @@ export function Navbar() {
       <div className="h-14 px-6 glass-panel rounded-full flex items-center justify-between pointer-events-auto shadow-2xl">
         
         {/* Logo Text + Icon */}
-        <div className="flex items-center gap-2">
-          <div className="p-1.5 bg-[#00f2ff]/20 rounded-lg">
+        <div className="flex items-center gap-2 min-w-0">
+          <div className="p-1.5 bg-[#00f2ff]/20 rounded-lg flex-shrink-0">
             <Activity className="w-5 h-5 text-[#00f2ff]" />
           </div>
-          <span className="font-display font-bold text-xl text-white tracking-widest">
-            {landingData.global.logoText}
+          <span className="font-display font-bold text-xl text-white tracking-widest truncate">
+            {landingData.global.logoText.split('|')[0]}<span className="hidden xs:inline"> |{landingData.global.logoText.split('|')[1]}</span>
           </span>
         </div>
         
