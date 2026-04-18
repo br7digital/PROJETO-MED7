@@ -6,12 +6,24 @@ export function Hero() {
 
   const renderHeadline = () => {
     const parts = headline.split('\n');
+    
+    // Function to dynamically inject neon colors
+    const highlightWords = (text) => {
+      // Splits retaining the target words to style them correctly
+      return text.split(/(autoridade|"blogueiros"\?)/g).map((chunk, i) => {
+        if (chunk === 'autoridade' || chunk === '"blogueiros"?') {
+          return <span key={i} className="text-[#00f2ff] drop-shadow-[0_2px_10px_rgba(0,242,255,0.3)]">{chunk}</span>;
+        }
+        return <span key={i}>{chunk}</span>;
+      });
+    };
+
     return (
-      <div className="flex flex-col gap-1">
-        <span className="text-white drop-shadow-lg">{parts[0]}</span>
+      <div className="flex flex-col gap-2">
+        <span className="text-white drop-shadow-lg leading-[1.2]">{parts[0]}</span>
         {parts[1] && (
-          <span className="text-[#00f2ff] drop-shadow-[0_2px_10px_rgba(0,242,255,0.3)] font-extrabold tracking-tight">
-            {parts[1]}
+          <span className="text-white drop-shadow-md font-extrabold tracking-tight leading-[1.3]">
+            {highlightWords(parts[1])}
           </span>
         )}
       </div>
@@ -29,17 +41,17 @@ export function Hero() {
         <div className="space-y-6 max-w-[360px]">
 
           {/* Elite Tag */}
-          <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#10B981]/30 bg-[#011a14]/60 backdrop-blur-xl shadow-[0_0_20px_rgba(16,185,129,0.25)]">
-            <span className="relative flex h-2 w-2 mr-3">
+          <div className="inline-flex items-center px-4 py-2 rounded-full border border-[#10B981]/50 bg-[#011a14]/80 backdrop-blur-xl shadow-[0_0_25px_rgba(16,185,129,0.35)]">
+            <span className="relative flex h-2.5 w-2.5 mr-3">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10B981] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#10B981]"></span>
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#10B981]"></span>
             </span>
-            <span className="text-[#10B981] text-[10px] font-bold tracking-[0.2em] uppercase flex items-center">
-              CONFORMIDADE CFM <span className="text-white/20 mx-2 text-[12px] font-light">|</span> <span className="text-[#00f2ff]">ESTRATÉGIA DE ELITE</span>
+            <span className="text-[#10B981] text-[11px] md:text-xs font-bold tracking-[0.2em] uppercase flex items-center drop-shadow-[0_0_8px_rgba(16,185,129,0.5)]">
+              CONFORMIDADE CFM <span className="text-white/20 mx-2 text-[12px] font-light">|</span> <span className="text-[#00f2ff] drop-shadow-[0_0_5px_rgba(0,242,255,0.6)]">ESTRATÉGIA DE ELITE</span>
             </span>
           </div>
 
-          <h1 className="text-[clamp(30px,9vw,42px)] font-display text-white tracking-tight font-extrabold !leading-[1.3] drop-shadow-md">
+          <h1 className="text-[clamp(30px,9vw,42px)] font-display text-white tracking-tight font-extrabold !leading-[1.4] drop-shadow-md">
             {renderHeadline()}
           </h1>
 
