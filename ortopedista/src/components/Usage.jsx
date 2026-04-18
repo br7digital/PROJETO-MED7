@@ -200,7 +200,7 @@ export function Usage() {
             </div>
 
             <p className="text-white/80 font-body text-[13px] leading-relaxed text-center mb-6">
-              Por que estamos entregando este arsenal de elite por apenas <strong className="text-white">R$ 197,90</strong>? Porque decidimos <strong className="text-[#00f2ff]">diluir o custo</strong> de uma produção de R$ 2.500,00 para democratizar o seu acesso.
+              Por que estamos entregando este arsenal de elite por apenas <strong className="text-white font-black text-[15px] drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] bg-white/10 px-2 py-0.5 rounded-md mx-1 tracking-wide">R$ 197,90</strong>? Porque decidimos <strong className="text-[#00f2ff]">diluir o custo</strong> de uma produção de R$ 2.500,00 para viabilizar e escalar o seu posicionamento.
             </p>
 
             <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-4 !text-sm group shadow-[0_0_20px_rgba(0,242,255,0.2)] animate-pulse-attention">
