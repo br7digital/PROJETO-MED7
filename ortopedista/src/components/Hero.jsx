@@ -1,17 +1,33 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { landingData } from '../data/data-config';
 
 export function Hero() {
-  const { headline, subheadline, ctaPrimary } = landingData.hero;
+  const { headlineVariations, subheadline, ctaPrimary, badge } = landingData.hero;
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIsAnimating(true);
+      setTimeout(() => {
+        setCurrentIndex((prev) => (prev + 1) % headlineVariations.length);
+        setIsAnimating(false);
+      }, 500); // Wait for fade out
+    }, 4500); // Change headline every 4.5 seconds
+
+    return () => clearInterval(timer);
+  }, [headlineVariations.length]);
 
   const renderHeadline = () => {
-    const parts = headline.split('\n');
+    const headline = headlineVariations[currentIndex];
     
     // Function to dynamically inject neon colors
     const highlightWords = (text) => {
-      // Splits retaining the target words to style them correctly
-      return text.split(/(autoridade|"blogueiros"\?)/g).map((chunk, i) => {
-        if (chunk === 'autoridade' || chunk === '"blogueiros"?') {
+      const wordsToHighlight = ['autoridade', '"blogueiro"', 'elite', 'prestígio', 'técnico', 'digital'];
+      const regex = new RegExp(`(${wordsToHighlight.join('|')})`, 'gi');
+      
+      return text.split(regex).map((chunk, i) => {
+        if (wordsToHighlight.some(w => chunk.toLowerCase().includes(w.toLowerCase()))) {
           return <span key={i} className="text-[#00f2ff] drop-shadow-[0_1px_4px_rgba(0,242,255,0.4)] brightness-110">{chunk}</span>;
         }
         return <span key={i}>{chunk}</span>;
@@ -19,13 +35,10 @@ export function Hero() {
     };
 
     return (
-      <div className="flex flex-col gap-1.5">
-        <span className="text-white drop-shadow-md leading-[1.15]">{parts[0]}</span>
-        {parts[1] && (
-          <span className="text-white drop-shadow-md font-extrabold tracking-tight leading-[1.15]">
-            {highlightWords(parts[1])}
-          </span>
-        )}
+      <div className={`transition-all duration-500 transform ${isAnimating ? 'opacity-0 -translate-y-4' : 'opacity-100 translate-y-0'}`}>
+        <span className="text-white drop-shadow-md leading-[1.15]">
+          {highlightWords(headline)}
+        </span>
       </div>
     );
   };
@@ -58,7 +71,7 @@ export function Hero() {
           <div className="flex items-start sm:items-center gap-2 px-4 py-2.5 sm:px-5 sm:py-2.5 rounded-[16px] sm:rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-3 shadow-[0_4px_15px_rgba(0,0,0,0.2)]">
             <div className="mt-1.5 sm:mt-0 w-2 h-2 flex-shrink-0 rounded-full bg-[#00f2ff] animate-pulse"></div>
             <span className="text-white/90 text-[11px] md:text-[12px] font-bold tracking-[0.1em] sm:tracking-wider uppercase font-display leading-[1.6] sm:leading-none">
-              SUA <span className="text-[#00f2ff]">EXCELÊNCIA CLÍNICA</span> É DE ELITE. SEU <span className="text-[#00f2ff]">POSICIONAMENTO DIGITAL</span> TAMBÉM PRECISA SER.
+              {badge}
             </span>
           </div>
 

@@ -3,8 +3,12 @@ export const landingData = {
     logoText: "MED7 | Acervo Visual"
   },
   hero: {
-    badge: "Sua excelência clínica é de elite. Seu posicionamento digital também precisa ser.",
-    headline: "Como os grandes nomes da Ortopedia e Traumatologia\nganham autoridade sem parecerem \"blogueiros\"?",
+    badge: "⚡ EXCLUSIVO PARA ORTOPEDISTAS E TRAUMATOLOGISTAS",
+    headlineVariations: [
+      "Como ganhar autoridade de elite sem parecer um 'blogueiro'?",
+      "Tenha o posicionamento dos grandes nomes sem perder o prestígio técnico.",
+      "Abandone os posts genéricos e domine o digital sem precisar gravar."
+    ],
     subheadline: "Substitua agências, ferramentas pagas e horas de gravação. Abandone os posts genéricos e use vídeos de alta fidelidade, prontos para postar, que transmitem sofisticação e autoridade técnica imediata.",
     ctaPrimary: "QUERO MEU ACERVO DE ELITE",
     imageAlt: "Médico ortopedista usando celular para gravar conteúdo"
