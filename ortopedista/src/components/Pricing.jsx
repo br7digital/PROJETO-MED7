@@ -16,7 +16,7 @@ export function Pricing() {
 
       <div className="container mx-auto px-6 relative z-10 w-full max-w-[480px] flex flex-col items-center">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-8">
           <h2 className="text-[clamp(30px,8vw,36px)] font-display font-black text-white mb-4 leading-none tracking-tighter text-glow">
             {title.split('\n').map((part, i) => (
               <React.Fragment key={i}>
@@ -27,6 +27,29 @@ export function Pricing() {
           <p className="text-white/70 font-body font-light text-sm tracking-wide">
             {subtitle}
           </p>
+        </div>
+
+        {/* Analytical Value Stack (Google AI Skeptical Conversion) */}
+        <div className="w-full bg-[#11151c]/90 rounded-3xl p-6 mb-10 border border-[#00f2ff]/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)] relative z-20 backdrop-blur-md">
+          <h3 className="text-white font-display font-bold text-center mb-5 text-[10px] uppercase tracking-[0.15em] text-emerald-400">O Custo Oculto da Produção Tradicional</h3>
+          <ul className="space-y-3 font-body text-xs text-white/70">
+            <li className="flex justify-between items-center border-b border-white/5 pb-2">
+              <span>Produção de 100 Vídeos (Agência)</span>
+              <span className="font-semibold text-white/90">R$ 1.500,00</span>
+            </li>
+            <li className="flex justify-between items-center border-b border-white/5 pb-2">
+              <span>Roteirização Técnica Especializada</span>
+              <span className="font-semibold text-white/90">R$ 600,00</span>
+            </li>
+            <li className="flex justify-between items-center border-b border-white/5 pb-2">
+              <span>Licenciamento de Banco 3D Médico</span>
+              <span className="font-semibold text-white/90">R$ 400,00</span>
+            </li>
+            <li className="flex justify-between items-center pt-2">
+              <span className="text-white font-bold uppercase text-[10px] tracking-widest">Custo Real Estimado</span>
+              <span className="text-emerald-400 font-black text-sm">R$ 2.500,00</span>
+            </li>
+          </ul>
         </div>
 
         {/* Seal and Doctors Container */}
@@ -58,15 +81,8 @@ export function Pricing() {
 
           {/* Top Header Section of Card - Imported from MiniOffer */}
           <div className="flex flex-col items-center mb-8 relative z-10">
-            {/* Top Badge */}
-            <div className="flex justify-center mb-6">
-              <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-black/40 border border-[#00f2ff]/30 rounded-full shadow-[0_0_15px_rgba(0,242,255,0.15)]">
-                <span className="text-orange-500 animate-pulse text-[11px]">🔥</span>
-                <span className="text-[#00f2ff] text-[10px] font-black tracking-widest uppercase">
-                  Oferta Limitada - 97% OFF
-                </span>
-              </div>
-            </div>
+            {/* To avoid redundant limits badge visually, we leave the top of pricing empty for the Launch Batch badge directly. */}
+            <div className="mb-2"></div>
 
             {/* Pricing Area */}
             <div className="text-center">
@@ -78,18 +94,18 @@ export function Pricing() {
               <p className="text-white/70 line-through text-xs font-display font-medium tracking-wider mb-2">De R$ 2.500,00</p>
               <div className="flex items-center justify-center gap-1 drop-shadow-xl mb-4 mt-2">
                 <span className="text-white/80 text-3xl font-display font-bold">R$</span>
-                <span className="text-white text-[90px] leading-none font-display font-black tracking-tighter drop-shadow-2xl scale-110 mx-2">97</span>
-                <span className="text-white/80 text-3xl font-display font-bold">,00</span>
+                <span className="text-white text-[90px] leading-none font-display font-black tracking-tighter drop-shadow-2xl scale-110 mx-2">197</span>
+                <span className="text-white/80 text-3xl font-display font-bold">,90</span>
               </div>
               <div className="mb-4">
                 <span className="text-emerald-400 font-bold text-[11px] uppercase tracking-wide bg-emerald-500/10 px-4 py-2 rounded-full border border-emerald-500/20 shadow-inner drop-shadow-md">
-                  💰 Economize R$ 2.403,00
+                  💰 Economize R$ 2.302,10
                 </span>
               </div>
 
               <div className="mt-2">
-                <span className="inline-block bg-white/5 px-6 py-1.5 rounded-full text-white/50 font-display font-light text-xs border border-white/5">
-                  Ou {installments}
+                <span className="inline-block bg-[#00f2ff]/5 px-6 py-1.5 rounded-full text-white/80 font-display font-medium text-[12px] md:text-sm border border-[#00f2ff]/20 shadow-[0_5px_15px_rgba(0,242,255,0.05)]">
+                  Ou 12x de R$ 19,75
                 </span>
               </div>
             </div>
@@ -115,7 +131,7 @@ export function Pricing() {
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-[150%] skew-x-[-30deg] animate-[shimmer_2.5s_infinite]" />
               <span className="relative z-10 text-[clamp(13.5px,4vw,18px)] uppercase tracking-[0.1em] md:tracking-widest font-black drop-shadow-md px-2 whitespace-nowrap">QUERO GARANTIR COM DESCONTO</span>
             </button>
-            <p className="text-center text-[#00f2ff]/80 font-light text-[9px] sm:text-[11px] font-display tracking-wide flex items-center justify-center gap-2">
+            <p className="text-center text-[#00f2ff]/90 font-medium text-[10px] sm:text-[11px] font-display tracking-wide flex items-center justify-center gap-2 mt-1">
               <span className="w-1.5 h-1.5 flex-shrink-0 rounded-full bg-[#10B981] animate-pulse"></span>
               Condição especial exclusiva para os primeiros acessos da atualização.
             </p>

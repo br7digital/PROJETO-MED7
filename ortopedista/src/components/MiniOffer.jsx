@@ -34,17 +34,22 @@ export function MiniOffer() {
           <p className="text-white/70 line-through text-xs font-display font-medium tracking-wider mb-1">De R$ 2.500,00</p>
           <div className="flex items-center justify-center gap-1 drop-shadow-xl mt-1">
             <span className="text-white/80 text-xl font-display font-bold">R$</span>
-            <span className="text-white text-[56px] leading-none font-display font-black tracking-tighter drop-shadow-2xl scale-110 mx-1">97</span>
-            <span className="text-white/80 text-xl font-display font-bold">,00</span>
+            <span className="text-white text-[56px] leading-none font-display font-black tracking-tighter drop-shadow-2xl scale-110 mx-1">197</span>
+            <span className="text-white/80 text-xl font-display font-bold">,90</span>
           </div>
           <div className="mt-3">
             <span className="text-emerald-400 font-bold text-[10px] uppercase tracking-wide bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/20 shadow-inner">
-              💰 Economize R$ 2.403,00
+              💰 Economize R$ 2.302,10
             </span>
           </div>
+          <div className="mt-4 mb-3 px-2">
+            <p className="text-white/80 font-body text-[12px] md:text-[13px] font-medium leading-relaxed max-w-[280px] mx-auto drop-shadow-md">
+              Economize mais de R$ 2.300 em custos de agência. Tenha o arsenal completo de um estúdio por uma fração do preço.
+            </p>
+          </div>
           <div className="mt-3 text-center">
-            <span className="inline-block bg-white/5 px-4 py-1.5 rounded-full text-white/50 font-display font-light text-[10px] border border-white/5">
-              Ou 12x de R$ 9,68
+            <span className="inline-block bg-[#00f2ff]/5 px-4 py-1.5 rounded-full text-white/80 font-display font-medium text-[12px] border border-[#00f2ff]/20">
+              Ou 12x de R$ 19,75
             </span>
           </div>
         </div>
@@ -54,25 +59,25 @@ export function MiniOffer() {
           <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-4 !text-sm group shadow-[0_0_20px_rgba(0,242,255,0.2)] animate-pulse-attention">
             <span className="relative z-10 uppercase tracking-[0.05em] md:tracking-widest font-black text-[clamp(12px,3.5vw,14px)] whitespace-nowrap">QUERO GARANTIR COM DESCONTO</span>
           </button>
-          <p className="text-center text-[#00f2ff]/80 font-light text-[9px] font-display tracking-wide flex items-center justify-center gap-2">
+          <p className="text-center text-[#00f2ff]/90 font-medium text-[10px] md:text-[11px] font-display tracking-wide flex items-center justify-center gap-2 mt-1">
             <span className="w-1.5 h-1.5 flex-shrink-0 rounded-full bg-[#10B981] animate-pulse"></span>
             Condição especial para os primeiros acessos.
           </p>
         </div>
 
-        {/* Bottom Trust Indicators */}
-        <div className="flex justify-between items-center px-4 pt-5 mt-5 border-t border-white/5 relative z-10">
-          <div className="flex flex-col items-center gap-1.5 opacity-50 hover:opacity-100 transition-opacity">
-             <span className="text-sm filter grayscale brightness-200">🛡️</span>
-             <span className="text-[8px] font-bold tracking-[0.2em] text-white uppercase">Seguro</span>
+        {/* Bottom Trust Indicators matched from Pricing */}
+        <div className="flex justify-between items-center px-4 pt-5 mt-5 border-t border-white/5 relative z-10 w-full mb-0">
+          <div className="flex flex-col items-center gap-1.5 opacity-90 hover:opacity-100 transition-opacity">
+            <span className="text-xl drop-shadow-[0_0_10px_rgba(0,0,0,0.5)]">🛡️</span>
+            <span className="text-[9px] font-bold tracking-[0.2em] text-[#00f2ff] uppercase">Seguro</span>
           </div>
-          <div className="flex flex-col items-center gap-1.5 opacity-50 hover:opacity-100 transition-opacity">
-             <span className="text-sm filter grayscale brightness-200">⚡</span>
-             <span className="text-[8px] font-bold tracking-[0.2em] text-white uppercase">Imediato</span>
+          <div className="flex flex-col items-center gap-1.5 opacity-90 hover:opacity-100 transition-opacity">
+            <span className="text-xl drop-shadow-[0_0_10px_rgba(255,215,0,0.5)]">⚡</span>
+            <span className="text-[9px] font-bold tracking-[0.2em] text-[#fbbf24] uppercase">Imediato</span>
           </div>
-          <div className="flex flex-col items-center gap-1.5 opacity-50 hover:opacity-100 transition-opacity">
-             <span className="text-sm filter grayscale brightness-200">🏆</span>
-             <span className="text-[8px] font-bold tracking-[0.2em] text-white uppercase">Garantia</span>
+          <div className="flex flex-col items-center gap-1.5 opacity-90 hover:opacity-100 transition-opacity">
+            <span className="text-xl drop-shadow-[0_0_10px_rgba(255,215,0,0.5)]">🏆</span>
+            <span className="text-[9px] font-bold tracking-[0.2em] text-[#fbbf24] uppercase">Garantia</span>
           </div>
         </div>
       </div>
