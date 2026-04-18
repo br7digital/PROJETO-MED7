@@ -31,7 +31,7 @@ export function MiniOffer() {
 
         {/* Pricing Area */}
         <div className="text-center mb-6 relative z-10">
-          <p className="text-rose-500/50 line-through text-sm font-display font-medium tracking-wider mb-2">De R$ 2.500,00</p>
+          <p className="text-amber-600/70 line-through text-sm font-display font-medium tracking-wider mb-2">De R$ 2.500,00</p>
           <div className="flex items-center justify-center gap-1 mt-1">
             <span className="text-emerald-400 text-xl font-display font-bold">R$</span>
             <span className="text-emerald-400 text-[64px] leading-none font-display font-black tracking-tighter drop-shadow-[0_0_20px_rgba(52,211,153,0.3)] scale-110 mx-1">197</span>

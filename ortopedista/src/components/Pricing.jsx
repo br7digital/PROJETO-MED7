@@ -50,7 +50,7 @@ export function Pricing() {
             </li>
             <li className="flex justify-between items-center pt-2 gap-3">
               <span className="text-white/60 font-black uppercase text-[9px] md:text-[11px] tracking-widest bg-white/5 px-2 md:px-3 py-1.5 rounded-lg border border-white/10 shadow-inner whitespace-nowrap flex-shrink-0">VALOR DE MERCADO</span>
-              <span className="text-rose-500/60 font-black text-lg md:text-2xl line-through decoration-rose-500/50 decoration-2 drop-shadow-sm whitespace-nowrap flex-shrink-0">R$ 2.500,00</span>
+              <span className="text-amber-600/80 font-black text-lg md:text-2xl line-through decoration-amber-600/60 decoration-2 drop-shadow-sm whitespace-nowrap flex-shrink-0">R$ 2.500,00</span>
             </li>
           </ul>
         </div>
@@ -94,7 +94,7 @@ export function Pricing() {
                   LOTE DE LANÇAMENTO
                 </span>
               </div>
-              <p className="text-rose-500/50 line-through text-[14px] font-display font-medium tracking-wider mb-2">De R$ 2.500,00</p>
+              <p className="text-amber-600/70 line-through text-[14px] font-display font-medium tracking-wider mb-2">De R$ 2.500,00</p>
               <div className="flex items-center justify-center gap-1 mb-4 mt-2">
                 <span className="text-emerald-400 text-3xl font-display font-bold">R$</span>
                 <span className="text-emerald-400 text-[90px] leading-none font-display font-black tracking-tighter drop-shadow-[0_0_30px_rgba(52,211,153,0.4)] scale-110 mx-2">197</span>
