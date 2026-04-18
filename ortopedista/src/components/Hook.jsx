@@ -29,7 +29,7 @@ export function Hook() {
         </div>
 
         {/* Neon Vertical Cards Stack - Cards moved up */}
-        <div className="flex flex-col gap-4 w-full relative z-20">
+        <div className="flex flex-col gap-10 w-full relative z-20">
           
           {pillars.map((pillar, index) => {
             const icons = [ASSETS.ICON_POSTS, ASSETS.ICON_PREMIUM, ASSETS.ICON_AUTHORITY];
@@ -37,7 +37,7 @@ export function Hook() {
               <div key={index} className="group relative bg-[#0a1e2f]/95 backdrop-blur-3xl border-2 border-[#00f2ff] rounded-2xl py-4 pr-5 pl-2 flex items-center gap-2 transition-all duration-500 hover:scale-[1.03] shadow-[0_0_20px_rgba(0,242,255,0.3)] min-h-[160px]">
                   {/* Asset Box - Breaking the Left Border */}
                   <div className="relative w-[140px] h-[180px] flex-shrink-0 flex items-center justify-center -ml-10 z-30">
-                     <img src={icons[index]} className="w-full h-full object-contain drop-shadow-[20px_10px_30px_rgba(0,0,0,0.7)] scale-125 transition-transform duration-700 group-hover:scale-[1.35]" alt="" />
+                     <img src={icons[index]} className="w-full h-full object-contain drop-shadow-[5px_15px_25px_rgba(0,0,0,0.6)] scale-125 transition-transform duration-700 group-hover:scale-[1.35]" alt="" />
                   </div>
                   
                   <div className="flex-1 -ml-2 relative z-10">
