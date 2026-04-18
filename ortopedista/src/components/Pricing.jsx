@@ -70,10 +70,15 @@ export function Pricing() {
 
             {/* Pricing Area */}
             <div className="text-center">
+              <div className="mb-3">
+                <span className="inline-block bg-[#00f2ff]/10 border border-[#00f2ff]/30 text-[#00f2ff] text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full shadow-[0_0_15px_rgba(0,242,255,0.2)] animate-pulse">
+                  LOTE DE LANÇAMENTO
+                </span>
+              </div>
               <p className="text-white/70 line-through text-xs font-display font-medium tracking-wider mb-2">De R$ 2.500,00</p>
-              <div className="flex items-center justify-center gap-1 drop-shadow-xl mb-4">
+              <div className="flex items-center justify-center gap-1 drop-shadow-xl mb-4 mt-2">
                 <span className="text-white/80 text-3xl font-display font-bold">R$</span>
-                <span className="text-white text-[90px] leading-none font-display font-black tracking-tighter text-glow">97</span>
+                <span className="text-white text-[90px] leading-none font-display font-black tracking-tighter drop-shadow-2xl scale-110 mx-2">97</span>
                 <span className="text-white/80 text-3xl font-display font-bold">,00</span>
               </div>
               <div className="mb-4">
@@ -104,11 +109,17 @@ export function Pricing() {
             ))}
           </ul>
 
-          {/* Elite CTA Button */}
-          <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="relative btn-elite w-full py-7 group overflow-hidden animate-pulse-attention shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:shadow-[0_0_40px_rgba(0,242,255,0.6)]">
-            <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-[150%] skew-x-[-30deg] animate-[shimmer_2.5s_infinite]" />
-            <span className="relative z-10 text-[clamp(13.5px,4vw,18px)] uppercase tracking-[0.1em] md:tracking-widest font-black drop-shadow-md px-2 whitespace-nowrap">QUERO GARANTIR COM DESCONTO</span>
-          </button>
+          {/* Elite CTA Button with Scarcity */}
+          <div className="flex flex-col gap-3">
+            <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="relative btn-elite w-full py-7 group overflow-hidden animate-pulse-attention shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:shadow-[0_0_40px_rgba(0,242,255,0.6)]">
+              <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-[150%] skew-x-[-30deg] animate-[shimmer_2.5s_infinite]" />
+              <span className="relative z-10 text-[clamp(13.5px,4vw,18px)] uppercase tracking-[0.1em] md:tracking-widest font-black drop-shadow-md px-2 whitespace-nowrap">QUERO GARANTIR COM DESCONTO</span>
+            </button>
+            <p className="text-center text-zinc-300 italic text-[10px] sm:text-xs font-display tracking-wide flex items-center justify-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse"></span>
+              Condição especial exclusiva para os primeiros acessos da atualização.
+            </p>
+          </div>
 
           {/* Bottom Trust Indicators - Imported from MiniOffer */}
           <div className="flex justify-between items-center px-2 pt-6 mt-6 border-t border-white/5 relative z-10 w-full mb-0">

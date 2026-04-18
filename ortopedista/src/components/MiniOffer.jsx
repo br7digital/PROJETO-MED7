@@ -10,10 +10,9 @@ export function MiniOffer() {
 
         {/* Top Badge */}
         <div className="flex justify-center mb-5 relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-black/40 border border-[#00f2ff]/30 rounded-full shadow-[0_0_15px_rgba(0,242,255,0.15)]">
-            <span className="text-orange-500 animate-pulse text-[10px]">🔥</span>
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#00f2ff]/10 border border-[#00f2ff]/30 rounded-full shadow-[0_0_15px_rgba(0,242,255,0.15)] animate-pulse">
             <span className="text-[#00f2ff] text-[9px] font-black tracking-widest uppercase">
-              Oferta Limitada - 97% OFF
+              LOTE DE LANÇAMENTO
             </span>
           </div>
         </div>
@@ -21,9 +20,9 @@ export function MiniOffer() {
         {/* Pricing Area */}
         <div className="text-center mb-6 relative z-10">
           <p className="text-white/70 line-through text-xs font-display font-medium tracking-wider mb-1">De R$ 2.500,00</p>
-          <div className="flex items-center justify-center gap-1 drop-shadow-xl">
+          <div className="flex items-center justify-center gap-1 drop-shadow-xl mt-1">
             <span className="text-white/80 text-xl font-display font-bold">R$</span>
-            <span className="text-white text-[56px] leading-none font-display font-black tracking-tighter text-glow">97</span>
+            <span className="text-white text-[56px] leading-none font-display font-black tracking-tighter drop-shadow-2xl scale-110 mx-1">97</span>
             <span className="text-white/80 text-xl font-display font-bold">,00</span>
           </div>
           <div className="mt-3">
@@ -39,10 +38,14 @@ export function MiniOffer() {
         </div>
 
         {/* Button */}
-        <div className="relative z-10">
+        <div className="relative z-10 flex flex-col gap-3">
           <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-4 !text-sm group shadow-[0_0_20px_rgba(0,242,255,0.2)] animate-pulse-attention">
             <span className="relative z-10 uppercase tracking-[0.05em] md:tracking-widest font-black text-[clamp(12px,3.5vw,14px)] whitespace-nowrap">QUERO GARANTIR COM DESCONTO</span>
           </button>
+          <p className="text-center text-zinc-300 italic text-[10px] font-display tracking-wide flex items-center justify-center gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse"></span>
+            Condição especial para os primeiros acessos.
+          </p>
         </div>
 
         {/* Bottom Trust Indicators */}

@@ -12,17 +12,17 @@ export function Hero() {
       // Splits retaining the target words to style them correctly
       return text.split(/(autoridade|"blogueiros"\?)/g).map((chunk, i) => {
         if (chunk === 'autoridade' || chunk === '"blogueiros"?') {
-          return <span key={i} className="text-[#00f2ff] drop-shadow-[0_2px_10px_rgba(0,242,255,0.3)]">{chunk}</span>;
+          return <span key={i} className="text-[#00f2ff] [text-shadow:-1px_-1px_0_rgba(0,0,0,0.8),1px_-1px_0_rgba(0,0,0,0.8),-1px_1px_0_rgba(0,0,0,0.8),1px_1px_0_rgba(0,0,0,0.8)] drop-shadow-[0_0_6px_rgba(0,242,255,0.5)] brightness-110">{chunk}</span>;
         }
         return <span key={i}>{chunk}</span>;
       });
     };
 
     return (
-      <div className="flex flex-col gap-2">
-        <span className="text-white drop-shadow-lg leading-[1.2]">{parts[0]}</span>
+      <div className="flex flex-col gap-0.5">
+        <span className="text-white drop-shadow-lg leading-[1.15]">{parts[0]}</span>
         {parts[1] && (
-          <span className="text-white drop-shadow-md font-extrabold tracking-tight leading-[1.3]">
+          <span className="text-white drop-shadow-md font-extrabold tracking-tight leading-[1.15]">
             {highlightWords(parts[1])}
           </span>
         )}
@@ -37,8 +37,8 @@ export function Hero() {
       <div className="absolute top-60 inset-x-0 h-[250px] bg-gradient-to-b from-[#020a18] via-[#020a18]/80 to-transparent pointer-events-none z-10" />
 
       {/* Content Container - High positioning with consistent padding */}
-      <div className="relative z-30 w-full px-6 pt-[100px] pb-0">
-        <div className="space-y-6 max-w-[360px]">
+      <div className="relative z-30 w-full px-5 pt-[85px] sm:pt-[100px] pb-0">
+        <div className="space-y-5 max-w-md md:max-w-[520px]">
 
           {/* Elite Tag */}
           <div className="inline-flex items-center px-4 py-2 rounded-full border border-[#10B981]/50 bg-[#011a14]/80 backdrop-blur-xl shadow-[0_0_25px_rgba(16,185,129,0.35)]">
@@ -51,7 +51,7 @@ export function Hero() {
             </span>
           </div>
 
-          <h1 className="text-[clamp(30px,9vw,42px)] font-display text-white tracking-tight font-extrabold !leading-[1.4] drop-shadow-md">
+          <h1 className="text-[clamp(24px,7vw,40px)] font-display text-white tracking-tight font-extrabold !leading-[1.15] drop-shadow-md">
             {renderHeadline()}
           </h1>
 
@@ -59,11 +59,15 @@ export function Hero() {
             {subheadline}
           </p>
 
-          <div className="pt-1">
+          <div className="pt-1 flex flex-col gap-3">
             <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite shadow-2xl flex items-center justify-center gap-3 w-fit group animate-pulse-attention">
               {ctaPrimary}
               <div className="w-1 h-1 rounded-full bg-slate-900 group-hover:scale-150 transition-transform duration-300" />
             </button>
+            <p className="text-zinc-300 italic text-[10px] sm:text-xs font-display tracking-wide ml-2 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse"></span>
+              Condição especial exclusiva para os primeiros acessos.
+            </p>
           </div>
         </div>
       </div>
