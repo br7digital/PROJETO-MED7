@@ -30,27 +30,27 @@ export function Pricing() {
         </div>
 
         {/* Analytical Value Stack (Google AI Skeptical Conversion) */}
-        <div className="w-full bg-[#11151c]/95 rounded-3xl p-6 md:p-8 mb-16 md:mb-20 border border-[#00f2ff]/20 shadow-[0_15px_40px_rgba(0,0,0,0.6)] relative z-20 backdrop-blur-xl">
-          <h3 className="text-[#00f2ff] font-display font-bold text-center mb-3 text-[11px] md:text-xs uppercase tracking-widest drop-shadow-md">O Custo Oculto da Produção Tradicional</h3>
-          <p className="text-white/85 text-center font-body text-[11px] sm:text-xs md:text-[13px] leading-[1.4] mb-6 w-full mx-auto block drop-shadow-sm">
+        <div className="w-full bg-[#11151c]/95 rounded-3xl p-5 md:p-8 mb-16 md:mb-20 border border-[#00f2ff]/20 shadow-[0_15px_40px_rgba(0,0,0,0.6)] relative z-20 backdrop-blur-xl">
+          <h3 className="text-[#00f2ff] font-display font-bold text-center mb-3 text-[12px] md:text-xs uppercase tracking-widest drop-shadow-md">O Custo Oculto da Produção Tradicional</h3>
+          <p className="text-white/85 text-center font-body text-[12px] sm:text-[13px] md:text-[14px] leading-[1.5] mb-6 w-full mx-auto block drop-shadow-sm">
             Se você fosse assinar as <strong className="text-white">ferramentas de IA</strong>, contratar <strong className="text-white">editores</strong> e gastar <strong className="text-white">horas criando roteiros técnicos</strong> do zero, seu investimento seria este:
           </p>
-          <ul className="space-y-4 font-body text-[13px] md:text-sm text-white/90">
-            <li className="flex justify-between items-center border-b border-white/10 pb-3">
-              <span className="font-medium text-white/80"><strong className="text-white">Produção CGI</strong> e Renderização IA</span>
-              <span className="font-bold text-white tracking-wide">R$ 1.500,00</span>
+          <ul className="space-y-4 font-body text-white/90">
+            <li className="flex justify-between items-center border-b border-white/10 pb-3 gap-3">
+              <span className="font-medium text-white/80 text-[13px] md:text-sm min-w-0"><strong className="text-white">Produção CGI</strong> e Renderização IA</span>
+              <span className="font-bold text-white tracking-wide text-[13px] md:text-sm whitespace-nowrap flex-shrink-0">R$ 1.500,00</span>
             </li>
-            <li className="flex justify-between items-center border-b border-white/10 pb-3">
-              <span className="font-medium text-white/80"><strong className="text-white">Roteirização Técnica</strong> e Estratégica</span>
-              <span className="font-bold text-white tracking-wide">R$ 600,00</span>
+            <li className="flex justify-between items-center border-b border-white/10 pb-3 gap-3">
+              <span className="font-medium text-white/80 text-[13px] md:text-sm min-w-0"><strong className="text-white">Roteirização Técnica</strong> e Estratégica</span>
+              <span className="font-bold text-white tracking-wide text-[13px] md:text-sm whitespace-nowrap flex-shrink-0">R$ 600,00</span>
             </li>
-            <li className="flex justify-between items-center border-b border-white/10 pb-3">
-              <span className="font-medium text-white/80"><strong className="text-white">Pós-Produção</strong> Digital Especializada</span>
-              <span className="font-bold text-white tracking-wide">R$ 400,00</span>
+            <li className="flex justify-between items-center border-b border-white/10 pb-3 gap-3">
+              <span className="font-medium text-white/80 text-[13px] md:text-sm min-w-0"><strong className="text-white">Pós-Produção</strong> Digital Especializada</span>
+              <span className="font-bold text-white tracking-wide text-[13px] md:text-sm whitespace-nowrap flex-shrink-0">R$ 400,00</span>
             </li>
-            <li className="flex justify-between items-center pt-2">
-              <span className="text-white/60 font-black uppercase text-[10px] md:text-[11px] tracking-widest bg-white/5 px-3 py-1.5 rounded-lg border border-white/10 shadow-inner">VALOR DE MERCADO</span>
-              <span className="text-rose-500/60 font-black text-xl md:text-2xl line-through decoration-rose-500/50 decoration-2 drop-shadow-sm">R$ 2.500,00</span>
+            <li className="flex justify-between items-center pt-2 gap-3">
+              <span className="text-white/60 font-black uppercase text-[9px] md:text-[11px] tracking-widest bg-white/5 px-2 md:px-3 py-1.5 rounded-lg border border-white/10 shadow-inner whitespace-nowrap flex-shrink-0">VALOR DE MERCADO</span>
+              <span className="text-rose-500/60 font-black text-lg md:text-2xl line-through decoration-rose-500/50 decoration-2 drop-shadow-sm whitespace-nowrap flex-shrink-0">R$ 2.500,00</span>
             </li>
           </ul>
         </div>
