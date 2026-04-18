@@ -23,7 +23,7 @@ export function Hook() {
           <span className="inline-block px-4 py-1.5 mb-5 rounded-full border border-[#00f2ff]/30 bg-[#00f2ff]/10 text-[#00f2ff] text-[10px] font-bold tracking-widest uppercase shadow-[0_0_15px_rgba(0,242,255,0.15)]">
             {badge}
           </span>
-          <h2 className="text-[clamp(24px,7vw,32px)] font-display font-black text-white leading-[1.15] tracking-tight drop-shadow-md">
+          <h2 className="text-[clamp(30px,8vw,36px)] font-display font-black text-white leading-none tracking-tighter text-glow">
             O que compõe o seu novo <span className="text-[#00f2ff]">arsenal digital?</span>
           </h2>
         </div>

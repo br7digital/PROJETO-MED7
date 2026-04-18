@@ -12,7 +12,7 @@ export function Transformation() {
       <div className="max-w-md mx-auto px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-10">
-          <h2 className="text-[clamp(24px,7vw,28px)] font-display font-bold text-white mb-3 leading-[1.2]">
+          <h2 className="text-[clamp(30px,8vw,36px)] font-display font-black text-white leading-none tracking-tighter text-glow mb-4">
             {title.split('\n').map((part, i) => (
               <React.Fragment key={i}>
                 {i === 1 ? <span className="text-[#10B981]">{part}</span> : part}

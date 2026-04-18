@@ -60,7 +60,7 @@ export function Hero() {
             <span className="text-white/90 text-[11px] md:text-[12px] font-bold tracking-[0.1em] sm:tracking-wider uppercase font-display leading-[1.4] sm:leading-none">{landingData.hero.badge}</span>
           </div>
 
-          <h1 className="text-[clamp(28px,8vw,44px)] font-display text-white tracking-tight font-extrabold !leading-[1.12] drop-shadow-md">
+          <h1 className="text-[clamp(28px,8vw,44px)] font-display text-white tracking-tighter font-black !leading-[1.12] drop-shadow-md">
             {renderHeadline()}
           </h1>
 

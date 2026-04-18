@@ -75,7 +75,7 @@ export function Usage() {
           <span className="text-[#00f2ff] text-[10px] font-bold tracking-[0.2em] uppercase mb-4 block animate-pulse">
             {overline}
           </span>
-          <h2 className="text-[clamp(26px,8vw,32px)] font-display font-bold text-white leading-[1.1] mb-6">
+          <h2 className="text-[clamp(30px,8vw,36px)] font-display font-black text-white tracking-tighter mb-4 text-glow leading-none">
             {title.split('\n').map((part, i, arr) => (
               <React.Fragment key={i}>
                 <span className={i === arr.length - 1 ? "text-[#00f2ff]" : ""}>

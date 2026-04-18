@@ -15,7 +15,7 @@ export function Gallery() {
       <div className="container mx-auto px-6 relative z-10 w-full max-w-[480px]">
         {/* Header */}
         <div className="text-center mb-10">
-          <h2 className="text-[clamp(22px,6vw,26px)] font-display font-bold text-white mb-3">
+          <h2 className="text-[clamp(30px,8vw,36px)] font-display font-black text-white tracking-tighter mb-4 text-glow leading-none">
             {title.split('\n').map((part, i) => (
               <React.Fragment key={i}>
                 {i === 1 ? <span className="text-[#00f2ff]">{part}</span> : part}

@@ -15,7 +15,7 @@ export function Faq() {
       <div className="container mx-auto px-6 relative z-10 w-full max-w-[480px]">
         {/* Header */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-display font-bold text-white leading-tight">
+          <h2 className="text-[clamp(30px,8vw,36px)] font-display font-black text-white leading-none tracking-tighter text-glow">
             {title}
           </h2>
         </div>
