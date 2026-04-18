@@ -88,7 +88,7 @@ export function Pricing() {
               </div>
 
               <div className="mt-2">
-                <span className="inline-block bg-white/5 px-6 py-1.5 rounded-full text-[#00f2ff] font-display font-bold text-sm border border-[#00f2ff]/20 shadow-[0_5px_15px_rgba(0,242,255,0.1)]">
+                <span className="inline-block bg-white/5 px-6 py-1.5 rounded-full text-white/50 font-display font-light text-xs border border-white/5">
                   Ou {installments}
                 </span>
               </div>
@@ -115,8 +115,8 @@ export function Pricing() {
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-[150%] skew-x-[-30deg] animate-[shimmer_2.5s_infinite]" />
               <span className="relative z-10 text-[clamp(13.5px,4vw,18px)] uppercase tracking-[0.1em] md:tracking-widest font-black drop-shadow-md px-2 whitespace-nowrap">QUERO GARANTIR COM DESCONTO</span>
             </button>
-            <p className="text-center text-zinc-300 italic text-[10px] sm:text-xs font-display tracking-wide flex items-center justify-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse"></span>
+            <p className="text-center text-[#00f2ff]/80 font-light text-[9px] sm:text-[11px] font-display tracking-wide flex items-center justify-center gap-2">
+              <span className="w-1.5 h-1.5 flex-shrink-0 rounded-full bg-[#10B981] animate-pulse"></span>
               Condição especial exclusiva para os primeiros acessos da atualização.
             </p>
           </div>

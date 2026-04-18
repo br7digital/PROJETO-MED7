@@ -64,8 +64,8 @@ export function Hero() {
               {ctaPrimary}
               <div className="w-1 h-1 rounded-full bg-slate-900 group-hover:scale-150 transition-transform duration-300" />
             </button>
-            <p className="text-zinc-300 italic text-[10px] sm:text-xs font-display tracking-wide ml-2 flex items-center gap-2">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse"></span>
+            <p className="text-[#00f2ff]/80 font-light text-[9px] sm:text-[11px] font-display tracking-wide ml-2 flex items-center gap-2">
+              <span className="w-1.5 h-1.5 flex-shrink-0 rounded-full bg-[#10B981] animate-pulse"></span>
               Condição especial exclusiva para os primeiros acessos.
             </p>
           </div>

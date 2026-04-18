@@ -31,7 +31,7 @@ export function MiniOffer() {
             </span>
           </div>
           <div className="mt-3 text-center">
-            <span className="inline-block bg-white/5 px-4 py-1.5 rounded-full text-[#00f2ff] font-display font-medium text-[11px] border border-[#00f2ff]/20">
+            <span className="inline-block bg-white/5 px-4 py-1.5 rounded-full text-white/50 font-display font-light text-[10px] border border-white/5">
               Ou 12x de R$ 9,68
             </span>
           </div>
@@ -42,8 +42,8 @@ export function MiniOffer() {
           <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-4 !text-sm group shadow-[0_0_20px_rgba(0,242,255,0.2)] animate-pulse-attention">
             <span className="relative z-10 uppercase tracking-[0.05em] md:tracking-widest font-black text-[clamp(12px,3.5vw,14px)] whitespace-nowrap">QUERO GARANTIR COM DESCONTO</span>
           </button>
-          <p className="text-center text-zinc-300 italic text-[10px] font-display tracking-wide flex items-center justify-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#10B981] animate-pulse"></span>
+          <p className="text-center text-[#00f2ff]/80 font-light text-[9px] font-display tracking-wide flex items-center justify-center gap-2">
+            <span className="w-1.5 h-1.5 flex-shrink-0 rounded-full bg-[#10B981] animate-pulse"></span>
             Condição especial para os primeiros acessos.
           </p>
         </div>
