@@ -6,7 +6,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-b from-[#01050d] to-black py-16 pb-20">
+    <footer className="bg-gradient-to-b from-[#01050d] to-black pt-8 pb-20">
       <div className="container mx-auto px-6 w-full max-w-[480px] text-center flex flex-col items-center">
 
         {/* Unified Logo Text + Icon */}

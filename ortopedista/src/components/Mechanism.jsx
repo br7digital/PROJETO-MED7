@@ -77,7 +77,7 @@ export function Mechanism() {
         </div>
 
         {/* CTA Button */}
-        <div className="mt-20 md:mt-28 flex justify-center w-full relative z-20">
+        <div className="mt-10 md:mt-16 flex justify-center w-full relative z-20">
            <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-[90%] sm:w-auto px-10 py-6 shadow-[0_0_40px_rgba(0,242,255,0.3)] animate-pulse-attention">
               <span className="relative z-10 uppercase tracking-widest font-black text-[clamp(14px,4vw,20px)] whitespace-nowrap">
                 {ctaLabel}

@@ -11,7 +11,7 @@ export function Faq() {
   };
 
   return (
-    <section className="relative pt-4 pb-16 bg-gradient-to-b from-[#020c1a] to-[#01050d] overflow-hidden">
+    <section className="relative pt-10 pb-6 bg-gradient-to-b from-[#020c1a] to-[#01050d] overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10 w-full max-w-[480px]">
         {/* Header */}
         <div className="text-center mb-10">
@@ -83,7 +83,7 @@ export function Faq() {
       </div>
 
       {/* Final CTA Mini-Card (Skeptical Final Hook) */}
-      <div className="mt-20 text-center relative z-10 w-full max-w-[450px] mx-auto pb-12">
+      <div className="mt-[140px] text-center relative z-10 w-full max-w-[450px] mx-auto pb-4">
         {/* Background Glow Overlay */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[110%] bg-[#00f2ff]/5 blur-[100px] rounded-full pointer-events-none" />
         

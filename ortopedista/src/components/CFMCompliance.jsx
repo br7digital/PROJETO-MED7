@@ -5,7 +5,7 @@ export function CFMCompliance() {
     <section className="relative py-12 bg-gradient-to-b from-[#000E1E] to-[#010F1F] overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10 w-full max-w-[480px]">
         {/* Compliance Block (Jurídico e CFM) */}
-        <div className="mt-16 md:mt-20 relative w-full flex flex-col items-center text-center px-4 md:px-6 py-12 bg-[#010815]/90 rounded-[32px] border border-[#00f2ff]/20 shadow-[0_20px_50px_rgba(0,0,0,0.4)] backdrop-blur-3xl">
+        <div className="mt-8 md:mt-12 relative w-full flex flex-col items-center text-center px-4 md:px-6 py-12 bg-[#010815]/90 rounded-[32px] border border-[#00f2ff]/20 shadow-[0_20px_50px_rgba(0,0,0,0.4)] backdrop-blur-3xl">
           
           {/* Overlapping CFM Seal - Elite Break-the-Border Style */}
           <div className="absolute -top-14 md:-top-20 w-28 h-28 md:w-40 md:h-40 z-20 animate-float">
