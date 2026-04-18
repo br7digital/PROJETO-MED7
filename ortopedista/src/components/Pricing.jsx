@@ -10,7 +10,7 @@ export function Pricing() {
   };
 
   return (
-    <section className="relative pt-12 pb-24 bg-gradient-to-b from-[#020b18] to-[#02101d] overflow-hidden">
+    <section className="relative pt-12 pb-24 bg-gradient-to-b from-[#111827] to-[#020c1a] overflow-hidden">
       {/* Intense glow at bottom for CTA focus */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-[#00f2ff]/5 blur-[120px] pointer-events-none" />
 

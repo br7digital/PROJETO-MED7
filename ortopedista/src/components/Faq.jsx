@@ -11,7 +11,7 @@ export function Faq() {
   };
 
   return (
-    <section className="relative py-14 bg-gradient-to-b from-[#02101d] to-[#010612] overflow-hidden">
+    <section className="relative py-14 bg-gradient-to-b from-[#020c1a] to-[#01050d] overflow-hidden">
       <div className="container mx-auto px-6 relative z-10 w-full max-w-[480px]">
         {/* Header */}
         <div className="text-center mb-10">

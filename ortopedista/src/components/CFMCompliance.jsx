@@ -2,7 +2,7 @@ import React from 'react';
 
 export function CFMCompliance() {
   return (
-    <section className="relative py-12 bg-gradient-to-b from-[#020c1a] to-[#020b18] overflow-hidden">
+    <section className="relative py-12 bg-gradient-to-b from-[#000E1E] to-[#010F1F] overflow-hidden">
       <div className="container mx-auto px-6 relative z-10 w-full max-w-[480px]">
         {/* Compliance Block (Jurídico e CFM) */}
         <div className="mt-16 md:mt-20 relative w-full flex flex-col items-center text-center px-6 py-12 bg-[#010815]/90 rounded-[32px] border border-[#00f2ff]/20 shadow-[0_20px_50px_rgba(0,0,0,0.4)] backdrop-blur-3xl">

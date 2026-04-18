@@ -5,7 +5,7 @@ export function SocialProof() {
   const { title, subtitle, testimonials } = landingData.socialProof;
 
   return (
-    <section className="relative py-20 bg-gradient-to-b from-[#000E1E] to-[#020c1a] overflow-hidden">
+    <section className="relative py-20 bg-gradient-to-b from-[#010F1F] to-[#111827] overflow-hidden">
       {/* Background Ambient Glows */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle,rgba(0,242,255,0.03)_0%,transparent_70%)] pointer-events-none" />
 
