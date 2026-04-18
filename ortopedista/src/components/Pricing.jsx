@@ -10,7 +10,7 @@ export function Pricing() {
   };
 
   return (
-    <section className="relative pt-12 pb-24 bg-gradient-to-b from-[#111827] to-[#020c1a] overflow-hidden">
+    <section className="relative pt-12 pb-16 bg-gradient-to-b from-[#111827] to-[#020c1a] overflow-hidden">
       {/* Intense glow at bottom for CTA focus */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-[#00f2ff]/5 blur-[120px] pointer-events-none" />
 
@@ -193,14 +193,14 @@ export function Pricing() {
           </div>
 
           {/* Safe Transaction Footer */}
-          <div className="pt-6 border-t border-white/5 w-full max-w-[280px] flex items-center justify-center gap-6 opacity-30 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
-            <div className="flex items-center gap-1.5 cursor-default">
-              <span className="text-[14px]">🔒</span>
-              <span className="text-[9px] font-display font-bold uppercase tracking-widest text-white">Checkout Seguro</span>
+          <div className="pt-6 border-t border-white/5 w-full max-w-[280px] flex items-center justify-center gap-6 opacity-80 hover:opacity-100 transition-all duration-500">
+            <div className="flex items-center gap-1.5 cursor-default group/seal">
+              <span className="text-[14px] drop-shadow-[0_0_8px_rgba(0,242,255,0.4)]">🔒</span>
+              <span className="text-[9px] font-display font-bold uppercase tracking-widest text-[#00f2ff] drop-shadow-sm">Checkout Seguro</span>
             </div>
-            <div className="flex items-center gap-1.5 cursor-default">
-              <span className="text-[13px]">🛡️</span>
-              <span className="text-[9px] font-display font-bold uppercase tracking-widest text-white">Dados Protegidos</span>
+            <div className="flex items-center gap-1.5 cursor-default group/seal">
+              <span className="text-[13px] drop-shadow-[0_0_8px_rgba(0,242,255,0.4)]">🛡️</span>
+              <span className="text-[9px] font-display font-bold uppercase tracking-widest text-[#00f2ff] drop-shadow-sm">Dados Protegidos</span>
             </div>
           </div>
         </div>
