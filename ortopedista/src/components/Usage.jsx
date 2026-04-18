@@ -71,23 +71,26 @@ export function Usage() {
       <div className="container mx-auto px-6 relative z-10 w-full max-w-[480px]">
         
         {/* Header Section */}
-        <div className="text-center mb-10">
+        <div className="text-center mb-2 flex flex-col items-center">
           <span className="text-[#00f2ff] text-[10px] font-bold tracking-[0.2em] uppercase mb-4 block animate-pulse">
             {overline}
           </span>
           <h2 className="text-[clamp(30px,8vw,36px)] font-display font-black text-white tracking-tighter mb-4 text-glow leading-[1.1]">
             Selecione o vídeo.<br />
-            Publique em segundos.<br />
+            Publique em minutos.<br />
             <span className="text-[#00f2ff]">Vire a referência.</span>
           </h2>
           <p className="text-zinc-200 text-sm font-body leading-relaxed max-w-[280px] mx-auto">
             {subheadline}
           </p>
+          
+          {/* Connector Line */}
+          <div className="w-[1px] h-10 bg-gradient-to-b from-[#00f2ff]/50 to-transparent mt-6 mx-auto shadow-[0_0_10px_rgba(0,242,255,0.3)]"></div>
         </div>
 
         {/* Carousel Area */}
         <div 
-          className="relative flex flex-col items-center select-none"
+          className="relative flex flex-col items-center select-none -mt-4"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
           onTouchStart={onTouchStart}
@@ -128,7 +131,7 @@ export function Usage() {
                   style={{ ...style, opacity }}
                   onClick={() => setActiveIndex(index)}
                 >
-                  <div className="relative w-full h-full rounded-[2.2rem] overflow-hidden border-[6px] border-[#0c1f32] shadow-2xl bg-[#0c1f32]">
+                  <div className="relative w-full h-full rounded-[2.2rem] overflow-hidden border-[6px] border-[#0c1f32] shadow-2xl bg-[#0c1f32] group-hover:border-[#00f2ff]/30 transition-colors">
                     <img 
                       src={item.image} 
                       className="w-full h-full object-cover pointer-events-none" 
@@ -147,63 +150,68 @@ export function Usage() {
 
           {/* Active Label */}
           <div className="text-center mb-6">
-            <h3 className="text-white font-display font-bold text-lg transition-all duration-300">
+            <h3 className="text-white font-display font-black text-xl tracking-tight transition-all duration-300 text-glow">
               {carousel[activeIndex].label}
             </h3>
           </div>
 
           {/* Pagination Dots */}
-          <div className="flex gap-2 mb-8">
+          <div className="flex gap-2 mb-10">
             {carousel.map((_, idx) => (
               <button
                 key={idx}
                 onClick={() => setActiveIndex(idx)}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
-                  activeIndex === idx ? 'w-8 bg-[#00f2ff]' : 'w-2 bg-white/20 hover:bg-white/40'
+                  activeIndex === idx ? 'w-10 bg-[#00f2ff]' : 'w-2 bg-white/20 hover:bg-white/40'
                 }`}
                 aria-label={`Go to slide ${idx + 1}`}
               />
             ))}
           </div>
 
-          {/* Microchips Bar */}
-          <div className="flex flex-wrap justify-center gap-2 mb-8">
+          {/* New Numbered Process Flow */}
+          <div className="flex flex-col gap-5 w-full max-w-[320px] mb-10 relative">
+            {/* Continuous Connecting Line - Identical to Hook section */}
+            <div className="absolute left-[27px] top-6 bottom-6 w-[1px] bg-gradient-to-b from-[#00f2ff]/0 via-[#00f2ff]/40 to-[#00f2ff]/0 shadow-[0_0_10px_rgba(0,242,255,0.2)] z-0 pointer-events-none"></div>
+
             {chips.map((chip, idx) => (
-              <div 
-                key={idx} 
-                className="px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-[#00f2ff] text-[10px] font-bold uppercase tracking-wider shadow-lg"
-              >
-                {chip}
+              <div key={idx} className="group flex items-center gap-4 p-3 rounded-2xl bg-[#020a18]/40 border border-white/5 backdrop-blur-md transition-all duration-500 hover:border-[#00f2ff]/30 hover:bg-[#00f2ff]/5 relative z-10">
+                <div className="w-8 h-8 rounded-full bg-[#0aa1e2f] border border-[#00f2ff]/40 flex items-center justify-center text-[#00f2ff] font-display font-black text-xs shadow-[0_0_15px_rgba(0,242,255,0.15)] group-hover:bg-[#00f2ff] group-hover:text-black transition-all shrink-0">
+                  0{idx + 1}
+                </div>
+                <span className="text-white font-display font-bold text-[13px] uppercase tracking-wider opacity-90 group-hover:opacity-100">
+                  {chip}
+                </span>
               </div>
             ))}
           </div>
 
           {/* Footer Support Text */}
-          <div className="text-center mb-8">
-            <p className="text-[#00f2ff] text-[11px] font-bold tracking-widest uppercase bg-[#00f2ff]/10 inline-block px-4 py-1.5 rounded-full border border-[#00f2ff]/20 shadow-[0_0_15px_rgba(0,242,255,0.15)]">
+          <div className="text-center mb-10">
+            <p className="text-[#00f2ff] text-[12px] font-bold tracking-widest uppercase bg-[#00f2ff]/10 inline-block px-5 py-2 rounded-full border border-[#00f2ff]/20 shadow-[0_0_15px_rgba(0,242,255,0.15)] animate-pulse">
               {supportText}
             </p>
           </div>
 
           {/* Matemática da Autoridade & CTA (Google AI Conversion Tactic) */}
-          <div className="relative w-full max-w-sm mx-auto p-6 md:p-8 rounded-[24px] bg-[#020a18]/80 backdrop-blur-xl border border-emerald-500/20 shadow-[0_15px_30px_rgba(0,0,0,0.5)] flex flex-col items-center">
+          <div className="relative w-full max-w-[420px] mx-auto p-8 md:p-10 rounded-[32px] bg-[#020a18]/90 backdrop-blur-3xl border border-emerald-500/30 shadow-[0_20px_40px_rgba(0,0,0,0.6)] flex flex-col items-center">
             
-            <div className="flex justify-center mb-4">
-               <span className="text-emerald-400 font-bold text-[10px] uppercase tracking-wide bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/20 shadow-inner">
+            <div className="flex justify-center mb-6">
+               <span className="text-emerald-400 font-bold text-[11px] uppercase tracking-widest bg-emerald-500/10 px-4 py-2 rounded-full border border-emerald-500/20 shadow-inner">
                  ⚖️ A Matemática da Autoridade
                </span>
             </div>
 
-            <p className="text-white/80 font-body text-[13px] leading-relaxed text-center mb-6">
-              Por que estamos entregando este arsenal de elite por apenas <strong className="text-white font-black text-[15px] drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] bg-white/10 px-2 py-0.5 rounded-md mx-1 tracking-wide">R$ 197,90</strong>? Porque decidimos <strong className="text-[#00f2ff]">diluir o custo</strong> de uma produção de R$ 2.500,00 para viabilizar e escalar o seu posicionamento.
+            <p className="text-white/90 font-body text-[14px] md:text-[15px] leading-relaxed text-center mb-8 px-2">
+              Por que estamos entregando este arsenal de elite por apenas <strong className="text-white font-black text-[17px] drop-shadow-[0_0_10px_rgba(255,255,255,0.4)] bg-white/10 px-3 py-1 rounded-lg mx-1 tracking-wide">R$ 197,90</strong>? Porque decidimos <strong className="text-[#00f2ff]">diluir o custo</strong> de uma produção de R$ 2.500,00 para viabilizar e escalar o seu posicionamento.
             </p>
 
-            <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-4 !text-sm group shadow-[0_0_20px_rgba(0,242,255,0.2)] animate-pulse-attention">
-              <span className="relative z-10 uppercase tracking-[0.05em] md:tracking-widest font-black text-[clamp(12px,3.5vw,14px)] whitespace-nowrap">QUERO MEU ACESSO AGORA</span>
+            <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-6 !text-base group shadow-[0_0_30px_rgba(0,242,255,0.25)] animate-pulse-attention">
+              <span className="relative z-10 uppercase tracking-widest font-black text-[clamp(13px,4vw,16px)]">QUERO MEU ACESSO AGORA</span>
             </button>
-            <p className="text-center text-[#00f2ff]/90 font-medium text-[10px] md:text-[11px] font-display tracking-wide mt-3 flex items-center justify-center gap-2">
-              <span className="w-1.5 h-1.5 flex-shrink-0 rounded-full bg-[#10B981] animate-pulse"></span>
-              Lote promocional exclusivo
+            <p className="text-center text-[#00f2ff]/90 font-medium text-[11px] md:text-[12px] font-display tracking-widest mt-4 flex items-center justify-center gap-3">
+              <span className="w-2 h-2 flex-shrink-0 rounded-full bg-[#10B981] animate-pulse"></span>
+              LOTE PROMOCIONAL EXCLUSIVO
             </p>
           </div>
 
