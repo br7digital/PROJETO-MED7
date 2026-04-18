@@ -95,20 +95,20 @@ export function Pricing() {
                 </span>
               </div>
               <p className="text-rose-500/50 line-through text-[14px] font-display font-medium tracking-wider mb-2">De R$ 2.500,00</p>
-              <div className="flex items-center justify-center gap-1 drop-shadow-xl mb-4 mt-2">
-                <span className="text-white/80 text-3xl font-display font-bold">R$</span>
-                <span className="text-white text-[90px] leading-none font-display font-black tracking-tighter drop-shadow-2xl scale-110 mx-2">197</span>
-                <span className="text-white/80 text-3xl font-display font-bold">,90</span>
+              <div className="flex items-center justify-center gap-1 mb-4 mt-2">
+                <span className="text-emerald-400 text-3xl font-display font-bold">R$</span>
+                <span className="text-emerald-400 text-[90px] leading-none font-display font-black tracking-tighter drop-shadow-[0_0_30px_rgba(52,211,153,0.4)] scale-110 mx-2">197</span>
+                <span className="text-emerald-400 text-3xl font-display font-bold">,90</span>
               </div>
-              <div className="mb-4">
-                <span className="text-emerald-400 font-bold text-[13px] md:text-[14px] uppercase tracking-wide bg-emerald-500/10 px-4 py-2 rounded-full border border-emerald-500/20 shadow-inner drop-shadow-md">
-                  💰 Economize R$ 2.302,10
+              <div className="mt-4">
+                <span className="inline-block bg-[#00f2ff]/5 px-6 py-2 rounded-full text-white/80 font-display font-medium text-[14px] md:text-[16px] border border-[#00f2ff]/20 shadow-[0_5px_15px_rgba(0,242,255,0.05)]">
+                  Ou 12x de R$ 19,75
                 </span>
               </div>
 
-              <div className="mt-3">
-                <span className="inline-block bg-[#00f2ff]/5 px-6 py-2 rounded-full text-white/80 font-display font-medium text-[14px] md:text-[16px] border border-[#00f2ff]/20 shadow-[0_5px_15px_rgba(0,242,255,0.05)]">
-                  Ou 12x de R$ 19,75
+              <div className="mt-5 mb-4">
+                <span className="text-emerald-400 font-bold text-[13px] md:text-[14px] uppercase tracking-wide bg-emerald-500/10 px-4 py-2 rounded-full border border-emerald-500/20 shadow-inner drop-shadow-md">
+                  💰 Economize R$ 2.302,10
                 </span>
               </div>
             </div>

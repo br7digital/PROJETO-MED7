@@ -124,12 +124,22 @@ export function Faq() {
             Junte-se à elite que domina o digital com <span className="text-white font-medium">sofisticação técnica</span> e liberdade de tempo imediata.
           </p>
 
-          <div className="flex flex-col items-center gap-1 mb-8 w-full group/price">
+          <div className="flex flex-col items-center gap-1 mb-10 w-full group/price">
             <p className="text-rose-500/50 line-through text-[12px] font-display font-medium tracking-[0.2em] uppercase transition-colors group-hover/price:text-rose-500/70">De R$ 2.500,00</p>
             <div className="flex items-baseline gap-1">
               <span className="text-emerald-400 text-lg font-display font-black">R$</span>
               <span className="text-emerald-400 text-6xl leading-none font-display font-black tracking-tighter drop-shadow-[0_0_20px_rgba(52,211,153,0.3)]">197</span>
               <span className="text-emerald-400 text-2xl font-display font-bold">,90</span>
+            </div>
+            
+            {/* Standardized Payment & Saving Hierachy */}
+            <div className="mt-4 flex flex-col items-center gap-4">
+              <span className="inline-block bg-[#00f2ff]/5 px-5 py-1.5 rounded-full text-white/70 font-display font-medium text-[13px] border border-[#00f2ff]/10 shadow-sm">
+                Ou 12x de R$ 19,75
+              </span>
+              <span className="text-emerald-400 font-bold text-[11px] uppercase tracking-widest bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/20 shadow-inner">
+                💰 Economize R$ 2.302,10
+              </span>
             </div>
           </div>
 
