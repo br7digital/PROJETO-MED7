@@ -11,26 +11,33 @@ import { Footer } from './components/Footer';
 import { Navbar } from './components/Navbar';
 import { MiniOffer } from './components/MiniOffer';
 import { CFMCompliance } from './components/CFMCompliance';
+import { LeadCaptureModal } from './components/LeadCaptureModal';
+import { CheckoutProvider } from './contexts/CheckoutContext';
 
 function App() {
   return (
-    <div className="bg-[#020b18] min-h-screen">
-      <main className="font-body text-white antialiased max-w-[480px] mx-auto min-h-screen bg-gradient-to-b from-[#020b18] via-[#01142c] to-[#020a18] shadow-[0_0_100px_rgba(0,0,0,0.8)] flex flex-col overflow-x-hidden">
-        <Navbar />
-        <Hero />
-        <MiniOffer />
-        <Hook />
-        <Usage />
-        <Gallery />
-        <Mechanism />
-        <CFMCompliance />
-        <SocialProof />
-        <Pricing />
-        <Faq />
-        <Footer />
-      </main>
-    </div>
+    <CheckoutProvider>
+      <div className="bg-[#020b18] min-h-screen">
+        <main className="font-body text-white antialiased max-w-[480px] mx-auto min-h-screen bg-gradient-to-b from-[#020b18] via-[#01142c] to-[#020a18] shadow-[0_0_100px_rgba(0,0,0,0.8)] flex flex-col overflow-x-hidden">
+          <Navbar />
+          <Hero />
+          <MiniOffer />
+          <Hook />
+          <Usage />
+          <Gallery />
+          <Mechanism />
+          <CFMCompliance />
+          <SocialProof />
+          <Pricing />
+          <Faq />
+          <Footer />
+        </main>
+        {/* Global Lead Capture Modal */}
+        <LeadCaptureModal />
+      </div>
+    </CheckoutProvider>
   );
 }
 
 export default App;
+

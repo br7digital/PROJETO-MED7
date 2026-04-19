@@ -33,9 +33,10 @@ export function Faq() {
                 onClick={() => toggleAccordion(idx)}
                 className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
               >
-                <span className="text-zinc-200 font-medium text-[15px] md:text-base pr-4">
-                  {item.question}
-                </span>
+                <span 
+                  className="text-zinc-200 font-medium text-[15px] md:text-base pr-4"
+                  dangerouslySetInnerHTML={{ __html: item.question }}
+                />
                 <span className={`flex-shrink-0 w-6 h-6 rounded-full border border-white/10 flex items-center justify-center text-zinc-200 transition-transform duration-300 ${openIndex === idx ? 'rotate-180 bg-white/10 text-white' : ''
                   }`}>
                   <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -123,7 +124,7 @@ export function Faq() {
             </p>
 
             <div className="flex flex-col items-center gap-1 mb-10 w-full group/price">
-              <p className="text-white/40 line-through text-[13px] font-display font-medium tracking-[0.2em] uppercase transition-colors group-hover/price:text-white/60">De R$ 2.500,00</p>
+              <p className="text-amber-600/80 line-through decoration-amber-600/60 decoration-2 text-[15px] font-display font-black tracking-[0.2em] uppercase mb-1 drop-shadow-sm">De R$ 2.500,00</p>
               <div className="flex items-baseline gap-1">
                 <span className="text-emerald-500 text-lg font-display font-black">R$</span>
                 <span className="text-emerald-500 text-6xl leading-none font-display font-black tracking-tighter drop-shadow-[0_0_20px_rgba(16,185,129,0.3)]">{price}</span>
@@ -154,7 +155,7 @@ export function Faq() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              <p className="text-[9px] md:text-[10px] text-white/40 font-display uppercase tracking-[0.15em] font-bold whitespace-nowrap">
+              <p className="text-[9px] md:text-[10px] text-[#00f2ff] font-display font-black uppercase tracking-[0.2em] whitespace-nowrap drop-shadow-[0_0_8px_rgba(0,242,255,0.3)]">
                 Inscrição Segura <span className="text-white/20 px-1">|</span> Checkout Hotmart
               </p>
             </div>

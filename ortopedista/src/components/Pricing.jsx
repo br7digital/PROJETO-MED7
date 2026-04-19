@@ -1,8 +1,10 @@
 import React from 'react';
 import { landingData } from '../data/data-config';
+import { useCheckout } from '../contexts/CheckoutContext';
 
 export function Pricing() {
   const { title, subtitle, price, installments, benefits, guarantee } = landingData.pricing;
+  const { openCheckoutModal } = useCheckout();
 
   const ASSETS = {
     SEAL: '/selo-premium.webp',
@@ -94,7 +96,7 @@ export function Pricing() {
                   LOTE DE LANÇAMENTO
                 </span>
               </div>
-              <p className="text-white/40 line-through text-[16px] font-display font-medium tracking-widest mb-1">DE R$ 2.500,00</p>
+              <p className="text-amber-600/80 line-through decoration-amber-600/60 decoration-2 text-[18px] font-display font-black tracking-widest mb-2 drop-shadow-sm">DE R$ 2.500,00</p>
               <div className="flex items-center justify-center gap-1 mb-4 mt-1">
                 <span className="text-emerald-500 text-3xl font-display font-bold">R$</span>
                 <span className="text-emerald-500 text-[90px] leading-none font-display font-black tracking-tighter drop-shadow-[0_0_30px_rgba(16,185,129,0.3)] scale-110 mx-2">{price}</span>
@@ -147,7 +149,7 @@ export function Pricing() {
 
           {/* Elite CTA Button with Scarcity */}
           <div className="flex flex-col gap-3.5">
-            <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="relative btn-elite w-full py-8 group overflow-hidden animate-pulse-attention shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:shadow-[0_0_40px_rgba(0,242,255,0.6)]">
+            <button onClick={openCheckoutModal} className="relative btn-elite w-full py-8 group overflow-hidden animate-pulse-attention shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:shadow-[0_0_40px_rgba(0,242,255,0.6)]">
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-[150%] skew-x-[-30deg] animate-[shimmer_2.5s_infinite]" />
               <div className="absolute inset-0 bg-[#00f2ff]/10 opacity-0 group-hover:opacity-100 transition-opacity" />
               <span className="relative z-10 text-[13px] xs:text-[14px] sm:text-[15px] md:text-[17px] uppercase tracking-wider md:tracking-widest font-black drop-shadow-md px-2 w-full text-center leading-snug">QUERO GARANTIR COM DESCONTO</span>

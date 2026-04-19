@@ -192,49 +192,57 @@ export const landingData = {
     title: "Dúvidas Frequentes",
     questions: [
       {
-        question: "Isso está de acordo com as normas médicas do CFM?",
+        question: "Isso está de acordo com as normas médicas do <span class=\"text-[#00f2ff]\">CFM</span>?",
         answer: "Sim. Totalmente adequado à <span class=\"text-[#00f2ff] font-bold\">Resolução CFM 2.336/23</span>. Os vídeos possuem caráter estritamente anatômico e educativo, sem promessas de resultados ou exposição de pacientes, garantindo sua <span class=\"text-[#00f2ff] font-bold\">segurança jurídica</span>."
       },
       {
-        question: "Como a Animação 3D me protege perante o CFM?",
+        question: "Como a <span class=\"text-[#00f2ff]\">Animação 3D</span> me protege perante o CFM?",
         answer: "A Resolução 2.336/23 proíbe a identificação de pacientes e veta qualquer manipulação de fotos reais. O uso de <span class=\"text-[#00f2ff] font-bold\">Animações 3D (Alta Fidelidade)</span> funciona como uma blindagem jurídica: você educa sua audiência com total realismo sem nunca violar o anonimato ou o pudor, eliminando o risco de denúncias por exposição indevida."
       },
       {
-        question: "O conteúdo é considerado sensacionalista?",
+        question: "O conteúdo é considerado <span class=\"text-[#00f2ff]\">sensacionalista</span>?",
         answer: "Pelo contrário. O CFM exige que a publicidade tenha caráter estritamente educativo. Ao usar animações técnicas em vez de 'antes e depois' apelativos, você mantém a <span class=\"text-[#00f2ff] font-bold\">sobriedade institucional</span> exigida, elevando sua autoridade técnica sem ferir os limites éticos da medicina."
       },
       {
-        question: "Preciso 'carimbar' meu CRM e RQE dentro de cada vídeo?",
+        question: "Preciso 'carimbar' meu <span class=\"text-[#00f2ff]\">CRM e RQE</span> dentro de cada vídeo?",
         answer: "Não é necessário. A nova resolução traz uma facilidade: nas redes sociais, basta que seus dados obrigatórios (Nome, CRM, RQE) estejam claros na sua <span class=\"text-[#00f2ff] font-bold\">Bio do perfil</span>. Isso permite que você poste as animações 3D de forma limpa e institucional, desde que seu perfil profissional esteja configurado corretamente."
       },
       {
-        question: "Preciso de softwares pagos ou do Canva Pro?",
+        question: "Preciso de <span class=\"text-[#00f2ff]\">softwares pagos</span> ou do Canva Pro?",
         answer: "Não. O acervo foi pensado para facilitar sua vida. Você recebe os <span class=\"text-[#00f2ff] font-bold\">vídeos prontos para postar</span>. O Canva Pro é recomendado apenas se você quiser fazer edições ultra-personalizadas, mas não é obrigatório."
       },
       {
-        question: "Preciso saber editar vídeos?",
+        question: "Preciso saber <span class=\"text-[#00f2ff]\">editar vídeos</span>?",
         answer: "Não é necessário. Entregamos o material em um formato <span class=\"text-[#00f2ff] font-bold\">'copy-paste'</span>. Você só precisa baixar e subir no Instagram/TikTok. Incluímos um tutorial rápido de 2 minutos para você não ter erro."
       },
       {
-        question: "O acesso é imediato?",
+        question: "O acesso é <span class=\"text-[#00f2ff]\">imediato</span>?",
         answer: "Sim! Após a confirmação do pagamento, você recebe os dados de acesso instantâneo no seu e-mail e já pode começar a usar agora mesmo."
       },
       {
-        question: "Terei custos contínuos ou mensalidades?",
+        question: "Terei <span class=\"text-[#00f2ff]\">custos contínuos</span> ou mensalidades?",
         answer: "Não. O <span class=\"text-[#00f2ff] font-bold\">acesso a este acervo é vitalício</span>. Você paga uma única vez e garante os 30 vídeos e todos os bônus inclusos sem qualquer mensalidade para este lote."
       },
       {
-        question: "O conteúdo deste pack é atualizado?",
+        question: "O conteúdo deste pack é <span class=\"text-[#00f2ff]\">atualizado</span>?",
         answer: "O acervo que você adquire hoje é completo e pronto para uso imediato. Como cliente deste primeiro lote, você terá <span class=\"text-[#00f2ff] font-bold\">condições especiais</span> caso decida migrar para nosso futuro <span class=\"text-[#00f2ff] font-bold\">Plano de Assinatura</span>, garantindo novos conteúdos de elite mensalmente."
       },
       {
-        question: "Serve para outras especialidades além de Ortopedia?",
+        question: "Serve para <span class=\"text-[#00f2ff]\">outras especialidades</span> além de Ortopedia?",
         answer: "Não. Este pack é <span class=\"text-[#00f2ff] font-bold\">ultra-específico</span> para a rotina e patologias da Ortopedia e Traumatologia, garantindo a máxima precisão anatômica necessária para a sua área de atuação."
       },
       {
-        question: "Como funciona a garantia de reembolso?",
+        question: "Como funciona a <span class=\"text-[#00f2ff]\">garantia de reembolso</span>?",
         answer: "Oferecemos <span class=\"text-[#00f2ff] font-bold\">7 dias de garantia incondicional</span>. Se o material não atender ao seu padrão de exigência técnica ou estética, basta um e-mail para o suporte e devolvemos 100% do seu investimento. Sem perguntas."
       }
     ]
+  },
+
+  checkout: {
+    hotmartOfferCode: 'aaj3t229',
+    ghlWebhookUrl: 'https://services.leadconnectorhq.com/hooks/VAXiMcLn9h5zym9anXiu/webhook-trigger/HdFdW4gFHZFArcDHLp17',
+    leadTag: 'lead-med7-ortopedista',
+    source: 'landing-page-ortopedista',
+    productName: 'Pack 30 Videos Ortopedia'
   }
 };

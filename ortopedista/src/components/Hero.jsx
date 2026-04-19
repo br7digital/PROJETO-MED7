@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { landingData } from '../data/data-config';
+import { useCheckout } from '../contexts/CheckoutContext';
 
 export function Hero() {
   const { headlineVariations, subheadline, ctaPrimary, badge } = landingData.hero;
+  const { openCheckoutModal } = useCheckout();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -84,7 +86,7 @@ export function Hero() {
           </p>
 
           <div className="pt-4 pb-8 sm:pb-12 flex flex-col gap-3.5 relative z-20">
-            <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite shadow-2xl flex items-center justify-center gap-3 w-fit group animate-pulse-attention py-4 px-8 text-[14px] md:text-[16px]">
+            <button onClick={openCheckoutModal} className="btn-elite shadow-2xl flex items-center justify-center gap-3 w-fit group animate-pulse-attention py-4 px-8 text-[14px] md:text-[16px]">
               {ctaPrimary}
               <div className="w-1.5 h-1.5 rounded-full bg-slate-900 group-hover:scale-150 transition-transform duration-300" />
             </button>

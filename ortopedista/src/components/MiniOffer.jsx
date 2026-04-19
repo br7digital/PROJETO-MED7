@@ -1,8 +1,10 @@
 import React from 'react';
 import { landingData } from '../data/data-config';
+import { useCheckout } from '../contexts/CheckoutContext';
 
 export function MiniOffer() {
   const { price, cents, installments, savings } = landingData.pricing;
+  const { openCheckoutModal } = useCheckout();
   return (
     <section className="relative px-6 pt-10 pb-6 bg-gradient-to-b from-[#01050d] to-black z-40 flex flex-col items-center">
       
@@ -33,7 +35,7 @@ export function MiniOffer() {
 
         {/* Pricing Area */}
         <div className="text-center mb-6 relative z-10">
-          <p className="text-white/40 line-through text-sm font-display font-medium tracking-widest mb-1 uppercase">De R$ 2.500,00</p>
+          <p className="text-amber-600/80 line-through decoration-amber-600/60 decoration-2 text-[15px] font-display font-black tracking-widest mb-1 uppercase drop-shadow-sm">De R$ 2.500,00</p>
           <div className="flex items-center justify-center gap-1 mt-1">
             <span className="text-emerald-500 text-xl font-display font-bold">R$</span>
             <span className="text-emerald-500 text-[64px] leading-none font-display font-black tracking-tighter drop-shadow-[0_0_20px_rgba(16,185,129,0.3)] scale-110 mx-1">{price}</span>
@@ -61,7 +63,7 @@ export function MiniOffer() {
 
         {/* Button */}
         <div className="relative z-10 flex flex-col gap-3.5 items-center">
-          <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-6 group shadow-[0_0_25px_rgba(0,242,255,0.3)] animate-pulse-attention">
+          <button onClick={openCheckoutModal} className="btn-elite w-full py-6 group shadow-[0_0_25px_rgba(0,242,255,0.3)] animate-pulse-attention">
             <span className="relative z-10 uppercase tracking-wider font-black text-[clamp(12px,3.8vw,15px)] leading-tight px-1 block">
               QUERO GARANTIR COM DESCONTO
             </span>
