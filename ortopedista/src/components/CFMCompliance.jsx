@@ -30,10 +30,10 @@ export function CFMCompliance() {
 
           <div className="space-y-4 max-w-[440px] relative z-10">
             <p className="text-white/90 font-body text-[15px] md:text-[17px] leading-relaxed px-2 font-medium">
-              Protocolize sua comunicação digital com total segurança jurídica.
+              Elimine o risco de exposição e garanta o anonimato exigido pelo conselho.
             </p>
             <p className="text-white/70 font-body text-[13px] md:text-[14px] leading-relaxed px-1 md:px-4">
-              Este acervo foi <strong className="text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.3)]">desenvolvido rigorosamente sob as novas diretrizes do CFM</strong>, garantindo o fortalecimento da sua autoridade sem colocar seu registro profissional em risco.
+              O uso de <strong className="text-[#00f2ff]">Animações 3D para fins educativos</strong> é uma estratégia expressamente autorizada pela nova normativa, permitindo que você reforce sua autoridade técnica com total segurança jurídica e sobriedade institucional.
             </p>
           </div>
         </div>

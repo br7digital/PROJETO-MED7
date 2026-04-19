@@ -166,7 +166,7 @@ export const landingData = {
     afterText: "Visual cinematográfico, autoridade instantânea e agenda lotada com o público certo.",
     comparison: [
       { label: "Tempo gasto", before: "4h por post", after: "30 segundos" },
-      { label: "Design", before: "Amador/Canva", after: "CGI/Cinematográfico" },
+      { label: "Design", before: "Amador/Canva", after: "Animação 3D Profissional" },
       { label: "Resultado", before: "Apenas likes", after: "Autoridade e Agendamentos" }
     ]
   },
@@ -179,7 +179,7 @@ export const landingData = {
     installments: "12x de R$ 19,75",
     savings: "R$ 2.302,10",
     benefits: [
-      "30 Vídeos CGI de Elite (Alta Fidelidade)",
+      "30 Vídeos em Animação 3D (Alta Fidelidade)",
       "[BÔNUS] Sistema de Personalização no Canva (Foto, Logo e CRM)",
       "[BÔNUS] 30 Legendas Estratégicas Inclusas",
       "[BÔNUS] Protocolo de Postagem e Posicionamento",
@@ -194,6 +194,18 @@ export const landingData = {
       {
         question: "Isso está de acordo com as normas médicas do CFM?",
         answer: "Sim. Totalmente adequado à <span class=\"text-[#00f2ff] font-bold\">Resolução CFM 2.336/23</span>. Os vídeos possuem caráter estritamente anatômico e educativo, sem promessas de resultados ou exposição de pacientes, garantindo sua <span class=\"text-[#00f2ff] font-bold\">segurança jurídica</span>."
+      },
+      {
+        question: "Como a Animação 3D me protege perante o CFM?",
+        answer: "A Resolução 2.336/23 proíbe a identificação de pacientes e veta qualquer manipulação de fotos reais. O uso de <span class=\"text-[#00f2ff] font-bold\">Animações 3D (Alta Fidelidade)</span> funciona como uma blindagem jurídica: você educa sua audiência com total realismo sem nunca violar o anonimato ou o pudor, eliminando o risco de denúncias por exposição indevida."
+      },
+      {
+        question: "O conteúdo é considerado sensacionalista?",
+        answer: "Pelo contrário. O CFM exige que a publicidade tenha caráter estritamente educativo. Ao usar animações técnicas em vez de 'antes e depois' apelativos, você mantém a <span class=\"text-[#00f2ff] font-bold\">sobriedade institucional</span> exigida, elevando sua autoridade técnica sem ferir os limites éticos da medicina."
+      },
+      {
+        question: "Preciso 'carimbar' meu CRM e RQE dentro de cada vídeo?",
+        answer: "Não é necessário. A nova resolução traz uma facilidade: nas redes sociais, basta que seus dados obrigatórios (Nome, CRM, RQE) estejam claros na sua <span class=\"text-[#00f2ff] font-bold\">Bio do perfil</span>. Isso permite que você poste as animações 3D de forma limpa e institucional, desde que seu perfil profissional esteja configurado corretamente."
       },
       {
         question: "Preciso de softwares pagos ou do Canva Pro?",

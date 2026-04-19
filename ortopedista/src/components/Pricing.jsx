@@ -37,7 +37,7 @@ export function Pricing() {
           </p>
           <ul className="space-y-4 font-body text-white/90">
             <li className="flex justify-between items-center border-b border-white/10 pb-3 gap-3">
-              <span className="font-medium text-white/80 text-[13px] md:text-sm min-w-0"><strong className="text-white">Produção CGI</strong> e Renderização IA</span>
+              <span className="font-medium text-white/80 text-[13px] md:text-sm min-w-0"><strong className="text-white">Produção em 3D</strong> e Renderização IA</span>
               <span className="font-bold text-white tracking-wide text-[13px] md:text-sm whitespace-nowrap flex-shrink-0">R$ 1.500,00</span>
             </li>
             <li className="flex justify-between items-center border-b border-white/10 pb-3 gap-3">
