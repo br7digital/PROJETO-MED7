@@ -174,14 +174,16 @@ export const landingData = {
   pricing: {
     title: "O Seu Arsenal\nde Autoridade",
     subtitle: "Acesso vitalício ao pack de vídeos CGI que dominam o feed.",
-    price: "97",
-    installments: "12x de R$ 9,68",
+    price: "197",
+    cents: "90",
+    installments: "12x de R$ 19,75",
+    savings: "R$ 2.302,10",
     benefits: [
-      "Acesso Vitalício aos 30 Vídeos CGI",
-      "Diversos formatos estruturados",
-      "Bônus: 30 Legendas Estratégicas",
-      "Protocolo de Postagem e Posicionamento",
-      "Suporte Exclusivo para Alunos"
+      "30 Vídeos CGI de Elite (Alta Fidelidade)",
+      "[BÔNUS] Sistema de Personalização no Canva (Foto, Logo e CRM)",
+      "[BÔNUS] 30 Legendas Estratégicas Inclusas",
+      "[BÔNUS] Protocolo de Postagem e Posicionamento",
+      "[BÔNUS] Acesso Vitalício e Suporte Exclusivo"
     ],
     guarantee: "Garantia incondicional de 7 dias."
   },

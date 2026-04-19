@@ -94,44 +94,62 @@ export function Pricing() {
                   LOTE DE LANÇAMENTO
                 </span>
               </div>
-              <p className="text-amber-600/70 line-through text-[14px] font-display font-medium tracking-wider mb-2">De R$ 2.500,00</p>
-              <div className="flex items-center justify-center gap-1 mb-4 mt-2">
+              <p className="text-white/40 line-through text-[16px] font-display font-medium tracking-widest mb-1">DE R$ 2.500,00</p>
+              <div className="flex items-center justify-center gap-1 mb-4 mt-1">
                 <span className="text-emerald-400 text-3xl font-display font-bold">R$</span>
-                <span className="text-emerald-400 text-[90px] leading-none font-display font-black tracking-tighter drop-shadow-[0_0_30px_rgba(52,211,153,0.4)] scale-110 mx-2">197</span>
-                <span className="text-emerald-400 text-3xl font-display font-bold">,90</span>
+                <span className="text-emerald-400 text-[90px] leading-none font-display font-black tracking-tighter drop-shadow-[0_0_30px_rgba(52,211,153,0.4)] scale-110 mx-2">{price}</span>
+                <span className="text-emerald-400 text-3xl font-display font-bold">,{landingData.pricing.cents || '90'}</span>
               </div>
               <div className="mt-4">
                 <span className="inline-block bg-[#00f2ff]/5 px-6 py-2 rounded-full text-white/80 font-display font-medium text-[14px] md:text-[16px] border border-[#00f2ff]/20 shadow-[0_5px_15px_rgba(0,242,255,0.05)]">
-                  Ou 12x de R$ 19,75
+                  Ou {installments}
                 </span>
               </div>
 
               <div className="mt-5 mb-4">
                 <span className="text-emerald-400 font-bold text-[13px] md:text-[14px] uppercase tracking-wide bg-emerald-500/10 px-4 py-2 rounded-full border border-emerald-500/20 shadow-inner drop-shadow-md">
-                  💰 Economize R$ 2.302,10
+                  💰 Economize {landingData.pricing.savings}
                 </span>
               </div>
             </div>
           </div>
 
-          {/* Elite Benefits List */}
-          <ul className="space-y-5 mb-12">
-            {benefits.map((benefit, idx) => (
-              <li key={idx} className="flex items-center gap-4 group/item">
-                <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-[#00f2ff]/10 border border-[#00f2ff]/20 flex items-center justify-center flex-shrink-0 group-hover/item:border-[#00f2ff]/50 transition-colors">
-                  <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#00f2ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" d="M5 13l4 4L19 7" />
-                  </svg>
-                </div>
-                <span className="text-white/70 text-[14px] md:text-[15px] font-medium leading-tight group-hover/item:text-white transition-colors">{benefit}</span>
-              </li>
-            ))}
+          <ul className="space-y-6 mb-12">
+            {benefits.map((benefit, idx) => {
+              const isBonus = benefit.includes('[BÔNUS]');
+              return (
+                <li key={idx} className="flex items-start gap-4 group/item">
+                  <div className={`mt-1 w-6 h-6 sm:w-7 sm:h-7 rounded-full flex items-center justify-center flex-shrink-0 transition-all duration-300 ${!isBonus ? 'bg-[#00f2ff]/20 border-[#00f2ff]/40 shadow-[0_0_15px_rgba(0,242,255,0.2)]' : 'bg-emerald-500/10 border-emerald-500/20 group-hover/item:border-[#00f2ff]/50'}`}>
+                    {!isBonus ? (
+                      <svg className="w-3.5 h-3.5 text-[#00f2ff]" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                      </svg>
+                    ) : (
+                      <svg className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-emerald-400 group-hover/item:text-[#00f2ff]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" d="M5 13l4 4L19 7" />
+                      </svg>
+                    )}
+                  </div>
+                  <div className="flex flex-col gap-1.5">
+                    {isBonus && (
+                      <span className="w-fit text-[#00f2ff] font-black text-[8px] tracking-[0.2em] bg-[#00f2ff]/10 px-2.5 py-1 rounded border border-[#00f2ff]/20 uppercase mb-0.5">
+                        Bônus Exclusivo
+                      </span>
+                    )}
+                    <span className={`text-[14px] md:text-[15px] font-medium leading-tight transition-colors ${!isBonus ? 'text-white font-bold' : 'text-white/70 group-hover/item:text-white'}`}>
+                      {isBonus ? benefit.replace('[BÔNUS]', '').trim() : benefit}
+                    </span>
+                  </div>
+                </li>
+              );
+            })}
           </ul>
 
           {/* Elite CTA Button with Scarcity */}
           <div className="flex flex-col gap-3.5">
             <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="relative btn-elite w-full py-8 group overflow-hidden animate-pulse-attention shadow-[0_0_25px_rgba(0,242,255,0.4)] hover:shadow-[0_0_40px_rgba(0,242,255,0.6)]">
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-[150%] skew-x-[-30deg] animate-[shimmer_2.5s_infinite]" />
+              <div className="absolute inset-0 bg-[#00f2ff]/10 opacity-0 group-hover:opacity-100 transition-opacity" />
               <span className="relative z-10 text-[13px] xs:text-[14px] sm:text-[15px] md:text-[17px] uppercase tracking-wider md:tracking-widest font-black drop-shadow-md px-2 w-full text-center leading-snug">QUERO GARANTIR COM DESCONTO</span>
             </button>
             <p className="text-center text-[#00f2ff]/90 font-medium text-[11px] sm:text-[13px] font-display tracking-wide flex items-center justify-center gap-2 mt-1">
