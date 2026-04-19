@@ -1,6 +1,8 @@
 import React from 'react';
+import { landingData } from '../data/data-config';
 
 export function MiniOffer() {
+  const { price, cents, installments, savings } = landingData.pricing;
   return (
     <section className="relative px-6 pt-10 pb-6 bg-gradient-to-b from-[#020a18] to-[#020814] z-40 flex flex-col items-center">
       
@@ -31,22 +33,22 @@ export function MiniOffer() {
 
         {/* Pricing Area */}
         <div className="text-center mb-6 relative z-10">
-          <p className="text-amber-600/70 line-through text-sm font-display font-medium tracking-wider mb-2">De R$ 2.500,00</p>
+          <p className="text-white/40 line-through text-sm font-display font-medium tracking-widest mb-1 uppercase">De R$ 2.500,00</p>
           <div className="flex items-center justify-center gap-1 mt-1">
-            <span className="text-emerald-400 text-xl font-display font-bold">R$</span>
-            <span className="text-emerald-400 text-[64px] leading-none font-display font-black tracking-tighter drop-shadow-[0_0_20px_rgba(52,211,153,0.3)] scale-110 mx-1">197</span>
-            <span className="text-emerald-400 text-xl font-display font-bold">,90</span>
+            <span className="text-emerald-500 text-xl font-display font-bold">R$</span>
+            <span className="text-emerald-500 text-[64px] leading-none font-display font-black tracking-tighter drop-shadow-[0_0_20px_rgba(16,185,129,0.3)] scale-110 mx-1">{price}</span>
+            <span className="text-emerald-500 text-xl font-display font-bold">,{cents || '90'}</span>
           </div>
           
           <div className="mt-4 mb-5">
             <span className="inline-block bg-[#00f2ff]/10 px-6 py-2 rounded-full text-white font-display font-bold text-[15px] border border-[#00f2ff]/30 shadow-[0_0_15px_rgba(0,242,255,0.1)]">
-              Ou 12x de R$ 19,75
+              Ou {installments}
             </span>
           </div>
 
           <div className="mt-4">
-            <span className="text-emerald-400 font-bold text-[12px] uppercase tracking-wide bg-emerald-500/10 px-4 py-2 rounded-full border border-emerald-500/20 shadow-inner">
-              💰 Economize R$ 2.302,10
+            <span className="text-emerald-500 font-bold text-[12px] uppercase tracking-wide bg-emerald-500/10 px-4 py-2 rounded-full border border-emerald-500/20 shadow-inner">
+              💰 Economize {savings}
             </span>
           </div>
 

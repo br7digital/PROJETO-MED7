@@ -10,7 +10,7 @@ export function Pricing() {
   };
 
   return (
-    <section className="relative pt-12 pb-16 bg-gradient-to-b from-[#111827] to-[#020c1a] overflow-hidden">
+    <section className="relative pt-12 pb-16 bg-gradient-to-b from-[#020814] to-black overflow-hidden">
       {/* Intense glow at bottom for CTA focus */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[300px] bg-[#00f2ff]/5 blur-[120px] pointer-events-none" />
 
@@ -77,7 +77,7 @@ export function Pricing() {
         </div>
 
         {/* Elite Pricing Card */}
-        <div className="relative w-full px-5 md:px-8 py-10 pt-14 glass-card rounded-[40px] overflow-hidden group z-30 bg-[#0b1627]/95 backdrop-blur-3xl shadow-[0_-20px_40px_rgba(0,0,0,0.6)]">
+        <div className="relative w-full px-5 md:px-8 py-10 pt-14 glass-card rounded-[40px] overflow-hidden group z-30 bg-[#010814]/98 backdrop-blur-3xl shadow-[0_-20px_40px_rgba(0,0,0,0.8)] border-white/5">
 
           {/* Decorative Corner Glow */}
           <div className="absolute -top-10 -right-10 w-32 h-32 bg-[#00f2ff]/20 blur-[40px] group-hover:bg-[#00f2ff]/30 transition-colors duration-700 pointer-events-none" />
@@ -96,9 +96,9 @@ export function Pricing() {
               </div>
               <p className="text-white/40 line-through text-[16px] font-display font-medium tracking-widest mb-1">DE R$ 2.500,00</p>
               <div className="flex items-center justify-center gap-1 mb-4 mt-1">
-                <span className="text-emerald-400 text-3xl font-display font-bold">R$</span>
-                <span className="text-emerald-400 text-[90px] leading-none font-display font-black tracking-tighter drop-shadow-[0_0_30px_rgba(52,211,153,0.4)] scale-110 mx-2">{price}</span>
-                <span className="text-emerald-400 text-3xl font-display font-bold">,{landingData.pricing.cents || '90'}</span>
+                <span className="text-emerald-500 text-3xl font-display font-bold">R$</span>
+                <span className="text-emerald-500 text-[90px] leading-none font-display font-black tracking-tighter drop-shadow-[0_0_30px_rgba(16,185,129,0.3)] scale-110 mx-2">{price}</span>
+                <span className="text-emerald-500 text-3xl font-display font-bold">,{landingData.pricing.cents || '90'}</span>
               </div>
               <div className="mt-4">
                 <span className="inline-block bg-[#00f2ff]/5 px-6 py-2 rounded-full text-white/80 font-display font-medium text-[14px] md:text-[16px] border border-[#00f2ff]/20 shadow-[0_5px_15px_rgba(0,242,255,0.05)]">
@@ -107,7 +107,7 @@ export function Pricing() {
               </div>
 
               <div className="mt-5 mb-4">
-                <span className="text-emerald-400 font-bold text-[13px] md:text-[14px] uppercase tracking-wide bg-emerald-500/10 px-4 py-2 rounded-full border border-emerald-500/20 shadow-inner drop-shadow-md">
+                <span className="text-emerald-500 font-bold text-[13px] md:text-[14px] uppercase tracking-wide bg-emerald-500/10 px-4 py-2 rounded-full border border-emerald-500/20 shadow-inner drop-shadow-md">
                   💰 Economize {landingData.pricing.savings}
                 </span>
               </div>

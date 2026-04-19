@@ -3,6 +3,7 @@ import { landingData } from '../data/data-config';
 
 export function Faq() {
   const { title, questions } = landingData.faq;
+  const { price, cents, installments, savings } = landingData.pricing;
   const [openIndex, setOpenIndex] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -122,20 +123,20 @@ export function Faq() {
             </p>
 
             <div className="flex flex-col items-center gap-1 mb-10 w-full group/price">
-              <p className="text-amber-600/70 line-through text-[12px] font-display font-medium tracking-[0.2em] uppercase transition-colors group-hover/price:text-amber-600/90">De R$ 2.500,00</p>
+              <p className="text-white/40 line-through text-[13px] font-display font-medium tracking-[0.2em] uppercase transition-colors group-hover/price:text-white/60">De R$ 2.500,00</p>
               <div className="flex items-baseline gap-1">
-                <span className="text-emerald-400 text-lg font-display font-black">R$</span>
-                <span className="text-emerald-400 text-6xl leading-none font-display font-black tracking-tighter drop-shadow-[0_0_20px_rgba(52,211,153,0.3)]">197</span>
-                <span className="text-emerald-400 text-2xl font-display font-bold">,90</span>
+                <span className="text-emerald-500 text-lg font-display font-black">R$</span>
+                <span className="text-emerald-500 text-6xl leading-none font-display font-black tracking-tighter drop-shadow-[0_0_20px_rgba(16,185,129,0.3)]">{price}</span>
+                <span className="text-emerald-500 text-2xl font-display font-bold">,{cents || '90'}</span>
               </div>
 
               {/* Standardized Payment & Saving Hierachy */}
               <div className="mt-4 flex flex-col items-center gap-4">
                 <span className="inline-block bg-[#00f2ff]/5 px-5 py-1.5 rounded-full text-white/70 font-display font-medium text-[13px] border border-[#00f2ff]/10 shadow-sm">
-                  Ou 12x de R$ 19,75
+                  Ou {installments}
                 </span>
-                <span className="text-emerald-400 font-bold text-[11px] uppercase tracking-widest bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/20 shadow-inner">
-                  💰 Economize R$ 2.302,10
+                <span className="text-emerald-500 font-bold text-[11px] uppercase tracking-widest bg-emerald-500/10 px-3 py-1.5 rounded-full border border-emerald-500/20 shadow-inner">
+                  💰 Economize {savings}
                 </span>
               </div>
             </div>
