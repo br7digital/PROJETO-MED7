@@ -54,15 +54,15 @@ export function Mechanism() {
                    )}
                     {item.assetType === 'conversion' && (
                       <img 
-                        src="/heartbeat.webp" 
-                        alt="Precisão"
-                        className="w-full h-full object-contain scale-[1.6] drop-shadow-[0_20px_30px_rgba(0,0,0,0.6)] relative z-20"
+                        src="/ORTO-MENISCO-HEROI.webp" 
+                        alt="Fidelidade"
+                        className="w-full h-full object-contain scale-[1.9] drop-shadow-[0_20px_30px_rgba(0,0,0,0.7)] relative z-20 animate-float-slow"
                       />
                     )}
                </div>
 
                {/* Text Content - Optimized for Mobile-Contained width */}
-               <div className="flex flex-col pl-[86px] pr-1 py-1">
+               <div className="flex flex-col pl-[94px] md:pl-[100px] pr-1 py-1">
                  <h3 className="text-lg font-display font-bold text-white mb-1 leading-tight">
                    {item.label}: <span className="font-light text-white/90">{item.sublabel}</span>
                  </h3>

@@ -75,11 +75,11 @@ export const landingData = {
         description: "",
         assetType: "understanding" 
       },
-      { 
-        label: "Precisão Cirúrgica", 
-        sublabel: "Demonstre seu domínio técnico com ativos validados.", 
-        description: "Substitua o amadorismo por modelos 3D de alta precisão que reforçam seu conhecimento profundo.",
-        assetType: "conversion" 
+      {
+        label: "Alta Fidelidade",
+        sublabel: "Anatomia interna com realismo 4K.",
+        description: "Demonstre patologias e procedimentos com ativos validados que reforçam seu domínio técnico e eliminam qualquer dúvida do paciente.",
+        assetType: "conversion"
       }
     ]
   },
