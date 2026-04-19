@@ -127,7 +127,7 @@ export function Hero() {
           </div>
 
           <div className="glass-panel px-3 py-2.5 rounded-xl shadow-elite animate-float flex flex-col items-center gap-1 border-white/20 bg-black/20" style={{ animationDelay: '2s' }}>
-            <span className="text-[#00f2ff] font-display font-black text-xs md:text-sm tracking-tighter">VITALÍCIO</span>
+            <span className="text-[#00f2ff] font-display font-black text-xs md:text-sm tracking-tighter">PACK VITALÍCIO</span>
             <span className="text-white/70 text-[7px] md:text-[8px] font-bold uppercase tracking-widest">Acesso Imediato</span>
           </div>
         </div>

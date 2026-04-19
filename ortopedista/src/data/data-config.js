@@ -173,7 +173,7 @@ export const landingData = {
   
   pricing: {
     title: "O Seu Arsenal\nde Autoridade",
-    subtitle: "Acesso vitalício ao pack de vídeos CGI que dominam o feed.",
+    subtitle: "Acesso vitalício a este Pack de 30 vídeos e todos os bônus.",
     price: "197",
     cents: "90",
     installments: "12x de R$ 19,75",
@@ -183,7 +183,7 @@ export const landingData = {
       "[BÔNUS] Sistema de Personalização no Canva (Foto, Logo e CRM)",
       "[BÔNUS] 30 Legendas Estratégicas Inclusas",
       "[BÔNUS] Protocolo de Postagem e Posicionamento",
-      "[BÔNUS] Acesso Vitalício e Suporte Exclusivo"
+      "[BÔNUS] Acesso Vitalício a este Conteúdo"
     ],
     guarantee: "Garantia incondicional de 7 dias."
   },
@@ -205,11 +205,11 @@ export const landingData = {
       },
       {
         question: "O acesso é imediato?",
-        answer: "Sim! Após a confirmação do pagamento, você recebe os dados de <span class=\"text-[#00f2ff] font-bold\">acesso instantâneo</span> no seu e-mail e já pode começar a usar agora mesmo."
+        answer: "Sim! Após a confirmação do pagamento, você recebe os dados de acesso instantâneo no seu e-mail e já pode começar a usar agora mesmo."
       },
       {
         question: "Terei custos contínuos ou mensalidades?",
-        answer: "Não. O <span class=\"text-[#00f2ff] font-bold\">acesso é vitalício</span>. Você paga uma única vez e garante todo o conteúdo e as atualizações futuras sem qualquer cobrança recorrente."
+        answer: "Não. O <span class=\"text-[#00f2ff] font-bold\">acesso a este acervo é vitalício</span>. Você paga uma única vez e garante os 30 vídeos e todos os bônus inclusos sem qualquer mensalidade para este lote."
       },
       {
         question: "O conteúdo deste pack é atualizado?",
