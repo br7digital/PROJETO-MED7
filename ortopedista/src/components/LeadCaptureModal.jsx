@@ -131,7 +131,19 @@ export function LeadCaptureModal() {
 
     // 2. Redirect to Hotmart Checkout with prefilled data
     try {
-      const checkoutUrl = `https://pay.hotmart.com/${checkout.hotmartProductId}?off=${checkout.hotmartOfferCode}&name=${encodeURIComponent(name.trim())}&email=${encodeURIComponent(email.trim())}&phoneac=${phoneParts.phoneac}&phonenumber=${phoneParts.phonenumber}`;
+      const baseUrl = `https://pay.hotmart.com/${checkout.hotmartProductId}`;
+      const params = new URLSearchParams();
+
+      if (checkout.hotmartOfferCode) {
+        params.append('off', checkout.hotmartOfferCode);
+      }
+
+      params.append('name', name.trim());
+      params.append('email', email.trim().toLowerCase());
+      params.append('phoneac', phoneParts.phoneac);
+      params.append('phonenumber', phoneParts.phonenumber);
+
+      const checkoutUrl = `${baseUrl}?${params.toString()}`;
 
       // Navigate on the same tab for better mobile conversion
       window.location.href = checkoutUrl;
