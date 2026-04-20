@@ -1,8 +1,10 @@
 import React from 'react';
 import { landingData } from '../data/data-config';
+import { useCheckout } from '../contexts/CheckoutContext';
 
 export function Mechanism() {
   const { title, subtitle, ctaLabel, items } = landingData.mechanism;
+  const { openCheckoutModal } = useCheckout();
 
   return (
     <section 
@@ -78,7 +80,7 @@ export function Mechanism() {
 
         {/* CTA Button */}
         <div className="mt-10 md:mt-16 flex justify-center w-full relative z-20">
-           <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-[90%] sm:w-auto px-10 py-6 shadow-[0_0_40px_rgba(0,242,255,0.3)] animate-pulse-attention">
+           <button onClick={openCheckoutModal} className="btn-elite w-[90%] sm:w-auto px-10 py-6 shadow-[0_0_40px_rgba(0,242,255,0.3)] animate-pulse-attention">
               <span className="relative z-10 uppercase tracking-widest font-black text-[clamp(14px,4vw,20px)] whitespace-nowrap">
                 {ctaLabel}
               </span>

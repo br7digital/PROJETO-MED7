@@ -239,8 +239,9 @@ export const landingData = {
   },
 
   checkout: {
+    hotmartProductId: 'P105394697A',
     hotmartOfferCode: 'aaj3t229',
-    ghlWebhookUrl: 'https://services.leadconnectorhq.com/hooks/VAXiMcLn9h5zym9anXiu/webhook-trigger/HdFdW4gFHZFArcDHLp17',
+    ghlWebhookUrl: 'https://services.leadconnectorhq.com/hooks/VAXiMcLn9h5zym9anXiu/webhook-trigger/d3ddc0bb-7863-44a4-afe5-ae84eb6e9615',
     leadTag: 'lead-med7-ortopedista',
     source: 'landing-page-ortopedista',
     productName: 'Pack 30 Videos Ortopedia'

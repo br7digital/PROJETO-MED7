@@ -1,8 +1,10 @@
 import React from 'react';
 import { landingData } from '../data/data-config';
+import { useCheckout } from '../contexts/CheckoutContext';
 
 export function SocialProof() {
   const { title, subtitle, testimonials } = landingData.socialProof;
+  const { openCheckoutModal } = useCheckout();
 
   return (
     <section className="relative py-14 bg-gradient-to-b from-[#010F1F] to-[#111827] overflow-hidden">
@@ -117,7 +119,7 @@ export function SocialProof() {
         <div className="relative flex flex-col items-center w-full max-w-[400px]">
 
           {/* Button */}
-          <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-5 group relative z-10 flex items-center justify-center">
+          <button onClick={openCheckoutModal} className="btn-elite w-full py-5 group relative z-10 flex items-center justify-center">
             <span className="relative z-10 font-display font-black text-[clamp(12px,4vw,15px)] uppercase tracking-[0.05em] md:tracking-wider text-center leading-snug">
               TAMBÉM QUERO ESSA TRANSFORMAÇÃO
             </span>

@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { landingData } from '../data/data-config';
+import { useCheckout } from '../contexts/CheckoutContext';
 
 export function Usage() {
   const { overline, title, subheadline, supportText, chips, carousel } = landingData.usage;
+  const { openCheckoutModal } = useCheckout();
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const touchStartX = useRef(null);
@@ -211,7 +213,7 @@ export function Usage() {
               </p>
             </div>
 
-            <button onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')} className="btn-elite w-full py-6 group shadow-[0_0_30px_rgba(0,242,255,0.25)] animate-pulse-attention">
+            <button onClick={openCheckoutModal} className="btn-elite w-full py-6 group shadow-[0_0_30px_rgba(0,242,255,0.25)] animate-pulse-attention">
               <span className="relative z-10 uppercase tracking-wider font-black text-[clamp(11px,3.8vw,14px)] whitespace-nowrap">
                 QUERO MEU ACESSO AGORA
               </span>

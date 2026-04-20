@@ -90,8 +90,6 @@ export function LeadCaptureModal() {
     };
   };
 
-  // Hidden button ref for Hotmart overlay attachment
-  const hotmartTriggerRef = useRef(null);
 
   // Submit handler
   const handleSubmit = async (e) => {
@@ -103,15 +101,19 @@ export function LeadCaptureModal() {
     const phoneParts = getPhoneParts();
     const phoneDigits = phone.replace(/\D/g, '');
 
-    // 1. Send lead to GoHighLevel (non-blocking)
+    // 1. Send lead to GoHighLevel (Awaiting with timeout for higher reliability)
     try {
-      fetch(checkout.ghlWebhookUrl, {
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 2000); // 2-second limit
+
+      await fetch(checkout.ghlWebhookUrl, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           firstName: name.trim(),
           email: email.trim().toLowerCase(),
           phone: `+55${phoneDigits}`,
+          productValue: parseFloat(`${landingData.pricing.price}.${landingData.pricing.cents || '90'}`),
           tags: [checkout.leadTag],
           source: checkout.source,
           customField: {
@@ -119,67 +121,31 @@ export function LeadCaptureModal() {
             product: checkout.productName,
           },
         }),
-      }).catch((err) => console.warn('GHL webhook error (non-blocking):', err));
+        signal: controller.signal
+      });
+      clearTimeout(timeoutId);
     } catch (err) {
-      console.warn('GHL webhook error (non-blocking):', err);
+      // We continue to redirect even if webhook fails or times out to not block the sale
+      console.warn('GHL capture timeout or error (continuing to checkout):', err);
     }
 
-    // 2. Open Hotmart Overlay Checkout with prefilled data
+    // 2. Redirect to Hotmart Checkout with prefilled data
     try {
-      if (window.checkoutElements && hotmartTriggerRef.current) {
-        // Close our modal first so it doesn't overlap the Hotmart overlay
-        closeCheckoutModal();
-        setIsSubmitting(false);
+      const checkoutUrl = `https://pay.hotmart.com/${checkout.hotmartProductId}?off=${checkout.hotmartOfferCode}&name=${encodeURIComponent(name.trim())}&email=${encodeURIComponent(email.trim())}&phoneac=${phoneParts.phoneac}&phonenumber=${phoneParts.phonenumber}`;
 
-        // Small delay to let our modal close before Hotmart overlay opens
-        await new Promise((resolve) => setTimeout(resolve, 200));
+      // Navigate on the same tab for better mobile conversion
+      window.location.href = checkoutUrl;
 
-        const elements = window.checkoutElements.init('overlayCheckout', {
-          offer: checkout.hotmartOfferCode,
-          prefilledInfo: {
-            name: name.trim(),
-            email: email.trim().toLowerCase(),
-            phoneac: phoneParts.phoneac,
-            phonenumber: phoneParts.phonenumber,
-          },
-        });
-
-        // Attach to the hidden trigger button and click it
-        elements.attach('#hotmart-trigger-btn');
-
-        // Wait for attachment to complete, then trigger
-        await new Promise((resolve) => setTimeout(resolve, 300));
-        hotmartTriggerRef.current.click();
-
-        return; // Exit early since we already closed the modal
-      } else {
-        // Fallback: redirect if script didn't load
-        window.open(
-          `https://pay.hotmart.com/${checkout.hotmartOfferCode}?name=${encodeURIComponent(name.trim())}&email=${encodeURIComponent(email.trim())}&phoneac=${phoneParts.phoneac}&phonenumber=${phoneParts.phonenumber}`,
-          '_blank'
-        );
-      }
     } catch (err) {
-      console.error('Hotmart checkout error:', err);
+      console.error('Redirection error:', err);
       // Ultimate fallback
-      window.open(`https://pay.hotmart.com/${checkout.hotmartOfferCode}`, '_blank');
+      window.location.href = `https://pay.hotmart.com/${checkout.hotmartOfferCode}`;
     }
 
-    setIsSubmitting(false);
-    closeCheckoutModal();
   };
 
   return (
     <>
-      {/* Hidden button that Hotmart attaches to — always rendered */}
-      <button
-        ref={hotmartTriggerRef}
-        id="hotmart-trigger-btn"
-        style={{ position: 'fixed', opacity: 0, pointerEvents: 'none', zIndex: -1, top: 0, left: 0 }}
-        aria-hidden="true"
-        tabIndex={-1}
-      />
-
       {/* Modal — only rendered when open */}
       {isModalOpen && (
         <div
@@ -212,7 +178,7 @@ export function LeadCaptureModal() {
 
             {/* Card */}
             <div className="bg-[#0a0f1a]/98 rounded-[28px] border border-white/10 shadow-[0_25px_80px_rgba(0,0,0,0.8)] backdrop-blur-3xl overflow-hidden">
-              
+
               {/* Top Glow */}
               <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[200px] h-[2px] bg-gradient-to-r from-transparent via-[#00f2ff]/60 to-transparent" />
 
@@ -234,7 +200,7 @@ export function LeadCaptureModal() {
 
               {/* Form */}
               <form onSubmit={handleSubmit} className="px-6 pb-6 space-y-4" noValidate>
-                
+
                 {/* Name Field */}
                 <div>
                   <div className={`relative rounded-xl border transition-colors duration-200 ${errors.name ? 'border-red-500/60 bg-red-500/5' : 'border-white/15 bg-white/5 focus-within:border-[#00f2ff]/40 focus-within:bg-white/[0.07]'}`}>
@@ -297,7 +263,7 @@ export function LeadCaptureModal() {
                 >
                   {/* Shimmer effect */}
                   <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-[150%] skew-x-[-30deg] animate-[shimmer_2.5s_infinite]" />
-                  
+
                   <span className="relative z-10 flex items-center justify-center gap-2">
                     {isSubmitting ? (
                       <>

@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { landingData } from '../data/data-config';
+import { useCheckout } from '../contexts/CheckoutContext';
 
 export function Faq() {
   const { title, questions } = landingData.faq;
   const { price, cents, installments, savings } = landingData.pricing;
   const [openIndex, setOpenIndex] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const { openCheckoutModal } = useCheckout();
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -70,7 +71,7 @@ export function Faq() {
             </p>
 
             <button
-              onClick={() => setIsModalOpen(true)}
+              onClick={openCheckoutModal}
               className="group relative inline-flex items-center justify-center gap-2 px-8 py-5 bg-[#111b29] hover:bg-[#1a293f] text-white rounded-full text-[13px] md:text-[14px] font-black border border-white/10 hover:border-[#00f2ff]/50 tracking-widest transition-all duration-300 shadow-xl"
             >
               <svg className="w-4 h-4 text-emerald-500 group-hover:scale-110 transition-transform" fill="currentColor" viewBox="0 0 24 24">
@@ -143,7 +144,7 @@ export function Faq() {
             </div>
 
             <button
-              onClick={() => window.open('https://pay.hotmart.com/P105394697A', '_blank')}
+              onClick={openCheckoutModal}
               className="relative btn-elite w-full py-6 group/btn overflow-hidden shadow-[0_15px_40px_rgba(0,242,255,0.2)] hover:shadow-[0_20px_60px_rgba(0,242,255,0.4)] rounded-2xl"
             >
               <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-transparent via-white/50 to-transparent -translate-x-[150%] skew-x-[-30deg] animate-[shimmer_3s_infinite]" />
@@ -162,63 +163,6 @@ export function Faq() {
           </div>
         </div>
 
-        {/* Support Modal Overlay */}
-        {isModalOpen && (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/95 backdrop-blur-md animate-fade-in" onClick={() => setIsModalOpen(false)}>
-            <div className="bg-[#0b1627] border border-[#00f2ff]/30 rounded-3xl p-6 md:p-8 max-w-[300px] w-full shadow-[0_0_60px_rgba(0,0,0,1)] relative transform transition-all border-b-4 border-b-[#00f2ff]" onClick={(e) => e.stopPropagation()}>
-              {/* Close Button */}
-              <button 
-                onClick={() => setIsModalOpen(false)}
-                className="absolute top-3 right-3 w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white/60 hover:bg-white/20 hover:text-white transition-all text-lg font-bold z-30"
-              >
-                ✕
-              </button>
-
-              <div className="text-center">
-                <div className="w-12 h-12 bg-[#00f2ff]/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-[#00f2ff]/20">
-                  <svg className="w-6 h-6 text-[#00f2ff]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
-                </div>
-
-                <h3 className="text-xl font-display font-bold text-white mb-2 tracking-tight">
-                  Atendimento <span className="text-[#00f2ff]">Prioritário</span>
-                </h3>
-
-                <p className="text-zinc-400 text-[14px] leading-relaxed mb-5">
-                  Preservamos este canal para garantir agilidade total na implementação técnica para médicos já cadastrados.
-                </p>
-
-                <div className="bg-white/[0.03] border border-white/10 p-4 rounded-2xl mb-6">
-                  <p className="text-white/90 text-[14px] leading-relaxed">
-                    Sinta-se seguro: teste o acervo por <span className="text-[#00f2ff] font-bold">7 Dias</span>. Se o material não atender sua exigência, reembolsamos o valor integral com prioridade.
-                  </p>
-                </div>
-
-                {/* CTA with Character */}
-                <div className="relative">
-                  <button
-                    onClick={() => {
-                      setIsModalOpen(false);
-                      window.open('https://pay.hotmart.com/P105394697A', '_blank');
-                    }}
-                    className="w-full py-4 pr-14 bg-[#00f2ff] hover:bg-[#00d0db] text-[#011021] font-black rounded-xl tracking-widest text-[14px] transition-all hover:scale-[1.02] shadow-[0_10px_20px_rgba(0,242,255,0.2)]"
-                  >
-                    CONCORDAR E ACESSAR
-                  </button>
-                  {/* Dr. Osso peeking */}
-                  <div className="absolute -bottom-10 -right-4 w-20 h-auto pointer-events-none z-20">
-                    <img
-                      src="/dr osso avaliar.webp"
-                      alt="Dr. Osso"
-                      className="w-full h-auto object-contain drop-shadow-[0_4px_8px_rgba(0,0,0,0.6)] animate-float"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </section>
   );
