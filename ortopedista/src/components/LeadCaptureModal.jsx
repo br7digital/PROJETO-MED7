@@ -111,6 +111,10 @@ export function LeadCaptureModal() {
 
     setIsSubmitting(true);
 
+    const nameParts = name.trim().split(/\s+/);
+    const firstName = nameParts[0];
+    const lastName = nameParts.slice(1).join(' ');
+
     const phoneParts = getPhoneParts();
     const phoneDigits = phone.replace(/\D/g, '');
 
@@ -123,7 +127,9 @@ export function LeadCaptureModal() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          firstName: name.trim(),
+          name: name.trim(),
+          firstName: firstName,
+          lastName: lastName,
           email: email.trim().toLowerCase(),
           phone: `+55${phoneDigits}`,
           productValue: parseFloat(`${landingData.pricing.price}.${landingData.pricing.cents || '90'}`),
