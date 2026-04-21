@@ -13,6 +13,11 @@ export function LeadCaptureModal() {
   const [errors, setErrors] = useState({});
   const [showContent, setShowContent] = useState(false);
 
+  // Hidden tracking fields state
+  const [utmSource, setUtmSource] = useState('');
+  const [utmMedium, setUtmMedium] = useState('');
+  const [utmCampaign, setUtmCampaign] = useState('');
+
   const modalRef = useRef(null);
   const nameInputRef = useRef(null);
 
@@ -35,6 +40,14 @@ export function LeadCaptureModal() {
       document.body.style.overflow = '';
     };
   }, [isModalOpen]);
+
+  // Capture UTM parameters from URL
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    setUtmSource(params.get('utm_source') || '');
+    setUtmMedium(params.get('utm_medium') || '');
+    setUtmCampaign(params.get('utm_campaign') || '');
+  }, []);
 
   // Close on Escape key
   useEffect(() => {
@@ -119,6 +132,11 @@ export function LeadCaptureModal() {
           customField: {
             lead_stage: 'pre-checkout',
             product: checkout.productName,
+            especialidade_medica: 'Ortopedista',
+            hotmart_offer_id: checkout.hotmartOfferCode || 'br84xiqy',
+            utm_source: utmSource,
+            utm_medium: utmMedium,
+            utm_campaign: utmCampaign,
           },
         }),
         signal: controller.signal
@@ -267,6 +285,13 @@ export function LeadCaptureModal() {
                   {errors.phone && <p className="text-red-400 text-[11px] mt-1.5 ml-1 font-medium">{errors.phone}</p>}
                 </div>
 
+                {/* Hidden Tracking Fields */}
+                <input type="hidden" name="especialidade_medica" id="especialidade_medica" value="Ortopedista" />
+                <input type="hidden" name="hotmart_offer_id" id="hotmart_offer_id" value={checkout.hotmartOfferCode || 'br84xiqy'} />
+                <input type="hidden" name="utm_source" id="utm_source" value={utmSource} />
+                <input type="hidden" name="utm_medium" id="utm_medium" value={utmMedium} />
+                <input type="hidden" name="utm_campaign" id="utm_campaign" value={utmCampaign} />
+
                 {/* CTA Button */}
                 <button
                   type="submit"
@@ -295,6 +320,11 @@ export function LeadCaptureModal() {
                     )}
                   </span>
                 </button>
+
+                {/* LGPD Notice */}
+                <p className="text-[10px] text-white/40 text-center px-4 leading-relaxed mt-2">
+                  🔒 Seus dados estão protegidos. Ao avançar para o pagamento, você concorda com nossos <span className="text-white/60">Termos de Uso</span> e <span className="text-white/60">Política de Privacidade</span>.
+                </p>
 
                 {/* Trust Indicators */}
                 <div className="flex items-center justify-center gap-5 pt-3 pb-1">
