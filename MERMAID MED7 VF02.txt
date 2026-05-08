@@ -1,0 +1,77 @@
+flowchart TD
+    subgraph Webhooks_da_Hotmart_f29e0521[Webhooks da Hotmart]
+        Evento_Compra_Aprova_dba1a9c0[Evento: Compra Aprovada]
+        Evento_Reembolso_Sol_dc1afc0e[Evento: Reembolso Solicitado]
+        Evento_Pix_ou_Boleto_28eab919[Evento: Pix ou Boleto Gerado]
+        Evento_Abandono_de_C_358582c3[Evento: Abandono de Carrinho]
+        Evento_Compra_Cancel_244b79c5["Evento: Compra Cancelada / Recusada"]
+        Evento_Pagamento_Exp_baa50b1a[Evento: Pagamento Expirado]
+    end
+    Cliente_no_seu_Site_9b0bebe2([Cliente no seu Site]) -->|Preenche Form| Gatilho_Formulario_d_bc19e545[Gatilho: Formulario do Site]
+    Gatilho_Formulario_d_bc19e545 -->|Disparo| Workflow_Enviar_E_ma_9f697da4[Workflow: Enviar E-mail de Boas-Vindas]
+    Gatilho_Formulario_d_bc19e545 -->|Acao Imediata| 01_Checkout_Iniciado_8b809a08[01. Checkout Iniciado]
+    subgraph PIPELINE_1_Automacao_9ae35d16[PIPELINE 1: Automacao Checkout]
+        03_Pix_ou_Boleto_Em__6199e320[03. Pix ou Boleto Em aberto]
+        02_Checkout_Abandona_cfbfe010[02. Checkout Abandonado]
+        04_Cartao_Recusado_777859d6[04. Cartao Recusado]
+        01_Checkout_Iniciado_8b809a08
+        05_Pagamento_Expirad_e3dd80f4[05. Pagamento Expirado]
+    end
+    WhatsApp_Codigo_Copi_7b9e2c8a[WhatsApp: Codigo Copia e Cola]
+    WhatsApp_Quebra_de_O_4c122f8c["WhatsApp: Quebra de Objecao<br>[Aplicar Tag: Abandono-Ativo]"] -.->|Se comprar depois de passar aqui| Adicionar_Tag_Client_6bc57881[Adicionar Tag: Cliente-Ativo]
+    Aplicar_Tag_Abandono_02f71e0e["[Aplicar Tag: Abandono-Recuperado]"] --> Adicionar_Tag_Client_6bc57881
+    WhatsApp_Oferta_de_P_8d59b347["WhatsApp: Oferta de Pix/Boleto Parc.<br>[Aplicar Tag: Cartao-Recusado]"]
+    WhatsApp_Link_Renova_18db70d1["WhatsApp: Link Renovado / Ultima Chance<br>[Aplicar Tag: Pix-Expirado]"] -.-> 01_1_Nivel_de_Atendi_ed1bc494[01. 🤖 1 Nivel de Atendimento IA]
+    subgraph Bastidores_Gestao_In_0f726b7f[Bastidores: Gestao Invisivel de LTV]
+        Adicionar_Tag_Client_6bc57881 --> Workflow_Entrega_do__07923240[Workflow: Entrega do Produto e Acesso]
+        Adicionar_Tag_Client_6bc57881 --> Filtro_Smart_List_de_ca570268[Filtro: Smart List de Clientes]
+        Adicionar_Tag_Reembo_b7e9cb31["Adicionar Tag: Reembolso-Solicitado<br>[Tirar Tag: Cliente-Ativo]"]
+        Filtro_Smart_List_de_ca570268 -->|Tempo de Casa| Workflow_Oferta_de_U_4ad6bfec["Workflow: Oferta de Upsell apos 7 dias<br>[Aplicar Tag: Oferta-Upsell-Enviada]"]
+    end
+    COMPROU_UPSELL_TAG_C_e92dd03d[COMPROU UPSELL<br>TAG Comprou-Upsell: Para você saber quem comprou o segundo produto e tirá-los da lista de oferta de 7 dias.]
+    subgraph PIPELINE_2_Suporte_A_9529eff2[PIPELINE 2: Suporte - Atendimento Humano]
+        01_1_Nivel_de_Atendi_ed1bc494 -->|Transferencia IA para Humano| 02_2_Nivel_de_Atendi_31875b69["02. 2 Nivel de Atendimento Humano<br>[Aplicar Tag: Escalado-Suporte]"]
+        03_Venda_Recuperada_9c6d80d0[03. Venda Recuperada]
+    end
+    Aplicar_Tag_Resolvid_40feb9ac["[Aplicar Tag: Resolvido-IA]"]
+    Aplicar_Tag_Resolvid_e2066aa9["[Aplicar Tag: Resolvido-Humano]"] --> 03_Venda_Recuperada_9c6d80d0
+    subgraph Rotas_de_Desistencia_5bef5096[Rotas de Desistencia e Bloqueio DND]
+        Humano_clica_Marcar__a93e24bb[Humano clica: Marcar como Perdido] --> Acao_Aplicar_DND_Nao_3ba8e7cf[Acao: Aplicar DND Nao Perturbe]
+        Humano_clica_Marcar__a93e24bb --> Acao_Mudar_status_pa_ada7aa94["Acao: Mudar status para LOST<br>[Aplicar Tag: Lead-Desistente]"]
+        IA_identifica_Nao_Qu_6c3e6bed["IA identifica: Nao Quero / Pare"] --> Acao_Aplicar_DND_Nao_3ba8e7cf
+        IA_identifica_Nao_Qu_6c3e6bed --> Acao_Mudar_status_pa_ada7aa94
+    end
+    Workflow_Auto_Lost_A_58cf9f4b[Workflow Auto-Lost: Arquiva Oportunidade]
+    Aplicar_Tag_DND_Ativ_25a32302["[Aplicar Tag: DND-Ativo]"]
+    03_Pix_ou_Boleto_Em__6199e320 -->|Disparo| WhatsApp_Codigo_Copi_7b9e2c8a
+    02_Checkout_Abandona_cfbfe010 -->|Disparo| WhatsApp_Quebra_de_O_4c122f8c
+    02_Checkout_Abandona_cfbfe010 --> Aplicar_Tag_Abandono_02f71e0e
+    04_Cartao_Recusado_777859d6 -->|Disparo| WhatsApp_Oferta_de_P_8d59b347
+    05_Pagamento_Expirad_e3dd80f4 -->|Disparo| WhatsApp_Link_Renova_18db70d1
+    Workflow_Oferta_de_U_4ad6bfec --> COMPROU_UPSELL_TAG_C_e92dd03d
+    01_1_Nivel_de_Atendi_ed1bc494 -->|IA resolve sozinha| Aplicar_Tag_Resolvid_40feb9ac
+    02_2_Nivel_de_Atendi_31875b69 -->|Atendente fecha a venda| Aplicar_Tag_Resolvid_e2066aa9
+    02_2_Nivel_de_Atendi_31875b69 -->|48 Horas sem resposta| Workflow_Auto_Lost_A_58cf9f4b
+    IA_identifica_Nao_Qu_6c3e6bed -->|Para relatorios| Aplicar_Tag_DND_Ativ_25a32302
+    Evento_Reembolso_Sol_dc1afc0e --> Adicionar_Tag_Reembo_b7e9cb31
+    05_Pagamento_Expirad_e3dd80f4 -->|Esperar 24 Horas sem Compra| 01_1_Nivel_de_Atendi_ed1bc494
+    Adicionar_Tag_Client_6bc57881 -.->|Cancela| 03_Pix_ou_Boleto_Em__6199e320
+    Evento_Abandono_de_C_358582c3 -->|Delay: 30 Minutos| 02_Checkout_Abandona_cfbfe010
+    Adicionar_Tag_Client_6bc57881 -.->|Cancela| 05_Pagamento_Expirad_e3dd80f4
+    Adicionar_Tag_Client_6bc57881 -.->|Cancela| 01_1_Nivel_de_Atendi_ed1bc494
+    01_1_Nivel_de_Atendi_ed1bc494 -->|Cliente rejeita compra| IA_identifica_Nao_Qu_6c3e6bed
+    Evento_Compra_Aprova_dba1a9c0 -->|Filtro Global| Adicionar_Tag_Client_6bc57881
+    Evento_Pagamento_Exp_baa50b1a -->|Acao Imediata| 05_Pagamento_Expirad_e3dd80f4
+    Adicionar_Tag_Client_6bc57881 -.->|Cancela| 02_2_Nivel_de_Atendi_31875b69
+    Adicionar_Tag_Client_6bc57881 -.->|Cancela| 01_Checkout_Iniciado_8b809a08
+    Adicionar_Tag_Client_6bc57881 -.->|Cancela| 04_Cartao_Recusado_777859d6
+    Evento_Compra_Cancel_244b79c5 -->|Delay: 15 Minutos| 04_Cartao_Recusado_777859d6
+    02_2_Nivel_de_Atendi_31875b69 -->|Cliente rejeita compra| Humano_clica_Marcar__a93e24bb
+    Adicionar_Tag_Client_6bc57881 -.->|Cancela| 02_Checkout_Abandona_cfbfe010
+    Evento_Pix_ou_Boleto_28eab919 -->|Delay: 10 Minutos| 03_Pix_ou_Boleto_Em__6199e320
+classDef style0 stroke:#C3CFD9,fill:#FFFFFF
+class 01_1_Nivel_de_Atendi_ed1bc494,01_Checkout_Iniciado_8b809a08,02_2_Nivel_de_Atendi_31875b69,02_Checkout_Abandona_cfbfe010,03_Pix_ou_Boleto_Em__6199e320,03_Venda_Recuperada_9c6d80d0,04_Cartao_Recusado_777859d6,05_Pagamento_Expirad_e3dd80f4,Acao_Aplicar_DND_Nao_3ba8e7cf,Acao_Mudar_status_pa_ada7aa94,Adicionar_Tag_Client_6bc57881,Adicionar_Tag_Reembo_b7e9cb31,Aplicar_Tag_Abandono_02f71e0e,Aplicar_Tag_DND_Ativ_25a32302,Aplicar_Tag_Resolvid_40feb9ac,Aplicar_Tag_Resolvid_e2066aa9,COMPROU_UPSELL_TAG_C_e92dd03d,Cliente_no_seu_Site_9b0bebe2,Evento_Abandono_de_C_358582c3,Evento_Compra_Aprova_dba1a9c0,Evento_Compra_Cancel_244b79c5,Evento_Pagamento_Exp_baa50b1a,Evento_Pix_ou_Boleto_28eab919,Evento_Reembolso_Sol_dc1afc0e,Filtro_Smart_List_de_ca570268,Gatilho_Formulario_d_bc19e545,Humano_clica_Marcar__a93e24bb,IA_identifica_Nao_Qu_6c3e6bed,WhatsApp_Codigo_Copi_7b9e2c8a,WhatsApp_Link_Renova_18db70d1,WhatsApp_Oferta_de_P_8d59b347,WhatsApp_Quebra_de_O_4c122f8c,Workflow_Auto_Lost_A_58cf9f4b,Workflow_Entrega_do__07923240,Workflow_Enviar_E_ma_9f697da4,Workflow_Oferta_de_U_4ad6bfec style0
+classDef style1 stroke:#9EADBA,fill:#e1e5ec
+class Bastidores_Gestao_In_0f726b7f,PIPELINE_1_Automacao_9ae35d16,PIPELINE_2_Suporte_A_9529eff2,Rotas_de_Desistencia_5bef5096,Webhooks_da_Hotmart_f29e0521 style1
+linkStyle 0,1,2,4,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,28,31,32,33,37,38,40 stroke:#788896
+linkStyle 3,5,27,29,30,34,35,36,39 stroke:#788896,stroke-dasharray:5 5
