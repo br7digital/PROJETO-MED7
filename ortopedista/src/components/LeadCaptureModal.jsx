@@ -152,9 +152,8 @@ export function LeadCaptureModal() {
           lastName: lastName,
           email: email.trim().toLowerCase(),
           phone: sanitizedPhoneE164,
-          productValue: parseFloat(`${landingData.pricing.price}.${landingData.pricing.cents || '90'}`),
-          tags: [checkout.leadTag],
-          source: checkout.source,
+          productValue: parseFloat(`${landingData.pricing.price}.${landingData.pricing.cents || '90'}`).toFixed(2),
+          source: 'LP-ORTO-BR',
           customField: {
             lead_stage: 'pre-checkout',
             product: checkout.productName,
