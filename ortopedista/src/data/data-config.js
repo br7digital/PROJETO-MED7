@@ -243,7 +243,7 @@ export const landingData = {
     hotmartOfferCode: 'br84xiqy',
     ghlWebhookUrl: 'https://services.leadconnectorhq.com/hooks/VAXiMcLn9h5zym9anXiu/webhook-trigger/d3ddc0bb-7863-44a4-afe5-ae84eb6e9615',
     leadTag: 'lead-med7-ortopedista',
-    source: 'landing-page-ortopedista',
+    source: 'ORTO-BR',
     productName: 'Pack 30 Videos Ortopedia'
   }
 };

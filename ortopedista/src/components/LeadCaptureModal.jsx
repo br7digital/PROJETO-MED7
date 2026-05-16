@@ -58,11 +58,20 @@ export function LeadCaptureModal() {
     return () => window.removeEventListener('keydown', handleEsc);
   }, [isModalOpen, closeCheckoutModal]);
 
-  // Phone mask: (DD) XXXXX-XXXX
+  // Phone mask: (DD) 9XXXX-XXXX ou (DD) XXXX-XXXX
   const formatPhone = (value) => {
-    const digits = value.replace(/\D/g, '').slice(0, 11);
+    let digits = value.replace(/\D/g, '');
+    
+    // Tratamento caso o usuário cole o número já com DDI +55
+    if (digits.startsWith('55') && digits.length > 11) {
+      digits = digits.slice(2);
+    }
+    
+    digits = digits.slice(0, 11);
+
     if (digits.length <= 2) return digits.length ? `(${digits}` : '';
-    if (digits.length <= 7) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+    if (digits.length <= 6) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+    if (digits.length <= 10) return `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`;
     return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
   };
 
@@ -103,6 +112,17 @@ export function LeadCaptureModal() {
     };
   };
 
+  // Webhook E.164 phone sanitization
+  const sanitizePhoneForWebhook = (phoneStr) => {
+    // 1. Remove non-numeric characters
+    let digits = phoneStr.replace(/\D/g, '');
+    
+    // 2. & 3. Ensure +55 country code (handling cases with or without it safely)
+    if (digits.startsWith('55') && digits.length > 11) {
+      return `+${digits}`;
+    }
+    return `+55${digits}`;
+  };
 
   // Submit handler
   const handleSubmit = async (e) => {
@@ -116,7 +136,7 @@ export function LeadCaptureModal() {
     const lastName = nameParts.slice(1).join(' ');
 
     const phoneParts = getPhoneParts();
-    const phoneDigits = phone.replace(/\D/g, '');
+    const sanitizedPhoneE164 = sanitizePhoneForWebhook(phone);
 
     // 1. Send lead to GoHighLevel (Awaiting with timeout for higher reliability)
     try {
@@ -131,7 +151,7 @@ export function LeadCaptureModal() {
           firstName: firstName,
           lastName: lastName,
           email: email.trim().toLowerCase(),
-          phone: `+55${phoneDigits}`,
+          phone: sanitizedPhoneE164,
           productValue: parseFloat(`${landingData.pricing.price}.${landingData.pricing.cents || '90'}`),
           tags: [checkout.leadTag],
           source: checkout.source,
