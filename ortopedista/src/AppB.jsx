@@ -1,43 +1,37 @@
 import React from 'react';
-import { Hero } from './components/Hero';
-import { Hook } from './components/Hook';
-import { Mechanism } from './components/Mechanism';
-import { SocialProof } from './components/SocialProof';
-import { Usage } from './components/Usage';
-import { Gallery } from './components/Gallery';
-import { Pricing } from './components/Pricing';
-import { Faq } from './components/Faq';
-import { Footer } from './components/Footer';
-import { Navbar } from './components/Navbar';
-import { MiniOffer } from './components/MiniOffer';
-import { CFMCompliance } from './components/CFMCompliance';
-import { LeadCaptureModal } from './components/LeadCaptureModal';
+import { NavbarB } from './components/variant-b/NavbarB';
+import { HeroB } from './components/variant-b/HeroB';
+import { PainB } from './components/variant-b/PainB';
+import { GalleryB } from './components/variant-b/GalleryB';
+import { CustomizationB } from './components/variant-b/CustomizationB';
+import { BonusesB } from './components/variant-b/BonusesB';
+import { SocialProofB } from './components/variant-b/SocialProofB';
+import { PricingB } from './components/variant-b/PricingB';
+import { FaqB } from './components/variant-b/FaqB';
+import { FooterB } from './components/variant-b/FooterB';
+import { LeadCaptureModalB } from './components/variant-b/LeadCaptureModalB';
 import { CheckoutProvider } from './contexts/CheckoutContext';
 
 function App() {
   return (
     <CheckoutProvider>
       <div className="bg-[#020b18] min-h-screen">
-        <main className="font-body text-white antialiased max-w-[480px] mx-auto min-h-screen bg-gradient-to-b from-[#020b18] via-[#01142c] to-[#020a18] shadow-[0_0_100px_rgba(0,0,0,0.8)] flex flex-col overflow-x-hidden">
-          <Navbar />
-          <Hero />
-          <MiniOffer />
-          <Hook />
-          <Usage />
-          <Gallery />
-          <Mechanism />
-          <CFMCompliance />
-          <SocialProof />
-          <Pricing />
-          <Faq />
-          <Footer />
+        <main className="font-body text-white/80 antialiased max-w-[520px] mx-auto min-h-screen bg-[#020b18] flex flex-col overflow-x-hidden relative">
+          <NavbarB />
+          <HeroB />
+          <PainB />
+          <GalleryB />
+          <CustomizationB />
+          <BonusesB />
+          <SocialProofB />
+          <PricingB />
+          <FaqB />
+          <FooterB />
         </main>
-        {/* Global Lead Capture Modal */}
-        <LeadCaptureModal />
+        <LeadCaptureModalB />
       </div>
     </CheckoutProvider>
   );
 }
 
 export default App;
-
