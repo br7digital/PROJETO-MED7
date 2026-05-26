@@ -32,6 +32,7 @@ export default defineConfig({
         main: resolve(__dirname, 'index.html'),
         ortopedista: resolve(__dirname, 'ortopedista/index.html'),
         ortopedistaB: resolve(__dirname, 'ortopedista/index-b.html'),
+        ortopedistaArsenal: resolve(__dirname, 'ortopedista/arsenal/index.html'),
       },
     },
   },
