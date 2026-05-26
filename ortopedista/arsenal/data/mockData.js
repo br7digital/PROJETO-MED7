@@ -1,12 +1,12 @@
 export const categories = [
-  { id: 'vertebra', name: 'VÉRTEBRA', icon: 'Bone', image3d: '' },
-  { id: 'joelho', name: 'JOELHO', icon: 'Activity', image3d: '' },
-  { id: 'ombro', name: 'OMBRO', icon: 'Stethoscope', image3d: '' },
-  { id: 'quadril', name: 'QUADRIL', icon: 'Shield', image3d: '' },
-  { id: 'mao_punho', name: 'MÃO E PUNHO', icon: 'Crosshair', image3d: '' },
-  { id: 'pe_tornozelo', name: 'PÉ E TORNOZELO', icon: 'Zap', image3d: '' },
-  { id: 'lesoes_sinais', name: 'LESÕES E SINAIS', icon: 'AlertCircle', image3d: '' },
-  { id: 'performance', name: 'PERFORMANCE E OSSOS', icon: 'TrendingUp', image3d: '' },
+  { id: 'vertebra', name: 'VÉRTEBRA', icon: 'Bone', image3d: '/arsenal/Cervical.webp' },
+  { id: 'joelho', name: 'JOELHO', icon: 'Activity', image3d: '/arsenal/JOELHO.webp' },
+  { id: 'ombro', name: 'OMBRO', icon: 'Stethoscope', image3d: '/arsenal/OMBRO.webp' },
+  { id: 'quadril', name: 'QUADRIL', icon: 'Shield', image3d: '/arsenal/QUADRIL.webp' },
+  { id: 'mao_punho', name: 'MÃO E PUNHO', icon: 'Crosshair', image3d: '/arsenal/MÃO E PULSO.webp' },
+  { id: 'pe_tornozelo', name: 'PÉ E TORNOZELO', icon: 'Zap', image3d: '/arsenal/PÉ E TORNOZELO.webp' },
+  { id: 'lesoes_sinais', name: 'LESÕES E SINAIS', icon: 'AlertCircle', image3d: '/arsenal/LESÕES E SINAIS.webp' },
+  { id: 'performance', name: 'PERFORMANCE E OSSOS', icon: 'TrendingUp', image3d: '/arsenal/PERFORMANCE E OSSOS.webp' },
 ];
 
 export const videos = {
